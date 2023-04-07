@@ -127,7 +127,7 @@ class processor:
 
         # R Format
         if(opcode == '0110011'):
-            state.generateControlSignals(True, False, 0, False, False, True, False, 4)
+            state.generateControlSignals(True, False, 0, False, False,False,True,False,4)
             state.RD = int(instruction[20:25],2)
             state.RS1 = int(instruction[12:17],2)
             state.RS2 = int(instruction[7:12],2)
@@ -370,7 +370,6 @@ class processor:
             print("Unknown Instruction")
             exit(1)
 
-        print(f"bfuufuufufu {state.MuxPC_select}")
             
 
     # Execute
@@ -380,7 +379,8 @@ class processor:
         InA=state.RA
         if state.MuxB_select:
             InB=state.Imm
-        InB=state.RB
+        else:
+            InB=state.RB
 
         for i in range(15):
             if(state.ALU_OP[i]==1):
@@ -467,7 +467,6 @@ class processor:
     # Memory Access
     def MemoryAccess(self,state):
         if not self.pipeliningEnabled:
-            print(state.MuxPC_select)
             self.IAG(state)
 
         if state.stall:
