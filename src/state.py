@@ -18,6 +18,7 @@ class State:
         self.ALU_OP = [0 for i in range(15)]
 
         self.stall = False
+        self.branch_taken=False
         # Control Signals
         self.registerWrite=False
         self.MuxB_select=False

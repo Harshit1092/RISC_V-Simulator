@@ -106,8 +106,10 @@ class processor:
             return
         
         btb=args[0]
+
         if btb.find(state.PC):
-            if btb.predict(state.PC):
+            state.branch_taken=btb.predict(state.PC)
+            if state.branch_taken:
                 state.PC_next=btb.next_add(state.PC)
             else:
                 state.PC_next= state.PC + 4
@@ -379,6 +381,8 @@ class processor:
         else:
             print("Unknown Instruction")
             exit(1)
+
+        
             
 
     # Execute
