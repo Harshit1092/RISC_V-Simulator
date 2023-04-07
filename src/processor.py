@@ -57,10 +57,33 @@ class processor:
                         self.dataMemory[idx+2] = instruction[4:6]
                         self.dataMemory[idx+3] = instruction[2:4]
         except:
-            print(f'Error: Unable to open {file1} file.')
+            print(f"Error: Unable to open {file1} file.\n")
             exit(1)
 
-    # Function to print the contents of the data memory
+    # Function to print the contents of the data memory in data.txt file and register values in reg.txt file
+    def writeDataMemory(self):
+        try:
+            fp = open('data.txt', 'w')
+            output = []
+            for i in range(int('10000000', 16), int('10007ffd', 16), 4):
+                output.append(hex(i) + ' 0x' + self.dataMemory[i] + self.dataMemory[i+1] + self.dataMemory[i+2] + self.dataMemory[i+3] + '\n')
+            fp.writelines(output)
+            fp.close()
+        except:
+            print("Error: Unable to open data.txt file for writing.\n")
+            exit(1)
+
+        try:
+            fp = open('reg.txt', 'w')
+            output = []
+            for i in range(32):
+                output.append('x' + str(i) + ' ' + self.registers[i] + '\n')
+            fp.writelines(output)
+            fp.close()
+        except:
+            print("Error: Unable to open reg.txt file for writing.\n")
+            exit();
+
 
         
 
