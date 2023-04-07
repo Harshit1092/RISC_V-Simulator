@@ -69,7 +69,7 @@ if __name__ == '__main__':
                     print("\n")
             pc_tmp.append([-1, -1,curr_instruction.PC,-1,-1])
 
-            processor.mem(curr_instruction)
+            processor.MemoryAccess(curr_instruction)
             clock_cycles +=1
             if print_registers_each_cycle:
                 print("CLOCK CYCLE:", clock_cycles)

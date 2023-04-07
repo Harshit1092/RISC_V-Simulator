@@ -277,3 +277,12 @@ class processor:
             else:
                 self.PC_next += state.Imm
 
+    def MemoryAccess(self,state):
+        if not self.pipeliningEnabled:
+            self.IAG(state)
+
+        if state.stall:
+            return
+        
+
+
