@@ -12,6 +12,7 @@ class State:
         self.RY = 0
         self.RZ = 0
         self.RM = 0
+        self.Imm = 0
         self.ALU_OP = [0 for i in range(15)]
 
         self.stall = False

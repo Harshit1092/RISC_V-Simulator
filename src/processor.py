@@ -84,16 +84,16 @@ class processor:
             exit()
 
 
-    def generateControlSignals(self, *args):
-        self.registerWrite = args[0]
-        self.MuxB_select = args[1]
-        self.MuxY_select = args[2]
-        self.mem_write = args[3]
-        self.mem_read = args[4]
-        self.MuxMA_select = args[5]
-        self.MuxPC_select = args[6]
-        self.MuxINC_select = args[7]
-        self.numBytes = args[8]
+    def generateControlSignals(state, *args):
+        state.registerWrite = args[0]
+        state.MuxB_select = args[1]
+        state.MuxY_select = args[2]
+        state.mem_write = args[3]
+        state.mem_read = args[4]
+        state.MuxMA_select = args[5]
+        state.MuxPC_select = args[6]
+        state.MuxINC_select = args[7]
+        state.numBytes = args[8]
 
     # Fetch instruction from instruction memory
     def fetch(self, state, *args):
@@ -111,15 +111,85 @@ class processor:
             return False, 0, False, 0
         
         for i in range(15):
-            state.ALU_OP[i] = 0
+            state.ALU_OP[i] = False
 
         instruction = bin(int(state.IR[2:], 16))[2:]
         instruction = (32-len(instruction))*'0' + instruction
 
         # Opcode and func3
-        opcode = int(instruction[25:32], 2)
-        func3 = int(instruction[17:20], 2)
+        opcode = instruction[25:32]
+        func3 = instruction[17:20]
 
         # R Format
-        if(opcode == 51):
-            pass
+        if(opcode == '0110011'):
+            self.generateControlSignals(state, True, False, False, False, False, True, False, 4)
+            state.RD = instruction[20:25]
+            state.RS1 = instruction[12:17]
+            state.RS2 = instruction[7:12]
+            func7 = int(instruction[0:7], 2)
+
+            # ADD/SUB/MUL
+            if(func3 == '000'):
+                # ADD Instruction
+                if(func7 == '0000000'):
+                    state.ALU_OP[0] = True
+                # SUB Instruction
+                elif(func7 == '0000020'):
+                    state.ALU_OP[1] = True
+                # MUL Instruction
+                elif(func7 == '0000001'):
+                    state.ALU_OP[3] = True
+                else:
+                    print("Error: Unknown instruction")
+                    exit(1)
+            # AND
+            elif(func3 == '007'):
+                # AND Instruction
+                if(func7 == '0000000'):
+                    state.ALU_OP[10] = True
+                else:
+                    print("Error: Unknown instruction")
+                    exit(1)
+            # OR/REM
+            elif(func3 == '006'):
+                # OR Instruction
+                if(func7 == '0000000'):
+                    state.ALU_OP[9] = True
+                # REM Instruction
+                elif(func7 == '0000001'):
+                    state.ALU_OP[4] = True
+            # SLL
+            elif(func3 == '001'):
+                # SLL Instruction
+                if(func7 == '0000000'):
+                    state.ALU_OP[6] = True
+                else:
+                    print("Error: Unknown instruction")
+                    exit(1)
+            # SLT
+            elif(func3 == '002'):
+                # SLT Instruction
+                if(func7 == '0000000'):
+                    state.ALU_OP[11] = True;
+                else:
+                    print("Error: Unknown instruction")
+                    exit(1)
+            # SRL/SRA
+            elif(func3 == '005'):
+                # SRL Instruction
+                if(func7 == '0000000'):
+                    state.ALU_OP[8] = True
+                # SRA Instruction
+                elif(func7 == '0000002'):
+                    state.ALU_OP[7] = True
+                else:
+                    print("Error: Unknown instruction")
+                    exit(1)
+            
+
+                
+
+
+
+
+
