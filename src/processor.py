@@ -348,7 +348,6 @@ class processor:
         elif(opcode == '0010111' or opcode == '0110111'):
             state.RD = int(instruction[20:25],2)
             state.Imm = int(instruction[0:20],2)
-            
             state.Imm = ImmediateSign(state.Imm,20)
             # AUIPC Instruction
             if(opcode == '0010111'):

@@ -1,7 +1,7 @@
 # Utility Functions
 def ImmediateSign(imm, num):
     if imm & (1 << (num - 1)) == 0:
-        return
+        return imm
     neg = (1 << num) - 1
     imm = imm ^ neg
     imm += 1

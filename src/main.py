@@ -81,7 +81,7 @@ if __name__ == '__main__':
                     print("\n")
             pc_tmp.append([-1,curr_instruction.PC,-1,-1,-1])
 
-            processor.write_back(curr_instruction)
+            processor.writeBack(curr_instruction)
             clock_cycles +=1
             if print_registers_each_cycle:
                 print("CLOCK CYCLE:", clock_cycles)
@@ -92,5 +92,6 @@ if __name__ == '__main__':
             pc_tmp.append([curr_instruction.PC,-1,-1,-1,-1])
 
             PC=processor.PC_next
+            # print("done")c
 
     processor.writeDataMemory()
