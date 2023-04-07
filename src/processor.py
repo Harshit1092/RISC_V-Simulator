@@ -85,16 +85,16 @@ class processor:
             exit()
 
 
-    def generateControlSignals(state, *args):
-        state.registerWrite = args[0]
-        state.MuxB_select = args[1]
-        state.MuxY_select = args[2]
-        state.mem_read = args[3]
-        state.mem_write = args[4]
-        state.MuxMA_select = args[5]
-        state.MuxPC_select = args[6]
-        state.MuxINC_select = args[7]
-        state.numBytes = args[8]
+    def generateControlSignals(state,RW,MBS,MYS,MR,MW,MMA,MPC,MINC,NUM):
+        state.registerWrite = RW
+        state.MuxB_select = MBS
+        state.MuxY_select = MYS
+        state.mem_read = MR
+        state.mem_write = MW
+        state.MuxMA_select = MMA
+        state.MuxPC_select = MPC
+        state.MuxINC_select = MINC
+        state.numBytes = NUM
 
     # Fetch
     def fetch(self, state, *args):
@@ -382,7 +382,7 @@ class processor:
             print("Unknown Instruction")
             exit(1)
 
-        
+        print(f"bfuufuufufu {state.MuxPC_select}")
             
 
     # Execute
@@ -479,6 +479,7 @@ class processor:
     # Memory Access
     def MemoryAccess(self,state):
         if not self.pipeliningEnabled:
+            print(state.MuxPC_select)
             self.IAG(state)
 
         if state.stall:
