@@ -1,5 +1,6 @@
 from processor import processor
 from state import State
+from btb import BTB
 import time
 
 pc_tmp = []
@@ -22,7 +23,9 @@ if __name__ == '__main__':
     print_pipeline_registers=knobs[3]   #knob4
     print_specific_pipeline_registers =knobs[4]  #knob5
 
+    #initial calling of classes.
     processor = processor(file1)
+    btb=BTB()
 
     # Signals
     PC = 0
