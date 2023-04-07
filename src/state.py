@@ -3,7 +3,7 @@ class State:
     def __init__(self, PC = 0):
         self.PC = PC
         self.PC_next = 0
-        self.instruction_word = '0x0'
+        self.IR = '0x0'
         self.RS1 = -1
         self.RS2 = -1
         self.RD = -1
