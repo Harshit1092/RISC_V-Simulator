@@ -96,7 +96,7 @@ class processor:
         state.MuxINC_select = args[7]
         state.numBytes = args[8]
 
-    # Fetch instruction from instruction memory
+    # Fetch
     def fetch(self, state, *args):
         if state.stall == True:
             return
@@ -113,7 +113,7 @@ class processor:
                 state.PC_next= state.PC + 4
 
 
-    # Decode instruction and identify the operation and operands
+    # Decode
     def decode(self, state, *args):
         if state.stall == True:
             return False, 0, False, 0
@@ -122,6 +122,8 @@ class processor:
             state.stall = True
             return False, 0, False, 0
         
+        self.Total_instructions += 1
+
         for i in range(15):
             state.ALU_OP[i] = False
 
@@ -200,9 +202,12 @@ class processor:
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
+            # XOR/DIV
             elif(func3 == 0x4):
+                # XOR Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[5] = True
+                # DIV Instruction
                 elif(func7 == 0x01):
                     state.ALU_OP[2] = True
                 else:
@@ -210,11 +215,13 @@ class processor:
                     exit(1)
             else:
                 print("Unknown instruction")
-            
+
             state.RA = self.registers[state.RS1]
             state.RB = self.registers[state.RS2]
             state.RM = state.RB
+            self.ALU_instructions += 1
             
+        # I Format
         elif(opcode == '0010011' or opcode == '0000011' or opcode == '1100111'):
             state.RD = int(instruction[20:25],2)
             state.RS1 = int(instruction[12:17],2)
@@ -223,12 +230,16 @@ class processor:
             if(state.Imm > 2047):
                 state.Imm -= 4096
                 
+            # LB/LH/LW
             if(opcode == '0000011'):
                 state.ALU_OP[0] = True
+                # LB Instruction
                 if(func3 == 0x0):
                     self.generateControlSignals(state,True,True,True,True,False,False,True,False,True)
+                # LH Instruction
                 elif(func3 == 0x1):
                     self.generateControlSignals(state,True,True,True,True,False,False,True,False,2)
+                # LW Instruction
                 elif(func3 == 0x2):
                     self.generateControlSignals(state,True,True,True,True,False,False,True,False,4)
                 else:
@@ -236,34 +247,47 @@ class processor:
                     exit(1)
             
                 state.RA = self.registers[state.RS1]
+                self.memory_instructions += 1
             
+            # ADDI/ANDI/ORI/XORI/SLLI/SRLI
             elif(opcode == '0010011'):
                 self.generateControlSignals(state,True,True,False,False,False,False,True,False,4)
+                # ADDI Instruction
                 if(func3 == 0x0):
                     state.ALU_OP[0] = True
+                # ANDI Instruction
                 elif(func3 == 0x7):
                     state.ALU_OP[10] = True
+                # ORI Instruction
                 elif(func3 == 0x6):
                     state.ALU_OP[9] = True
+                # XORI Instruction
                 elif(func3 == 0x4):
                     state.ALU_OP[5] = True
+                # SLLI Instruction
                 elif(func3 == 0x1):
                     state.ALU_OP[6] = True
+                # SRLI Instruction
                 elif(func3 == 0x5):
                     state.ALU_OP[8] = True
                 else:
                     print("Unknown instruction")
                 state.RA = self.registers[state.RS1]
+                self.ALU_instructions += 1
             
+            # JALR
             elif(opcode == '1100111'):
                 self.generateControlSignals(state,True,False,2,False,False,False,False,True,4)
+                # JALR Instruction
                 if(func3 == 0x0):
                     state.ALU_OP[0] = True
                 else:
                     print("Unknown Error")
                     exit(1)
                 state.RA = self.registers[state.RS1]
-                
+                self.control_instructions += 1
+        
+        # S Format
         elif(opcode == '0100011'):
             state.RS1 = int(instruction[12:17],2)
             state.RS2 = int(instruction[7:12],2)
@@ -271,10 +295,13 @@ class processor:
             state.Imm = ImmediateSign(state.Imm,12)
             state.ALU_OP[0] = True
             
+            # SB Instruction
             if(func3 == 0x0):
-                self.generateControlSignals(state,False,True,True,False,True,False,True,False,True)
+                self.generateControlSignals(state,False,True,True,False,True,False,True,False,1)
+            # SH Instruction
             elif(func3 == 0x1):
                 self.generateControlSignals(state,False,True,True,False,True,False,True,False,2)
+            # SW Instruction
             elif(func3 == 0x2):                            
                 self.generateControlSignals(state,False,True,True,False,True,False,True,False,4)
             else:
@@ -283,8 +310,10 @@ class processor:
             
             state.RA = self.registers[state.RS1]
             state.RB = self.registers[state.RS2]
-            state.RM = self.registers[state.RB]
-            
+            state.RM = state.RB
+            self.memory_instructions += 1
+        
+        # B Format
         elif(opcode == '1100011'):
             state.RS1 = int(instruction[12:17])
             state.RS2 = int(instruction[7:12])
@@ -294,37 +323,48 @@ class processor:
             state.Imm = int(instruction[0] + instruction[24] + instruction[1:7] + instruction[20:24],2)
             state.Imm = ImmediateSign(state.Imm,12)
             state.Imm *= 2
-        
+
+            # BEQ Instruction
             if(func3 == 0x0):
                 state.ALU_OP[12] = True
+            # BNE Instruction
             elif(func3 == 0x1):
                 state.ALU_OP[13] = True
+            # BLT Instruction
             elif(func3 == 0x4):
                 state.ALU_OP[11] = True
+            # BGE Instruction
             elif(func3 == 0x5):
                 state.ALU_OP[14] = True
             else:
                 print("Unknown Error")
                 exit(1)
             self.generateControlSignals(state,False,False,False,False,False,False,True,True,False)
+            self.control_instructions += 1
             
+        # U Format
         elif(opcode == '0010111' or opcode == '0110111'):
             state.RD = int(instruction[20:25],2)
             state.Imm = int(instruction[0:20],2)
             
             state.Imm = ImmediateSign(state.Imm,20)
+            # AUIPC Instruction
             if(opcode == '0010111'):
                 state.ALU_OP[0] = True
                 state.RA = state.PC
                 state.Imm = state.Imm << 12
+            # LUI Instruction
             else:
                 state.ALU_OP[6] = True
                 state.RA = state.Imm
                 state.Imm = 12
             
             self.generateControlSignals(True,True,False,False,False,False,True,False,False)
+            self.ALU_instructions += 1
         
+        # J Format
         elif(opcode == '1101111'):
+            # JAL Instruction
             state.RD = int(instruction[20:25],2)
             state.Imm = int(instruction[0] + instruction[12:20] + instruction[11] + instruction[1:11],2)
             state.Imm =  ImmediateSign(state.Imm,20)
@@ -334,13 +374,14 @@ class processor:
             state.RB = 0
             
             self.generateControlSignals(state,True,False,2,False,False,False,True,True,False)
+            self.control_instructions += 1
         
         else:
             print("Unknown Instruction")
             exit(1)
             
 
-
+    # Execute
     def execute(self,state):
         if (state.stall):
             return
@@ -419,7 +460,7 @@ class processor:
                 else:
                     break
 
-
+    # Function to update PC
     def IAG(self,state):
         if(state.MuxPC_select==0):
             self.PC_next = state.RA
@@ -430,6 +471,7 @@ class processor:
             else:
                 self.PC_next += state.Imm
 
+    # Memory Access
     def MemoryAccess(self,state):
         if not self.pipeliningEnabled:
             self.IAG(state)
@@ -437,12 +479,44 @@ class processor:
         if state.stall:
             return
         
+        # How to update RY?
         if state.MuxY_select == 0:
             state.RY = state.RZ
         elif state.MuxY_select == 1:
+            # Whether to access dataMemory?
             if state.MuxMA_select == False:
+                state.MAR = state.RZ
+                state.MDR = hex(state.RM)
+                state.MDR = '0x' + '0' * (10-len(state.MDR)) + state.MDR[2:]
+                # Memory Read (Load Instructions)
                 if state.mem_read:
-                    
+                    if state.numBytes == 1:
+                        state.RY = int(self.dataMemory[state.MAR], 16)
+                    elif state.numBytes == 2:
+                        state.RY = int(self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR], 16)
+                    elif state.numBytes == 4:
+                        state.RY = int(self.dataMemory[state.MAR + 3] + self.dataMemory[state.MAR + 2] + self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR], 16)
+                # Memory Write (Store Instructions)
+                elif state.mem_write:
+                    if state.numBytes == 2:
+                        self.dataMemory[state.MAR] = state.MDR[8:10]
+                    if state.numBytes == 4:
+                        self.dataMemory[state.MAR] = state.MDR[8:10]
+                        self.dataMemory[state.MAR + 1] = state.MDR[6:8]
+                    if state.numBytes == 8:
+                        self.dataMemory[state.MAR] = state.MDR[8:10]
+                        self.dataMemory[state.MAR + 1] = state.MDR[6:8]
+                        self.dataMemory[state.MAR + 2] = state.MDR[4:6]
+                        self.dataMemory[state.MAR + 3] = state.MDR[2:4]
+        elif state.MuxY_select == 2:
+            state.RY = state.PC + 4
+
+    # Write Back 
+    def writeBack(self, state):
+        if state.registerWrite and state.RD != 0:
+            self.registers[state.RD] = state.RY
+
+				
         
         
 
