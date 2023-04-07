@@ -19,7 +19,6 @@ def upload_file():
     f  = open("input.txt",'w')
     f.close()
     f = open('input.txt','a')
-    f.write(str(prog_mc_file)+'\n')
     f.write(str(pipelining_enabled)+'\n')
     f.write(str(forwarding_enabled)+'\n')
     f.write(str(print_registers_each_cycle)+'\n')
