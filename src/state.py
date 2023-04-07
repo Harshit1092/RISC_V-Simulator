@@ -32,3 +32,14 @@ class State:
         # Forwarding Signals
         self.decode_forwarding_op1 = False
         self.decode_forwarding_op2 = False
+    
+    def generateControlSignals(self,RW,MBS,MYS,MR,MW,MMA,MPC,MINC,NUM):
+        self.registerWrite = RW
+        self.MuxB_select = MBS
+        self.MuxY_select = MYS
+        self.mem_read = MR
+        self.mem_write = MW
+        self.MuxMA_select = MMA
+        self.MuxPC_select = MPC
+        self.MuxINC_select = MINC
+        self.numBytes = NUM
