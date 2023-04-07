@@ -92,6 +92,5 @@ if __name__ == '__main__':
             pc_tmp.append([curr_instruction.PC,-1,-1,-1,-1])
 
             PC=processor.PC_next
-            # print("done")c
 
     processor.writeDataMemory()
