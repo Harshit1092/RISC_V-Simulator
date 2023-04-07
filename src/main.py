@@ -6,7 +6,7 @@ pc_tmp = []
 
 if __name__ == '__main__':
     
-    file1=open("demofile.mc", "r")
+    file1=open("demofile.txt", "r")
     knob_input=open("input.txt", "r")
     knobs=[]
     for line in knob_input:
