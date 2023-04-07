@@ -7,11 +7,20 @@ pc_tmp = []
 if __name__ == '__main__':
     
     file1=open("demofile.mc", "r")
-    pipelining_knob=bool(input())  #knob1
-    forwarding_knob=bool(input())   #knob2
-    print_registers_each_cycle=bool(input())    #knob3
-    print_pipeline_registers=bool(input())   #knob4
-    print_specific_pipeline_registers =bool(input())  #knob5
+    knob_input=open("input.txt", "r")
+    knobs=[]
+    for line in knob_input:
+        if(line[0]=="T"):
+            knobs.append(True)
+        else:
+            knobs.append(False)
+
+    knob_input.close()
+    pipelining_knob=knobs[0]  #knob1
+    forwarding_knob=knobs[1]   #knob2
+    print_registers_each_cycle=knobs[2]    #knob3
+    print_pipeline_registers=knobs[3]   #knob4
+    print_specific_pipeline_registers =knobs[4]  #knob5
 
     processor = processor(file1)
 
@@ -81,6 +90,6 @@ if __name__ == '__main__':
             pc_tmp.append([curr_instruction.PC,-1,-1,-1,-1])
 
             PC=processor.PC_next
-            
+
 
     file1.close()
