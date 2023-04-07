@@ -82,9 +82,10 @@ class processor:
             fp.close()
         except:
             print("Error: Unable to open reg.txt file for writing.\n")
-            exit();
+            exit()
 
 
+    
         
 
 
