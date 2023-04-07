@@ -3,7 +3,7 @@ class State:
     def __init__(self, PC = 0):
         self.PC = PC
         self.PC_next = 0
-        self.IR = '0x0'
+        self.IR = '0x00000000'
         self.RS1 = -1
         self.RS2 = -1
         self.RD = -1
@@ -12,8 +12,9 @@ class State:
         self.RY = 0
         self.RZ = 0
         self.RM = 0
-
         self.ALU_OP = [0 for i in range(15)]
+
+        self.stall = False
         # Control Signals
         self.registerWrite=False
         self.MuxB_select=False
