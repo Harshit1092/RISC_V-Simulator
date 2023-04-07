@@ -119,8 +119,6 @@ class processor:
     def decode(self, state, *args):
         if state.stall == True:
             return False, 0, False, 0
-        
-        print(state.IR)
         if state.IR == '0x401080BB':
             self.terminate = True
             state.stall = True
