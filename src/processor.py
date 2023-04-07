@@ -188,7 +188,83 @@ class processor:
             
 
                 
+    def execute(self,state):
+        if (state.stall):
+            return
+        InA=state.RA
+        if state.MuxB_select:
+            InB=state.Imm
+        InB=state.RB
 
+        for i in range(15):
+            if(state.ALU_OP[i]==1):
+                if i==0:
+                    state.RZ=InA+InB
+                    break
+                elif i==1:
+                    state.RZ=InA-InB
+                    break
+                elif i==2:
+                    if(InB!=0):
+                        state.RZ=InA/InB
+                    break
+                elif i==3:
+                    state.RZ=InA*InB
+                    break
+                elif i==4:
+                    if(InB!=0):
+                        state.RZ=InA-InB
+                    break
+                elif i==5:
+                    state.RZ=InA^InB
+                    break
+                elif i==6:
+                    if (InB>=0):
+                        state.RZ=InA<<InB
+                    break
+                elif i==7:
+                    #please write sra code here.
+                    break
+                elif i==8:
+                    if (InB>=0):
+                        state.RZ=InA>>InB
+                    break
+                elif i==9:
+                    state.RZ=InA|InB
+                    break
+                elif i==10:
+                    state.RZ=InA&InB
+                    break
+                elif i==11:
+                    if(InA<InB):
+                        state.RZ=1
+                    else:
+                        state.RZ=0
+                    state.MuxINC_select=state.RZ
+                    break
+                elif i==12:
+                    if(InA==InB):
+                        state.RZ=1
+                    else:
+                        state.RZ=0
+                    state.MuxINC_select=state.RZ
+                    break
+                elif i==13:
+                    if(InA!=InB):
+                        state.RZ=1
+                    else:
+                        state.RZ=0
+                    state.MuxINC_select=state.RZ
+                    break
+                elif i==14:
+                    if(InA>=InB):
+                        state.RZ=1
+                    else:
+                        state.RZ=0
+                    state.MuxINC_select=state.RZ
+                    break
+                else:
+                    break
 
 
 
