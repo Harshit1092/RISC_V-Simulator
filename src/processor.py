@@ -89,8 +89,8 @@ class processor:
         state.registerWrite = args[0]
         state.MuxB_select = args[1]
         state.MuxY_select = args[2]
-        state.mem_write = args[3]
-        state.mem_read = args[4]
+        state.mem_read = args[3]
+        state.mem_write = args[4]
         state.MuxMA_select = args[5]
         state.MuxPC_select = args[6]
         state.MuxINC_select = args[7]
@@ -119,12 +119,13 @@ class processor:
     def decode(self, state, *args):
         if state.stall == True:
             return False, 0, False, 0
-        if state.IR == '0x401080BB':
+        if state.IR == '0x00000000':
             self.terminate = True
             state.stall = True
             return False, 0, False, 0
         
         self.Total_instructions += 1
+        print(state.IR)
 
         for i in range(15):
             state.ALU_OP[i] = False
@@ -138,7 +139,7 @@ class processor:
 
         # R Format
         if(opcode == '0110011'):
-            self.generateControlSignals(state, True, False, False, False, False, True, False, 4)
+            self.generateControlSignals(state, True, False, 0, False, False, True, False, 4)
             state.RD = int(instruction[20:25],2)
             state.RS1 = int(instruction[12:17],2)
             state.RS2 = int(instruction[7:12],2)
@@ -237,13 +238,13 @@ class processor:
                 state.ALU_OP[0] = True
                 # LB Instruction
                 if(func3 == 0x0):
-                    self.generateControlSignals(state,True,True,True,True,False,False,True,False,True)
+                    self.generateControlSignals(state,True,True,1,True,False,False,True,False,1)
                 # LH Instruction
                 elif(func3 == 0x1):
-                    self.generateControlSignals(state,True,True,True,True,False,False,True,False,2)
+                    self.generateControlSignals(state,True,True,1,True,False,False,True,False,2)
                 # LW Instruction
                 elif(func3 == 0x2):
-                    self.generateControlSignals(state,True,True,True,True,False,False,True,False,4)
+                    self.generateControlSignals(state,True,True,1,True,False,False,True,False,4)
                 else:
                     print("Unknown instruction")
                     exit(1)
@@ -253,7 +254,7 @@ class processor:
             
             # ADDI/ANDI/ORI/XORI/SLLI/SRLI
             elif(opcode == '0010011'):
-                self.generateControlSignals(state,True,True,False,False,False,False,True,False,4)
+                self.generateControlSignals(state,True,True,0,False,False,False,True,False,4)
                 # ADDI Instruction
                 if(func3 == 0x0):
                     state.ALU_OP[0] = True
@@ -299,13 +300,13 @@ class processor:
             
             # SB Instruction
             if(func3 == 0x0):
-                self.generateControlSignals(state,False,True,True,False,True,False,True,False,1)
+                self.generateControlSignals(state,False,True,1,False,True,False,True,False,1)
             # SH Instruction
             elif(func3 == 0x1):
-                self.generateControlSignals(state,False,True,True,False,True,False,True,False,2)
+                self.generateControlSignals(state,False,True,1,False,True,False,True,False,2)
             # SW Instruction
             elif(func3 == 0x2):                            
-                self.generateControlSignals(state,False,True,True,False,True,False,True,False,4)
+                self.generateControlSignals(state,False,True,1,False,True,False,True,False,4)
             else:
                 print("Unknown Error")
                 exit(1)
@@ -341,7 +342,7 @@ class processor:
             else:
                 print("Unknown Error")
                 exit(1)
-            self.generateControlSignals(state,False,False,False,False,False,False,True,True,False)
+            self.generateControlSignals(state,False,False,0,False,False,False,True,True,0)
             self.control_instructions += 1
             
         # U Format
@@ -360,7 +361,7 @@ class processor:
                 state.RA = state.Imm
                 state.Imm = 12
             
-            self.generateControlSignals(True,True,False,False,False,False,True,False,False)
+            self.generateControlSignals(state,True,True,0,False,False,False,True,False,0)
             self.ALU_instructions += 1
         
         # J Format
@@ -374,7 +375,7 @@ class processor:
             state.RA = 0
             state.RB = 0
             
-            self.generateControlSignals(state,True,False,2,False,False,False,True,True,False)
+            self.generateControlSignals(state,True,False,2,False,False,False,True,True,0)
             self.control_instructions += 1
         
         else:
@@ -465,11 +466,12 @@ class processor:
 
     # Function to update PC
     def IAG(self,state):
-        if(state.MuxPC_select==0):
+        if(state.MuxPC_select==False):
             self.PC_next = state.RA
+            print("buggy")
         
         else:
-            if(state.MuxINC_select==0):
+            if(state.MuxINC_select==False):
                 self.PC_next += 4
             else:
                 self.PC_next += state.Imm
