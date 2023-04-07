@@ -118,76 +118,217 @@ class processor:
 
         # Opcode and func3
         opcode = instruction[25:32]
-        func3 = instruction[17:20]
+        func3 = int(instruction[17:20],2)
 
         # R Format
         if(opcode == '0110011'):
             self.generateControlSignals(state, True, False, False, False, False, True, False, 4)
-            state.RD = instruction[20:25]
-            state.RS1 = instruction[12:17]
-            state.RS2 = instruction[7:12]
+            state.RD = int(instruction[20:25],2)
+            state.RS1 = int(instruction[12:17],2)
+            state.RS2 = int(instruction[7:12],2)
             func7 = int(instruction[0:7], 2)
 
             # ADD/SUB/MUL
-            if(func3 == '000'):
+            if(func3 == 0x0):
                 # ADD Instruction
-                if(func7 == '0000000'):
+                if(func7 == 0x00):
                     state.ALU_OP[0] = True
                 # SUB Instruction
-                elif(func7 == '0000020'):
+                elif(func7 == 0x20):
                     state.ALU_OP[1] = True
                 # MUL Instruction
-                elif(func7 == '0000001'):
+                elif(func7 == 0x01):
                     state.ALU_OP[3] = True
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
             # AND
-            elif(func3 == '007'):
+            elif(func3 == 0x7):
                 # AND Instruction
-                if(func7 == '0000000'):
+                if(func7 == 0x00):
                     state.ALU_OP[10] = True
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
             # OR/REM
-            elif(func3 == '006'):
+            elif(func3 == 0x6):
                 # OR Instruction
-                if(func7 == '0000000'):
+                if(func7 == 0x00):
                     state.ALU_OP[9] = True
                 # REM Instruction
-                elif(func7 == '0000001'):
+                elif(func7 == 0x01):
                     state.ALU_OP[4] = True
+                else:
+                    print("Unknown Instruction")
+                    exit(1)
             # SLL
-            elif(func3 == '001'):
+            elif(func3 == 0x1):
                 # SLL Instruction
-                if(func7 == '0000000'):
+                if(func7 == 0x00):
                     state.ALU_OP[6] = True
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
             # SLT
-            elif(func3 == '002'):
+            elif(func3 == 0x2):
                 # SLT Instruction
-                if(func7 == '0000000'):
+                if(func7 == 0x00):
                     state.ALU_OP[11] = True;
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
             # SRL/SRA
-            elif(func3 == '005'):
+            elif(func3 == 0x5):
                 # SRL Instruction
-                if(func7 == '0000000'):
+                if(func7 == 0x00):
                     state.ALU_OP[8] = True
                 # SRA Instruction
-                elif(func7 == '0000002'):
+                elif(func7 == 0x20):
                     state.ALU_OP[7] = True
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
+            elif(func3 == 0x4):
+                if(func7 == 0x00):
+                    state.ALU_OP[5] = True
+                elif(func7 == 0x01):
+                    state.ALU_OP[2] = True
+                else:
+                    print("Unknown instruction")
+                    exit(1)
+            else:
+                print("Unknown instruction")
+            
+            state.RA = self.registers[state.RS1]
+            state.RB = self.registers[state.RS2]
+            state.RM = state.RB
+            
+        elif(opcode == '0010011' or opcode == '0000011' or opcode == '1100111'):
+            state.RD = int(instruction[20:25],2)
+            state.RS1 = int(instruction[12:17],2)
+            state.Imm = int(instruction[0:12],2)
+            
+            if(state.Imm > 2047):
+                state.Imm -= 4096
+                
+            if(opcode == '0000011'):
+                state.ALU_OP[0] = True
+                if(func3 == 0x0):
+                    self.generateControlSignals(state,True,True,True,True,False,False,True,False,True)
+                elif(func3 == 0x1):
+                    self.generateControlSignals(state,True,True,True,True,False,False,True,False,2)
+                elif(func3 == 0x2):
+                    self.generateControlSignals(state,True,True,True,True,False,False,True,False,4)
+                else:
+                    print("Unknown instruction")
+                    exit(1)
+            
+                state.RA = self.registers[state.RS1]
+            
+            elif(opcode == '0010011'):
+                self.generateControlSignals(state,True,True,False,False,False,False,True,False,4)
+                if(func3 == 0x0):
+                    state.ALU_OP[0] = True
+                elif(func3 == 0x7):
+                    state.ALU_OP[10] = True
+                elif(func3 == 0x6):
+                    state.ALU_OP[9] = True
+                elif(func3 == 0x4):
+                    state.ALU_OP[5] = True
+                elif(func3 == 0x1):
+                    state.ALU_OP[6] = True
+                elif(func3 == 0x5):
+                    state.ALU_OP[8] = True
+                else:
+                    print("Unknown instruction")
+                state.RA = self.registers[state.RS1]
+            
+            elif(opcode == '1100111'):
+                self.generateControlSignals(state,True,False,2,False,False,False,False,True,4)
+                if(func3 == 0x0):
+                    state.ALU_OP[0] = True
+                else:
+                    print("Unknown Error")
+                    exit(1)
+                state.RA = self.registers[state.RS1]
+                
+        elif(opcode == '0100011'):
+            state.RS1 = int(instruction[12:17],2)
+            state.RS2 = int(instruction[7:12],2)
+            state.Imm = int(instruction[0:7] + instruction[20:25],2)
+            state.Imm = ImmediateSign(state.Imm,12)
+            state.ALU_OP[0] = True
+            
+            if(func3 == 0x0):
+                self.generateControlSignals(state,False,True,True,False,True,False,True,False,True)
+            elif(func3 == 0x1):
+                self.generateControlSignals(state,False,True,True,False,True,False,True,False,2)
+            elif(func3 == 0x2):                            
+                self.generateControlSignals(state,False,True,True,False,True,False,True,False,4)
+            else:
+                print("Unknown Error")
+                exit(1)
+            
+            state.RA = self.registers[state.RS1]
+            state.RB = self.registers[state.RS2]
+            state.RM = self.registers[state.RB]
+            
+        elif(opcode == '1100011'):
+            state.RS1 = int(instruction[12:17])
+            state.RS2 = int(instruction[7:12])
+            state.RA = self.registers[state.RS1]
+            state.RB = self.registers[state.RS2]
+            
+            state.Imm = int(instruction[0] + instruction[24] + instruction[1:7] + instruction[20:24],2)
+            state.Imm = ImmediateSign(state.Imm,12)
+            state.Imm *= 2
+        
+            if(func3 == 0x0):
+                state.ALU_OP[12] = True
+            elif(func3 == 0x1):
+                state.ALU_OP[13] = True
+            elif(func3 == 0x4):
+                state.ALU_OP[11] = True
+            elif(func3 == 0x5):
+                state.ALU_OP[14] = True
+            else:
+                print("Unknown Error")
+                exit(1)
+            self.generateControlSignals(state,False,False,False,False,False,False,True,True,False)
+            
+        elif(opcode == '0010111' or opcode == '0110111'):
+            state.RD = int(instruction[20:25],2)
+            state.Imm = int(instruction[0:20],2)
+            
+            state.Imm = ImmediateSign(state.Imm,20)
+            if(opcode == '0010111'):
+                state.ALU_OP[0] = True
+                state.RA = state.PC
+                state.Imm = state.Imm << 12
+            else:
+                state.ALU_OP[6] = True
+                state.RA = state.Imm
+                state.Imm = 12
+            
+            self.generateControlSignals(True,True,False,False,False,False,True,False,False)
+        
+        elif(opcode == '1101111'):
+            state.RD = int(instruction[20:25],2)
+            state.Imm = int(instruction[0] + instruction[12:20] + instruction[11] + instruction[1:11],2)
+            state.Imm =  ImmediateSign(state.Imm,20)
+            state.Imm *= 2
+            state.ALU_OP[12] = True
+            state.RA = 0
+            state.RB = 0
+            
+            self.generateControlSignals(state,True,False,2,False,False,False,True,True,False)
+        
+        else:
+            print("Unknown Instruction")
+            exit(1)
             
 
-                
+
     def execute(self,state):
         if (state.stall):
             return
