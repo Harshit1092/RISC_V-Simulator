@@ -42,7 +42,7 @@ if __name__ == '__main__':
                 print("CLOCK CYCLE:", clock_cycles)
                 print("Register Data:-")
                 for i in range(32):
-                    print("R" + str(i) + ":", processor.R[i], end=" ")
+                    print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
                 pc_tmp.append([-1, -1, -1, -1, curr_instruction.PC])
 
@@ -52,7 +52,7 @@ if __name__ == '__main__':
                 print("CLOCK CYCLE:", clock_cycles)
                 print("Register Data:-")
                 for i in range(32):
-                    print("R" + str(i) + ":", processor.R[i], end=" ")
+                    print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([-1, -1, -1, curr_instruction.PC,-1])
 
@@ -67,7 +67,7 @@ if __name__ == '__main__':
                 print("CLOCK CYCLE:", clock_cycles)
                 print("Register Data:-")
                 for i in range(32):
-                    print("R" + str(i) + ":", processor.R[i], end=" ")
+                    print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([-1, -1,curr_instruction.PC,-1,-1])
 
@@ -77,7 +77,7 @@ if __name__ == '__main__':
                 print("CLOCK CYCLE:", clock_cycles)
                 print("Register Data:-")
                 for i in range(32):
-                    print("R" + str(i) + ":", processor.R[i], end=" ")
+                    print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([-1,curr_instruction.PC,-1,-1,-1])
 
@@ -87,7 +87,7 @@ if __name__ == '__main__':
                 print("CLOCK CYCLE:", clock_cycles)
                 print("Register Data:-")
                 for i in range(32):
-                    print("R" + str(i) + ":", processor.R[i], end=" ")
+                    print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([curr_instruction.PC,-1,-1,-1,-1])
 
