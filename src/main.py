@@ -1,7 +1,6 @@
-from processor import processor
-from state import State
-from btb import BTB
-import time
+from processor import *
+from state import *
+from btb import *
 
 pc_tmp = []
 

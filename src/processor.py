@@ -1,5 +1,6 @@
 from collections import defaultdict
-from btb import BTB
+from btb import *
+from utility import *
 class processor:
     def __init__(self,file1):
         self.dataMemory = defaultdict(lambda: '00') # initialising data memory
@@ -100,6 +101,9 @@ class processor:
         if state.stall == True:
             return
         state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
+        
+        if not self.pipeliningEnabled:
+            return
         
         btb=args[0]
         if btb.find(state.PC):
