@@ -206,9 +206,8 @@ class processor:
                     exit(1)
             else:
                 print("Unknown instruction")
-
-            state.RA = self.registers[state.RS1]
-            state.RB = self.registers[state.RS2]
+            state.RA = int(self.registers[state.RS1][2:], 16)
+            state.RB = int(self.registers[state.RS2][2:], 16)
             state.RM = state.RB
             self.ALU_instructions += 1
             
@@ -237,7 +236,7 @@ class processor:
                     print("Unknown instruction")
                     exit(1)
             
-                state.RA = self.registers[state.RS1]
+                state.RA = int(self.registers[state.RS1][2:], 16)
                 self.memory_instructions += 1
             
             # ADDI/ANDI/ORI/XORI/SLLI/SRLI
@@ -263,7 +262,7 @@ class processor:
                     state.ALU_OP[8] = True
                 else:
                     print("Unknown instruction")
-                state.RA = self.registers[state.RS1]
+                state.RA = int(self.registers[state.RS1][2:], 16)
                 self.ALU_instructions += 1
             
             # JALR
@@ -275,7 +274,7 @@ class processor:
                 else:
                     print("Unknown Error")
                     exit(1)
-                state.RA = self.registers[state.RS1]
+                state.RA = int(self.registers[state.RS1][2:], 16)
                 self.control_instructions += 1
         
         # S Format
@@ -299,17 +298,18 @@ class processor:
                 print("Unknown Error")
                 exit(1)
             
-            state.RA = self.registers[state.RS1]
-            state.RB = self.registers[state.RS2]
+            state.RA = int(self.registers[state.RS1][2:], 16)
+            state.RB = int(self.registers[state.RS2][2:], 16)
             state.RM = state.RB
             self.memory_instructions += 1
         
         # B Format
         elif(opcode == '1100011'):
-            state.RS1 = int(instruction[12:17])
-            state.RS2 = int(instruction[7:12])
-            state.RA = self.registers[state.RS1]
-            state.RB = self.registers[state.RS2]
+            state.RS1 = int(instruction[12:17], 2)
+            state.RS2 = int(instruction[7:12], 2)
+            print(f"Hello {state.RS1}")
+            state.RA = int(self.registers[state.RS1][2:], 16)
+            state.RB = int(self.registers[state.RS2][2:], 16)
             
             state.Imm = int(instruction[0] + instruction[24] + instruction[1:7] + instruction[20:24],2)
             state.Imm = ImmediateSign(state.Imm,12)
@@ -508,7 +508,7 @@ class processor:
     # Write Back 
     def writeBack(self, state):
         if state.registerWrite and state.RD != 0:
-            self.registers[state.RD] = state.RY
+            self.registers[state.RD] = hex(state.RY)
 
 				
         
