@@ -32,7 +32,7 @@ class processor:
         
 
     # Function to populate the instruction & data memory using the program.mc file    
-    def loadProgramMemory(self, file1):
+    def loadProgramMemory(self,file1):
         try:
             fp = open(file1, 'r')
             flag = True

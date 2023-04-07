@@ -6,7 +6,7 @@ pc_tmp = []
 
 if __name__ == '__main__':
     
-    file1=open("demofile.txt", "r")
+    file1="demofile.txt"
     knob_input=open("input.txt", "r")
     knobs=[]
     for line in knob_input:
@@ -93,5 +93,4 @@ if __name__ == '__main__':
 
             PC=processor.PC_next
 
-
-    file1.close()
+    processor.writeDataMemory()
