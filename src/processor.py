@@ -267,5 +267,14 @@ class processor:
                     break
 
 
+    def IAG(self,state):
+        if(state.MuxPC_select==0):
+            state.PC = state.RA
+        
+        else:
+            if(state.MuxINC_select==0):
+                state.PC += 4
+            else:
+                state.PC += state.Imm
 
-
+    
