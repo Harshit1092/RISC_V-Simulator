@@ -100,7 +100,15 @@ class processor:
         if state.stall == True:
             return
         state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
-    
+        
+        btb=args[0]
+        if btb.find(state.PC):
+            if btb.predict(state.PC):
+                state.PC_next=btb.next_add(state.PC)
+            else:
+                state.PC_next= state.PC + 4
+
+
     # Decode instruction and identify the operation and operands
     def decode(self, state, *args):
         if state.stall == True:
