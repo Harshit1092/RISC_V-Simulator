@@ -484,11 +484,14 @@ class processor:
                 # Memory Read (Load Instructions)
                 if state.mem_read:
                     if state.numBytes == 1:
-                        state.RY = int(self.dataMemory[state.MAR], 16)
+                        tmp = self.dataMemory[state.MAR]
                     elif state.numBytes == 2:
-                        state.RY = int(self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR], 16)
+                        tmp = self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR]
                     elif state.numBytes == 4:
-                        state.RY = int(self.dataMemory[state.MAR + 3] + self.dataMemory[state.MAR + 2] + self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR], 16)
+                        tmp = self.dataMemory[state.MAR + 3] + self.dataMemory[state.MAR + 2] + self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR]
+                    tmp = '0x' + tmp
+                    sign_extend(tmp)
+                    state.RY = int(tmp,16)
                 # Memory Write (Store Instructions)
                 elif state.mem_write:
                     if state.numBytes == 2:
