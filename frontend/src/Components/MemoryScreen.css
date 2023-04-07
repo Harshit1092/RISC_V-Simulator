@@ -1,0 +1,9 @@
+.navBar {
+    height: 20%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(241, 179, 179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
