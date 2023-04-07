@@ -16,7 +16,7 @@ class processor:
         # Control Signals
         self.registerWrite=False
         self.MuxB_select=False
-        self.MuxY_select=False
+        self.MuxY_select=0
         self.mem_write=False
         self.mem_read=False
         self.MuxMA_select=False
@@ -393,28 +393,28 @@ class processor:
                         state.RZ=1
                     else:
                         state.RZ=0
-                    state.MuxINC_select=state.RZ
+                    state.MuxINC_select=InA<InB
                     break
                 elif i==12:
                     if(InA==InB):
                         state.RZ=1
                     else:
                         state.RZ=0
-                    state.MuxINC_select=state.RZ
+                    state.MuxINC_select=InA==InB
                     break
                 elif i==13:
                     if(InA!=InB):
                         state.RZ=1
                     else:
                         state.RZ=0
-                    state.MuxINC_select=state.RZ
+                    state.MuxINC_select=InA!=InB
                     break
                 elif i==14:
                     if(InA>=InB):
                         state.RZ=1
                     else:
                         state.RZ=0
-                    state.MuxINC_select=state.RZ
+                    state.MuxINC_select=InA>=InB
                     break
                 else:
                     break
@@ -436,6 +436,14 @@ class processor:
 
         if state.stall:
             return
+        
+        if state.MuxY_select == 0:
+            state.RY = state.RZ
+        elif state.MuxY_select == 1:
+            if state.MuxMA_select == False:
+                if state.mem_read:
+                    
+        
         
 
 
