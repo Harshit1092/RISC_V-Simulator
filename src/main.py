@@ -35,6 +35,7 @@ if __name__ == '__main__':
 
         processor.pipelingEnabled=False
         while True:
+
             curr_instruction=State(PC)
             processor.fetch(curr_instruction)
             clock_cycles +=1

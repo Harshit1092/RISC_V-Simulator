@@ -77,7 +77,7 @@ class processor:
             fp = open('reg.txt', 'w')
             output = []
             for i in range(32):
-                output.append('x' + str(i) + ' ' + self.registers[i] + ' ' + bin(int(self.registers[i], 16)) + ' ' + str(int(self.registers[i], 16)) + '\n')
+                output.append('x' + str(i) + ' ' + self.registers[i] + ' ' + bin(int(self.registers[i], 16)) + ' ' + str(nint(self.registers[i], 16)) + '\n')
             fp.writelines(output)
             fp.close()
         except:
@@ -206,8 +206,9 @@ class processor:
                     exit(1)
             else:
                 print("Unknown instruction")
-            state.RA = int(self.registers[state.RS1][2:], 16)
-            state.RB = int(self.registers[state.RS2][2:], 16)
+
+            state.RA = nint(self.registers[state.RS1][2:], 16)
+            state.RB = nint(self.registers[state.RS2][2:], 16)
             state.RM = state.RB
             self.ALU_instructions += 1
             
@@ -298,8 +299,8 @@ class processor:
                 print("Unknown Error")
                 exit(1)
             
-            state.RA = int(self.registers[state.RS1][2:], 16)
-            state.RB = int(self.registers[state.RS2][2:], 16)
+            state.RA = nint(self.registers[state.RS1][2:], 16)
+            state.RB = nint(self.registers[state.RS2][2:], 16)
             state.RM = state.RB
             self.memory_instructions += 1
         
@@ -456,7 +457,6 @@ class processor:
     def IAG(self,state):
         if(state.MuxPC_select==False):
             self.PC_next = state.RA
-            print("buggy")
         
         else:
             if(state.MuxINC_select==False):
@@ -510,7 +510,7 @@ class processor:
     # Write Back 
     def writeBack(self, state):
         if state.registerWrite and state.RD != 0:
-            tmp = hex(state.RY)
+            tmp = nhex(state.RY)
             tmp = '0x' + '0' * (10-len(tmp)) + tmp[2:]
             self.registers[state.RD] = tmp
 
