@@ -276,6 +276,7 @@ class processor:
                 else:
                     print("Unknown Error")
                     exit(1)
+                state.isbranch=1
                 state.RA = nint(self.registers[state.RS1][2:], 16)
                 self.control_instructions += 1
         
@@ -332,6 +333,7 @@ class processor:
             else:
                 print("Unknown Error")
                 exit(1)
+            state.isbranch=2
             state.generateControlSignals(False,False,0,False,False,False,True,True,0)
             self.control_instructions += 1
             
@@ -364,7 +366,7 @@ class processor:
             state.ALU_OP[12] = True
             state.RA = 0
             state.RB = 0
-            
+            state.isbranch=1
             state.generateControlSignals(True,False,2,False,False,False,True,True,0)
             self.control_instructions += 1
         
@@ -372,7 +374,40 @@ class processor:
             print("Unknown Instruction")
             exit(1)
 
-            
+        if self.pipeliningEnabled:
+            enter=False
+            if state.isbranch==0:
+                return False,0,False,0
+            else:
+                self.execute(state)
+                self.PC_next=state.PC
+                self.IAG(state)
+                actual_pc=self.PC_next
+
+                btb=args[0]
+
+                if btb.find(state.PC):
+                    state.MucINC_select=self.MuxINC_select
+                    #pc_offset
+                    #pc_select
+                    #state_returnaddress
+                    self.PC_next=state.PC
+                    self.IAG(state)
+                    #state.pc_update no need
+                    if(state.isbranch==1):
+                        btb.enter(True,state.PC,self.PC_next)
+                    else:
+                        btb.enter(False,state.PC,self.PC_next)
+                    
+                    self.reset()
+                    self.reset(state)
+                    enter=True
+                
+                if actual_pc!=state.PC_next:
+                    return True,actual_pc,enter,1
+                else:
+                    return False,0,enter,3
+
 
     # Execute
     def execute(self,state):

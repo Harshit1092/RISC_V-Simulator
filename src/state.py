@@ -19,6 +19,7 @@ class State:
 
         self.stall = False
         self.branch_taken=False
+        self.isbranch=0
         # Control Signals
         self.registerWrite=False
         self.MuxB_select=False
@@ -32,6 +33,7 @@ class State:
         # Forwarding Signals
         self.decode_forwarding_op1 = False
         self.decode_forwarding_op2 = False
+
     
     def generateControlSignals(self,RW,MBS,MYS,MR,MW,MMA,MPC,MINC,NUM):
         self.registerWrite = RW
