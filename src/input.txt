@@ -1,9 +1,5 @@
 True
-False
-<<<<<<< Updated upstream
 True
-=======
 False
->>>>>>> Stashed changes
 False
 False 0

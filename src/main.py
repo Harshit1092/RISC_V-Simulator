@@ -184,6 +184,7 @@ if __name__ == '__main__':
                 clock_cycles+=1
             else:
                 dataHazard, ifStall, stallPos, pipelineInstructions, toFrom = hdu.dataHazardForwarding(pipelineInstructions)
+                print(f"data : {dataHazard}  {ifStall} {stallPos} {toFrom}")
 
                 oldStates = pipelineInstructions
                 pipelineInstructions, controlHazard, controlPC = evaluate(processor, pipelineInstructions)
