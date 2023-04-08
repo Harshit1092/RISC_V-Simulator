@@ -8,7 +8,7 @@ function Input() {
     const [printSpecificPipelineRegisters, setPrintSpecificPipelineRegisters] = useState(false);
     const [instructionNumber, setInstructionNumber] = useState(-1);
     const [selectedFile, setSelectedFile] = useState(null);
-      
+    
         function handleFileInput(e) {
           setSelectedFile(e.target.files[0]);
         };
