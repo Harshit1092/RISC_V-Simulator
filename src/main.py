@@ -3,6 +3,22 @@ from state import *
 from btb import *
 
 pc_tmp = []
+controlHazardSignals = []
+def evaluate(processor, pipeline_instructions):
+    processor.writeBack(pipeline_instructions[0])
+    processor.MemoryAccess(pipeline_instructions[1])
+    processor.execute(pipeline_instructions[2])
+    controlHazard, controlPC, enter, color = processor.decode(pipeline_instructions[3], btb)
+    if enter:
+        controlHazardSignals.append(2)
+    elif pipeline_instructions[2].stall and color !=0 and len(controlHazardSignals) > 0 and controlHazardSignals[-1] == 2:
+        controlHazardSignals.append(controlHazardSignals[-1])
+    else:
+        controlHazardSignals.append(color)
+    processor.fetch(pipeline_instructions[4],btb)
+    return [pipeline_instructions[1],pipeline_instructions[2],pipeline_instructions[3],pipeline_instructions[4]], controlHazard, controlPC
+        
+
 
 if __name__ == '__main__':
     
@@ -93,5 +109,5 @@ if __name__ == '__main__':
             pc_tmp.append([curr_instruction.PC,-1,-1,-1,-1])
 
             PC=processor.PC_next
-
+                
     processor.writeDataMemory()
