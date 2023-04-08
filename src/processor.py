@@ -112,7 +112,6 @@ class processor:
 
         if not self.pipeliningEnabled:
             return
-        
         btb=args[0]
 
         if btb.find(state.PC):
@@ -344,7 +343,6 @@ class processor:
             state.Imm = int(instruction[0] + instruction[24] + instruction[1:7] + instruction[20:24],2)
             state.Imm = ImmediateSign(state.Imm,12)
             state.Imm *= 2
-
             # BEQ Instruction
             if(func3 == 0x0):
                 state.ALU_OP[12] = True
@@ -361,7 +359,7 @@ class processor:
                 print("Unknown Error")
                 exit(1)
             state.isbranch=2
-            state.generateControlSignals(False,False,0,False,False,False,True,True,0)
+            state.generateControlSignals(False,False,0,False,False,False,True,False,0)
             self.control_instructions += 1
             
         # U Format
@@ -449,6 +447,7 @@ class processor:
             InB=state.Imm
         else:
             InB=state.RB
+            
         state.MDR = nhex(state.registerData)
         state.MDR = '0x' + ('0' * (10-len(state.MDR))) + state.MDR[2:]
 
