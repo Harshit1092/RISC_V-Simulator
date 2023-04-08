@@ -66,7 +66,7 @@ class processor:
             fp = open('data.txt', 'w')
             output = []
             for i in range(int('10000000', 16), int('10007ffd', 16), 4):
-                tmp = self.dataMemory[i] + self.dataMemory[i+1] + self.dataMemory[i+2] + self.dataMemory[i+3]
+                tmp = self.dataMemory[i + 3] + self.dataMemory[i + 2] + self.dataMemory[i + 1] + self.dataMemory[i]
                 output.append(hex(i) + ' 0x' + tmp + ' ' + bin(int(tmp, 16)) + ' ' + str(nint(tmp, 16)) + '\n')
             fp.writelines(output)
             fp.close()
