@@ -125,7 +125,8 @@ class processor:
 
     # Decode
     def decode(self, state, *args):
-        
+        print("Printing Instructions")
+        print(f"{state.IR}   {state.PC}")
         if state.stall == True:
             return False, 0, False, 0
         # print(f"stkmb {state.IR}")

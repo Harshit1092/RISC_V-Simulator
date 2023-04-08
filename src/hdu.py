@@ -3,27 +3,37 @@ class HDU:
     def dataHazardStalling(self, pipeline_instructions):
         countHazards = 0
         isDataHazard = False
-        
+        print(f"pipeline0 : {pipeline_instructions[0].IR}")
+        print(f"pipeline1 : {pipeline_instructions[1].IR}")
+        print(f"pipeline2 : {pipeline_instructions[2].IR}")
+        print(f"pipeline3 : {pipeline_instructions[3].IR}")
+        print(f"pipeline4 : {pipeline_instructions[4].IR}")
         decode_state = pipeline_instructions[-2]
         instruction = bin(int(decode_state.IR[2:],16))[2:]
         instruction = (32-len(instruction)) * '0' + instruction
-        
+        print(f"inst : {instruction}")
         decode_opcode = int(instruction[25:32],2)
         if(decode_opcode in [19, 103, 3]):
-            decode_state.RS1 = instruction[12:17]
+            decode_state.RS1 = int(instruction[12:17],2)
             decode_state.RS2 = -1
         else:
-            decode_state.RS1 = instruction[12:17]
-            decode_state.RS2 = instruction[7:12]
+            decode_state.RS1 = int(instruction[12:17],2)
+            decode_state.RS2 = int(instruction[7:12],2)
             
         states = pipeline_instructions[:-1]
         to_from = {'to': -1, 'from': -1}
         
         # Extracting all states
         execute_state = states[-2]
-        decode_state = states[1]
+        decode_state = states[-1]
         memory_state = states[-3]
         
+        print(f"execute RD : {execute_state.RD}")
+        print(f"decode RS1 : {decode_state.RS1}")
+        print(f"decode RS2 : {decode_state.RS2}")
+        print(f"Memory RD : {memory_state.RD}")
+        # print(f"Memory : {memory_state.IR}")
+        # print(f"RS2 : {decode_state.RS2}")
         # Checking dependency between execute state and decode state
         if execute_state.RD != -1 and execute_state.RD != 0 and not execute_state.stall and not decode_state.stall:
             if execute_state.RD == decode_state.RS1 or execute_state.RD == decode_state.RS2:
@@ -32,12 +42,13 @@ class HDU:
                 to_from = {'to': 3, 'from': 2}
         
         #checking dependency between memory state and decode state
-        if memory_state.RD != -1 and memory_state.RS1 != 0 and not memory_state.stall and not decode_state.stall:
+        if memory_state.RD != -1 and memory_state.RD != 0 and not memory_state.stall and not decode_state.stall:
             if memory_state.RD == decode_state.RS1 or memory_state.RD == decode_state.RS2:
                 isDataHazard = True
                 countHazards = countHazards + 1
                 to_from = {'to': 3, 'from': 1}
-        
+                print("HELLO")
+        # print(f"to_from : {to_from}")
         return [isDataHazard, countHazards, to_from]
     
     #If forwarding is enabled

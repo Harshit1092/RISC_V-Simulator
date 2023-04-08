@@ -7,6 +7,8 @@ pc_tmp = []
 dataHazardPairs = []
 controlHazardSignals = []
 
+
+
 def evaluate(processor, pipelineInstructions):
     processor.writeBack(pipelineInstructions[0])
     processor.MemoryAccess(pipelineInstructions[1])
@@ -142,7 +144,7 @@ if __name__ == '__main__':
             if not forwarding_knob:
                 
                 dataHazard = hdu.dataHazardStalling(pipelineInstructions)
-
+                print(f"data : {dataHazard}")
                 oldStates = pipelineInstructions
                 pipelineInstructions, controlHazard, controlPC = evaluate(processor, pipelineInstructions)
                 
