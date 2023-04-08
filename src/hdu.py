@@ -67,15 +67,15 @@ class HDU:
         
         
         #Extracting opcodes
-        instruction = bin(int(execute_state.instruction_word[2:], 16))[2:]
+        instruction = bin(int(execute_state.IR[2:], 16))[2:]
         instruction = (32 - len(instruction)) * '0' + instruction
         execute_opcode = int(instruction[25:32], 2)
 
-        instruction = bin(int(memory_state.instruction_word[2:], 16))[2:]
+        instruction = bin(int(memory_state.IR[2:], 16))[2:]
         instruction = (32 - len(instruction)) * '0' + instruction
         memory_opcode = int(instruction[25:32], 2)
 
-        instruction = bin(int(writeback_state.instruction_word[2:], 16))[2:]
+        instruction = bin(int(writeback_state.IR[2:], 16))[2:]
         instruction = (32 - len(instruction)) * '0' + instruction
         writeback_opcode = int(instruction[25:32], 2)
         

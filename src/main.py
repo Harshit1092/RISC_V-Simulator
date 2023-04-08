@@ -29,14 +29,17 @@ if __name__ == '__main__':
     knobs=[]
     for line in knob_input:
         x=line.split()
-        if x[0]=='T':
+        if x[0]=='True':
             if len(x)==1:
                 knobs.append(True)
             else:
                 knobs.append([True,x[1]])
         
         else:
-            knobs.append(False)
+            if len(x)==1:
+                knobs.append(False)
+            else:
+                knobs.append([False,x[1]])
 
     knob_input.close()
     # Knobs
@@ -234,13 +237,15 @@ if __name__ == '__main__':
                     print("\n")
 
                 # Print specific pipeline registers
+                print(f"Harsh {print_specific_pipeline_registers}\n")
+                
                 if print_specific_pipeline_registers[0]:
                     for inst in pipelineInstructions:
                         if inst.PC/4 == print_specific_pipeline_registers[1]:
                             if not print_registers_each_cycle:
                                 print("CLOCK CYCLE:", clock_cycles)
                             print("Pipeline Registers:-")
-                            print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].instruction_word)
+                            print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].IR)
                             print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].operand1, ", Operand2: ", pipelineInstructions[2].operand2, sep="")
                             print("Execute # Memory => ", "Data: ", pipelineInstructions[1].register_data, sep="")
                             print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].register_data, sep="")
@@ -251,7 +256,7 @@ if __name__ == '__main__':
                     if not print_registers_each_cycle:
                         print("CLOCK CYCLE:", clock_cycles)
                         print("Pipeline Registers:-")
-                        print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].instruction_word)
+                        print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].IR)
                         print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].operand1, ", Operand2: ", pipelineInstructions[2].operand2, sep="")
                         print("Execute # Memory => ", "Data: ", pipelineInstructions[1].register_data, sep="")
                         print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].register_data, sep="")
