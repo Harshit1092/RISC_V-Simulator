@@ -155,7 +155,7 @@ if __name__ == '__main__':
                 if dataHazard[0]:
                     number_of_data_hazards += dataHazard[1]
                     stalls_due_to_data_hazard += 1
-                    pipelineInstructions = pipelineInstructions[:2] + [State(0)] + old_states[3:]
+                    pipelineInstructions = pipelineInstructions[:2] + [State(0)] + oldStates[3:]
                     pipelineInstructions[2].is_dummy = True
                     PC -= 4
                 
