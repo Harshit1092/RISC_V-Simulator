@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css';
 import MemoryScreen from './Components/MemoryScreen.js'
+import RegisterScreen from './Components/RegisterScreen.js';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Input from './Components/input.js'
 
@@ -11,9 +12,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Input />} />
         <Route path='/memory' element={<MemoryScreen />} />
+        <Route path='/register' element={<RegisterScreen />} />
       </Routes>
       </BrowserRouter>
-      {/* <MemoryScreen /> */}
     </div>
   )
 }
