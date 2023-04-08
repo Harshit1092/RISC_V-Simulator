@@ -12,6 +12,7 @@ class processor:
         self.pipeliningEnabled = False # knob for pipelining
         self.PC_next = 0 # Next PC address
         self.PC_offset = 0 # PC offset
+        self.return_address = -1 # return address
         self.terminate = False # flag to terminate the program
         # Control Signals
         self.registerWrite=False
@@ -278,6 +279,9 @@ class processor:
                     exit(1)
                 state.isbranch=1
                 state.RA = nint(self.registers[state.RS1][2:], 16)
+                state.return_address = state.RA
+                self.return_address = state.RA
+                self.MuxPC_select = True
                 self.control_instructions += 1
         
         # S Format
@@ -461,30 +465,42 @@ class processor:
                 elif i==11:
                     if(InA<InB):
                         state.RZ=1
+                        state.PC_offset = state.Imm
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA<InB
+                    self.PC_offset = state.Imm
+                    self.MuxINC_select = True
                     break
                 elif i==12:
                     if(InA==InB):
                         state.RZ=1
+                        state.PC_offset = state.Imm
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA==InB
+                    self.PC_offset = state.Imm
+                    self.MuxINC_select = True
                     break
                 elif i==13:
                     if(InA!=InB):
                         state.RZ=1
+                        state.PC_offset = state.Imm
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA!=InB
+                    self.PC_offset = state.Imm
+                    self.MuxINC_select = True
                     break
                 elif i==14:
                     if(InA>=InB):
                         state.RZ=1
+                        state.PC_offset = state.Imm
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA>=InB
+                    self.PC_offset = state.Imm
+                    self.MuxINC_select = True
                     break
                 else:
                     break
@@ -493,7 +509,6 @@ class processor:
     def IAG(self,state):
         if(state.MuxPC_select==False):
             self.PC_next = state.RA
-        
         else:
             if(state.MuxINC_select==False):
                 self.PC_next += 4

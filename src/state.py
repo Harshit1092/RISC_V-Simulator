@@ -3,6 +3,8 @@ class State:
     def __init__(self, PC = 0):
         self.PC = PC
         self.PC_next = 0
+        self.PC_offset = 0
+        self.return_address = -1
         self.IR = '0x00000000'
         self.RS1 = -1
         self.RS2 = -1
