@@ -67,7 +67,7 @@ class processor:
             output = []
             for i in range(int('10000000', 16), int('10007ffd', 16), 4):
                 tmp = self.dataMemory[i + 3] + self.dataMemory[i + 2] + self.dataMemory[i + 1] + self.dataMemory[i]
-                output.append(hex(i) + ' 0x' + tmp + ' ' + bin(int(tmp, 16)) + ' ' + str(nint(tmp, 16)) + '\n')
+                output.append(hex(i).upper() + ' 0x' + tmp.upper() + ' ' + bin(int(tmp, 16)) + ' ' + str(nint(tmp, 16)) + '\n')
             fp.writelines(output)
             fp.close()
         except:
@@ -78,7 +78,7 @@ class processor:
             fp = open('reg.txt', 'w')
             output = []
             for i in range(32):
-                output.append('x' + str(i) + ' ' + self.registers[i] + ' ' + bin(int(self.registers[i], 16)) + ' ' + str(nint(self.registers[i], 16)) + '\n')
+                output.append('x' + str(i) + ' ' + self.registers[i].upper() + ' ' + bin(int(self.registers[i], 16)) + ' ' + str(nint(self.registers[i], 16)) + '\n')
             fp.writelines(output)
             fp.close()
         except:
@@ -238,7 +238,7 @@ class processor:
                     print("Unknown instruction")
                     exit(1)
             
-                state.RA = int(self.registers[state.RS1][2:], 16)
+                state.RA = nint(self.registers[state.RS1][2:], 16, state.numBytes)
                 self.memory_instructions += 1
             
             # ADDI/ANDI/ORI/XORI/SLLI/SRLI
@@ -264,7 +264,7 @@ class processor:
                     state.ALU_OP[8] = True
                 else:
                     print("Unknown instruction")
-                state.RA = int(self.registers[state.RS1][2:], 16)
+                state.RA = nint(self.registers[state.RS1][2:], 16)
                 self.ALU_instructions += 1
             
             # JALR
@@ -310,8 +310,8 @@ class processor:
             state.RS1 = int(instruction[12:17], 2)
             state.RS2 = int(instruction[7:12], 2)
             print(f"Hello {state.RS1}")
-            state.RA = int(self.registers[state.RS1][2:], 16)
-            state.RB = int(self.registers[state.RS2][2:], 16)
+            state.RA = nint(self.registers[state.RS1][2:], 16)
+            state.RB = nint(self.registers[state.RS2][2:], 16)
             
             state.Imm = int(instruction[0] + instruction[24] + instruction[1:7] + instruction[20:24],2)
             state.Imm = ImmediateSign(state.Imm,12)
@@ -429,6 +429,7 @@ class processor:
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA<InB
+                    print('Harsh 1')
                     break
                 elif i==12:
                     if(InA==InB):
@@ -436,6 +437,7 @@ class processor:
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA==InB
+                    print('Harsh 2')
                     break
                 elif i==13:
                     if(InA!=InB):
@@ -443,6 +445,7 @@ class processor:
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA!=InB
+                    print('Harsh 3')
                     break
                 elif i==14:
                     if(InA>=InB):
@@ -450,6 +453,7 @@ class processor:
                     else:
                         state.RZ=0
                     state.MuxINC_select=InA>=InB
+                    print('Harsh 4')
                     break
                 else:
                     break
