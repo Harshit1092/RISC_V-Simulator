@@ -18,6 +18,7 @@ class State:
         self.MAR = 0
         self.Imm = 0
         self.ALU_OP = [0 for i in range(15)]
+        self.registerData = 0
 
         self.stall = False
         self.branch_taken=False

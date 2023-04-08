@@ -105,11 +105,11 @@ class HDU:
         print(f"execute RD : , {execute_state.RD}")
         print(f"decode RS1 : , {decode_state.RS1}")
         print(f"decode RS2 : , {decode_state.RS2}")
-        
+        print(f"********: {memory_state.MDR}\n")
         # M -> M forwarding
         if writeback_opcode == 3 and memory_opcode == 35 and not writeback_state.stall and not memory_state.stall:
             if writeback_state.RD != -1 and writeback_state.RD != 0 and writeback_state.RD == memory_state.RS2:
-                memory_state.register_data = writeback_state.register_data
+                memory_state.registerData = writeback_state.registerData
                 countHazards = countHazards + 1
                 to_from = {'to': -1, 'from': -1}
                 to_for[1] = "forwarded from mem"
@@ -117,16 +117,16 @@ class HDU:
         # M -> E forwarding
         if writeback_state.RD != -1 and writeback_state.RD != 0 and not writeback_state.stall:
             if writeback_state.RD == execute_state.RS1 and not execute_state.stall:
-                execute_state.RA = writeback_state.register_data
+                execute_state.RA = writeback_state.registerData
                 countHazards = countHazards + 1
                 to_from = {'to': -1, 'from': -1}
                 to_for[2] = "forwarded from mem"
         
             if writeback_state.RD == execute_state.RS2 and not execute_state.stall:
                 if execute_opcode != 35:
-                    execute_state.RB = writeback_state.register_data
+                    execute_state.RB = writeback_state.registerData
                 else:
-                    execute_state.register_data = writeback_state.register_data
+                    execute_state.registerData = writeback_state.registerData
                 
                 countHazards = countHazards + 1
                 to_from = {'to': -1, 'from': -1}
@@ -150,7 +150,7 @@ class HDU:
                     
             else:
                 if execute_state.RS1 == memory_state.RD and not execute_state.stall:
-                    execute_state.RA = memory_state.register_data
+                    execute_state.RA = memory_state.registerData
                     countHazards += 1
                     to_from = {'to': -1, 'from': -1}
                     to_for[2] = "forwarded from execute"
@@ -158,9 +158,11 @@ class HDU:
 
                 if execute_state.RS2 == memory_state.RD and not execute_state.stall:
                     if execute_opcode != 35: # store
-                        execute_state.RB = memory_state.register_data
+                        execute_state.RB = memory_state.registerData
                     else:
-                        execute_state.register_data = memory_state.register_data
+                        # print(f"1: {execute_state.registerData}, 2: {memory_state.registerData}")
+                        execute_state.registerData = memory_state.registerData
+                        # print('******Hello*****')
                     countHazards += 1
                     to_from = {'to': -1, 'from': -1}
                     to_for[2] = "forwarded from execute"
@@ -169,14 +171,14 @@ class HDU:
             # M -> D forwarding
             if writeback_state.RD != -1 and writeback_state.RD != 0 and not writeback_state.stall:
                 if writeback_state.RD == decode_state.RS1:
-                    decode_state.RA = writeback_state.register_data
+                    decode_state.RA = writeback_state.registerData
                     decode_state.decode_forwarding_op1 = True
                     countHazards += 1
                     to_from = {'to': -1, 'from': -1}
                     to_for[3] = "forwarded from mem"
 
                 if writeback_state.RD == decode_state.RS2:
-                    decode_state.RB = writeback_state.register_data
+                    decode_state.RB = writeback_state.registerData
                     decode_state.decode_forwarding_op2 = True
                     countHazards += 1
                     to_from = {'to': -1, 'from': -1}
@@ -193,14 +195,14 @@ class HDU:
 
                 else:
                     if memory_state.RD == decode_state.RS1:
-                        decode_state.RA = memory_state.register_data
+                        decode_state.RA = memory_state.registerData
                         decode_state.decode_forwarding_op1 = True
                         countHazards += 1
                         to_from = {'to': -1, 'from': -1}
                         to_for[3] = "forwarded from execute"
 
                     if memory_state.RD == decode_state.RS2:
-                        decode_state.RB = memory_state.register_data
+                        decode_state.RB = memory_state.registerData
                         decode_state.decode_forwarding_op2 = True
                         countHazards += 1
                         to_from = {'to': -1, 'from': -1}
@@ -213,7 +215,7 @@ class HDU:
                 if stallPos > 1:
                     stallPos = 1
                     to_from = {'to': 3, 'from': 2}
-
+        print(f"harshit : {execute_state.registerData}")
         to_from['from'] = to_for
         new_states = [writeback_state, memory_state, execute_state, decode_state, pipeline_instructions[-1]]
         return [countHazards, isStall, stallPos, new_states, to_from]

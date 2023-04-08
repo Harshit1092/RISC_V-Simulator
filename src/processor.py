@@ -305,6 +305,7 @@ class processor:
                 self.return_address = state.RA
                 self.MuxPC_select = True
                 self.control_instructions += 1
+                state.registerData = state.PC + 4
         
         # S Format
         elif(opcode == '0100011'):
@@ -329,7 +330,7 @@ class processor:
             
             state.RA = int(self.registers[state.RS1][2:], 16)
             state.RB = int(self.registers[state.RS2][2:], 16)
-            state.RM = state.RB
+            state.registerData = state.RB
             self.memory_instructions += 1
         
         # B Format
@@ -395,6 +396,7 @@ class processor:
             state.isbranch=1
             state.generateControlSignals(True,False,2,False,False,False,True,True,0)
             self.control_instructions += 1
+            state.registerData = state.PC + 4
         
         else:
             print("Unknown Instruction")
@@ -447,83 +449,73 @@ class processor:
             InB=state.Imm
         else:
             InB=state.RB
+        state.MDR = nhex(state.registerData)
+        state.MDR = '0x' + ('0' * (10-len(state.MDR))) + state.MDR[2:]
 
         for i in range(15):
             if(state.ALU_OP[i]==1):
                 if i==0:
-                    state.RZ=InA+InB
+                    state.registerData=InA+InB
                     break
                 elif i==1:
-                    state.RZ=InA-InB
+                    state.registerData=InA-InB
                     break
                 elif i==2:
                     if(InB!=0):
-                        state.RZ=InA/InB
+                        state.registerData=InA/InB
                     break
                 elif i==3:
-                    state.RZ=InA*InB
+                    state.registerData=InA*InB
                     break
                 elif i==4:
                     if(InB!=0):
-                        state.RZ=InA-InB
+                        state.registerData=InA-InB
                     break
                 elif i==5:
-                    state.RZ=InA^InB
+                    state.registerData=InA^InB
                     break
                 elif i==6:
                     if (InB>=0):
-                        state.RZ=InA<<InB
+                        state.registerData=InA<<InB
                     break
                 elif i==7:
                     #please write sra code here.
                     break
                 elif i==8:
                     if (InB>=0):
-                        state.RZ=InA>>InB
+                        state.registerData=InA>>InB
                     break
                 elif i==9:
-                    state.RZ=InA|InB
+                    state.registerData=InA|InB
                     break
                 elif i==10:
-                    state.RZ=InA&InB
+                    state.registerData=InA&InB
                     break
                 elif i==11:
                     if(InA<InB):
-                        state.RZ=1
+                        state.MuxINC_select=True
                         state.PC_offset = state.Imm
-                    else:
-                        state.RZ=0
-                    state.MuxINC_select=InA<InB
                     self.PC_offset = state.Imm
                     self.MuxINC_select = True
                     break
                 elif i==12:
                     if(InA==InB):
-                        state.RZ=1
+                        state.MuxINC_select=True
                         state.PC_offset = state.Imm
-                    else:
-                        state.RZ=0
-                    state.MuxINC_select=InA==InB
                     self.PC_offset = state.Imm
                     self.MuxINC_select = True
                     break
                 elif i==13:
                     if(InA!=InB):
-                        state.RZ=1
+                        state.MuxINC_select=True
                         state.PC_offset = state.Imm
-                    else:
-                        state.RZ=0
-                    state.MuxINC_select=InA!=InB
                     self.PC_offset = state.Imm
                     self.MuxINC_select = True
                     break
                 elif i==14:
                     if(InA>=InB):
-                        state.RZ=1
+                        state.MuxINC_select=True
                         state.PC_offset = state.Imm
-                    else:
-                        state.RZ=0
-                    state.MuxINC_select=InA>=InB
                     self.PC_offset = state.Imm
                     self.MuxINC_select = True
                     break
@@ -550,14 +542,15 @@ class processor:
         
         # How to update RY?
         if state.MuxY_select == 0:
-            state.RY = state.RZ
+            state.RY = state.registerData
         elif state.MuxY_select == 1:
             # Whether to access dataMemory?
             if state.MuxMA_select == False:
-                state.MAR = state.RZ
-                state.MDR = nhex(state.RM)
+                state.MAR = state.registerData
+                print(f"please : {state.registerData}")
                 # print(f"before hew {state.MDR} {state.RM}")
-                state.MDR = '0x' + ('0' * (10-len(state.MDR))) + state.MDR[2:]
+                # state.MDR = nhex(state.registerData)
+                # state.MDR = '0x' + ('0' * (10-len(state.MDR))) + state.MDR[2:]
                 # Memory Read (Load Instructions)
                 if state.mem_read:
                     if state.numBytes == 1:
@@ -569,10 +562,7 @@ class processor:
                     elif state.numBytes == 4:
                         tmp = self.dataMemory[state.MAR + 3] + self.dataMemory[state.MAR + 2] + self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR]
                         state.RY = nint(tmp,16,32)
-                    # print(f"heeeee {tmp} {state.numBytes}  {self.dataMemory[state.RZ]}  {hex(state.RZ)}")
-                    # tmp = '0x' + tmp
-                    # sign_extend(tmp)
-                    # print(tmp)
+                    state.registerData = state.RY
                     
                 # Memory Write (Store Instructions)
                 elif state.mem_write:
@@ -589,7 +579,7 @@ class processor:
                     
         elif state.MuxY_select == 2:
             state.RY = state.PC + 4
-
+        
     # Write Back 
     def writeBack(self, state):
         if not state.stall:
