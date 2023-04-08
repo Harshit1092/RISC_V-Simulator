@@ -32,6 +32,19 @@ class processor:
         self.branch_misprediction=0 # Total number of branch mispredictions
         
 
+    def reset(self, *args):
+        if len(args) > 0:
+            state = args[0]
+            state.MuxINC_select = False
+            state.MuxPC_select = False
+            state.PC_offset = 0
+            state.return_address = 0
+        else:
+            self.MuxINC_select = False
+            self.MuxPC_select = False
+            self.PC_offset = 0
+            self.return_address = 0
+    
     # Function to populate the instruction & data memory using the program.mc file    
     def loadProgramMemory(self,file1):
         try:
