@@ -480,31 +480,38 @@ class processor:
             # Whether to access dataMemory?
             if state.MuxMA_select == False:
                 state.MAR = state.RZ
-                state.MDR = hex(state.RM)
-                state.MDR = '0x' + '0' * (10-len(state.MDR)) + state.MDR[2:]
+                state.MDR = nhex(state.RM)
+                # print(f"before hew {state.MDR} {state.RM}")
+                state.MDR = '0x' + ('0' * (10-len(state.MDR))) + state.MDR[2:]
                 # Memory Read (Load Instructions)
                 if state.mem_read:
                     if state.numBytes == 1:
                         tmp = self.dataMemory[state.MAR]
+                        state.RY = nint(tmp,16,8)
                     elif state.numBytes == 2:
                         tmp = self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR]
+                        state.RY = nint(tmp,16,16)
                     elif state.numBytes == 4:
                         tmp = self.dataMemory[state.MAR + 3] + self.dataMemory[state.MAR + 2] + self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR]
-                    tmp = '0x' + tmp
-                    sign_extend(tmp)
-                    state.RY = int(tmp,16)
+                        state.RY = nint(tmp,16,32)
+                    # print(f"heeeee {tmp} {state.numBytes}  {self.dataMemory[state.RZ]}  {hex(state.RZ)}")
+                    # tmp = '0x' + tmp
+                    # sign_extend(tmp)
+                    # print(tmp)
+                    
                 # Memory Write (Store Instructions)
                 elif state.mem_write:
+                    if state.numBytes == 1:
+                        self.dataMemory[state.MAR] = state.MDR[8:10]
                     if state.numBytes == 2:
                         self.dataMemory[state.MAR] = state.MDR[8:10]
-                    if state.numBytes == 4:
-                        self.dataMemory[state.MAR] = state.MDR[8:10]
                         self.dataMemory[state.MAR + 1] = state.MDR[6:8]
-                    if state.numBytes == 8:
+                    if state.numBytes == 4:
                         self.dataMemory[state.MAR] = state.MDR[8:10]
                         self.dataMemory[state.MAR + 1] = state.MDR[6:8]
                         self.dataMemory[state.MAR + 2] = state.MDR[4:6]
                         self.dataMemory[state.MAR + 3] = state.MDR[2:4]
+                    print(f"hewwwww  {state.numBytes}  {self.dataMemory[state.MAR]}  {hex(state.RZ)} {state.MDR}")
         elif state.MuxY_select == 2:
             state.RY = state.PC + 4
 
@@ -512,7 +519,9 @@ class processor:
     def writeBack(self, state):
         if state.registerWrite and state.RD != 0:
             tmp = nhex(state.RY)
-            tmp = '0x' + '0' * (10-len(tmp)) + tmp[2:]
+            # print(f"bug 1 {tmp}")
+            tmp = '0x' + ('0' * (10-len(tmp))) + tmp[2:]
+            # print(f"bug 2 {tmp}  {hex(state.RD)} ")
             self.registers[state.RD] = tmp
 
 				

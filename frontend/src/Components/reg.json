@@ -31,6 +31,7 @@
     },
     {
         "register": "x5",
+<<<<<<< Updated upstream
         "hex": "0xfffffff9",
         "binary": "0b11111111111111111111111111111001",
         "decimal": "-7"
@@ -90,28 +91,89 @@
         "decimal": "0"
     },
     {
+=======
+        "hex": "0x0000000c",
+        "binary": "0b1100",
+        "decimal": "12"
+    },
+    {
+        "register": "x6",
+        "hex": "0x10000000",
+        "binary": "0b10000000000000000000000000000",
+        "decimal": "268435456"
+    },
+    {
+        "register": "x7",
+        "hex": "0x00000001",
+        "binary": "0b1",
+        "decimal": "1"
+    },
+    {
+        "register": "x8",
+        "hex": "0x00000003",
+        "binary": "0b11",
+        "decimal": "3"
+    },
+    {
+        "register": "x9",
+        "hex": "0x00000004",
+        "binary": "0b100",
+        "decimal": "4"
+    },
+    {
+        "register": "x10",
+        "hex": "0x00000005",
+        "binary": "0b101",
+        "decimal": "5"
+    },
+    {
+        "register": "x11",
+        "hex": "0x00000006",
+        "binary": "0b110",
+        "decimal": "6"
+    },
+    {
+        "register": "x12",
+        "hex": "0x00000007",
+        "binary": "0b111",
+        "decimal": "7"
+    },
+    {
+        "register": "x13",
+        "hex": "0x00000009",
+        "binary": "0b1001",
+        "decimal": "9"
+    },
+    {
+        "register": "x14",
+        "hex": "0x0000000a",
+        "binary": "0b1010",
+        "decimal": "10"
+    },
+    {
+>>>>>>> Stashed changes
         "register": "x15",
-        "hex": "0x00000000",
-        "binary": "0b0",
-        "decimal": "0"
+        "hex": "0x000000fe",
+        "binary": "0b11111110",
+        "decimal": "254"
     },
     {
         "register": "x16",
-        "hex": "0x00000000",
-        "binary": "0b0",
-        "decimal": "0"
+        "hex": "0x000000ff",
+        "binary": "0b11111111",
+        "decimal": "255"
     },
     {
         "register": "x17",
-        "hex": "0x00000000",
-        "binary": "0b0",
-        "decimal": "0"
+        "hex": "0xfffffff8",
+        "binary": "0b11111111111111111111111111111000",
+        "decimal": "-8"
     },
     {
         "register": "x18",
-        "hex": "0x00000000",
-        "binary": "0b0",
-        "decimal": "0"
+        "hex": "0xfffffffe",
+        "binary": "0b11111111111111111111111111111110",
+        "decimal": "-2"
     },
     {
         "register": "x19",
