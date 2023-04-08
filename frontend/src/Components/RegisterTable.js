@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import RegisterData from "./RegisterData.js";
+// import RegisterData from "./RegisterData.js";
+import RegisterData from './reg.json'
 
 function RegisterTable(){
 // get table column
