@@ -28,7 +28,7 @@ with open(filename) as fh:
 
 filename = 'data.txt'
 
-fields = ['memory', 'hex']
+fields = ['memory', 'hex', 'binary', 'decimal']
 with open(filename) as fh:
     array = []
     for line in fh:
