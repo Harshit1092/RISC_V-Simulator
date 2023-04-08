@@ -12,6 +12,11 @@ def evaluate(processor, pipelineInstructions):
     processor.MemoryAccess(pipelineInstructions[1])
     processor.execute(pipelineInstructions[2])
     controlHazard, controlPC, enter, color = processor.decode(pipelineInstructions[3], btb)
+    # if(processor.terminate==True):
+    #     print(f"gaand m danda de")
+    #     for i in range(5):
+    #         print(pipelineInstructions[i].stall)
+            # pipelineInstructions[i].stall=True
     if enter:
         controlHazardSignals.append(2)
     elif pipelineInstructions[2].stall and color !=0 and len(controlHazardSignals) > 0 and controlHazardSignals[-1] == 2:
@@ -135,11 +140,12 @@ if __name__ == '__main__':
         
         while not prog_end:
             if not forwarding_knob:
+                
                 dataHazard = hdu.dataHazardStalling(pipelineInstructions)
 
                 oldStates = pipelineInstructions
                 pipelineInstructions, controlHazard, controlPC = evaluate(processor, pipelineInstructions)
-
+                
                 dataHazardPairs.append(dataHazard[2])
                 branch_taken = pipelineInstructions[3].branch_taken
                 branch_pc = pipelineInstructions[3].PC_next
@@ -159,7 +165,7 @@ if __name__ == '__main__':
                     number_of_data_hazards += dataHazard[1]
                     stalls_due_to_data_hazard += 1
                     pipelineInstructions = pipelineInstructions[:2] + [State(0)] + oldStates[3:]
-                    pipelineInstructions[2].is_dummy = True
+                    pipelineInstructions[2].stall = True
                     PC -= 4
                 
                 if not controlHazard and not dataHazard[0]:
@@ -170,7 +176,7 @@ if __name__ == '__main__':
                 prog_end = True
                 for i in range(4):
                     x = pipelineInstructions[i]
-                    if not x.is_dummy:
+                    if not x.stall:
                         prog_end = False
                         break
 
@@ -237,8 +243,6 @@ if __name__ == '__main__':
                     print("\n")
 
                 # Print specific pipeline registers
-                print(f"Harsh {print_specific_pipeline_registers}\n")
-                
                 if print_specific_pipeline_registers[0]:
                     for inst in pipelineInstructions:
                         if inst.PC/4 == print_specific_pipeline_registers[1]:
@@ -246,9 +250,9 @@ if __name__ == '__main__':
                                 print("CLOCK CYCLE:", clock_cycles)
                             print("Pipeline Registers:-")
                             print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].IR)
-                            print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].operand1, ", Operand2: ", pipelineInstructions[2].operand2, sep="")
-                            print("Execute # Memory => ", "Data: ", pipelineInstructions[1].register_data, sep="")
-                            print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].register_data, sep="")
+                            print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].RA, ", Operand2: ", pipelineInstructions[2].RB, sep="")
+                            print("Execute # Memory => ", "Data: ", pipelineInstructions[1].RY, sep="")
+                            print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].RY, sep="")
                             print("\n")
 
                 # Print pipeline registers
@@ -257,9 +261,9 @@ if __name__ == '__main__':
                         print("CLOCK CYCLE:", clock_cycles)
                         print("Pipeline Registers:-")
                         print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].IR)
-                        print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].operand1, ", Operand2: ", pipelineInstructions[2].operand2, sep="")
-                        print("Execute # Memory => ", "Data: ", pipelineInstructions[1].register_data, sep="")
-                        print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].register_data, sep="")
+                        print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].RA, ", Operand2: ", pipelineInstructions[2].RB, sep="")
+                        print("Execute # Memory => ", "Data: ", pipelineInstructions[1].RY, sep="")
+                        print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].RY, sep="")
                         print("\n")
 
     processor.writeDataMemory()

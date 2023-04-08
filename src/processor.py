@@ -31,6 +31,7 @@ class processor:
         self.control_instructions=0 # Total number of control instructions executed
         self.branch_misprediction=0 # Total number of branch mispredictions
         
+        self.allStall=False
 
     def reset(self, *args):
         if len(args) > 0:
@@ -105,6 +106,10 @@ class processor:
             return
         state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
         
+        if self.allStall:
+            state.stall=True
+            return
+
         if not self.pipeliningEnabled:
             return
         
@@ -120,11 +125,14 @@ class processor:
 
     # Decode
     def decode(self, state, *args):
+        
         if state.stall == True:
             return False, 0, False, 0
+        # print(f"stkmb {state.IR}")
         if state.IR == '0x00000000':
             self.terminate = True
             state.stall = True
+            self.allStall=True
             return False, 0, False, 0
         
         self.Total_instructions += 1
@@ -580,12 +588,13 @@ class processor:
 
     # Write Back 
     def writeBack(self, state):
-        if state.registerWrite and state.RD != 0:
-            tmp = nhex(state.RY)
-            # print(f"bug 1 {tmp}")
-            tmp = '0x' + ('0' * (10-len(tmp))) + tmp[2:]
-            # print(f"bug 2 {tmp}  {hex(state.RD)} ")
-            self.registers[state.RD] = tmp
+        if not state.stall:
+            if state.registerWrite and state.RD != 0:
+                tmp = nhex(state.RY)
+                # print(f"bug 1 {tmp}")
+                tmp = '0x' + ('0' * (10-len(tmp))) + tmp[2:]
+                # print(f"bug 2 {tmp}  {hex(state.RD)} ")
+                self.registers[state.RD] = tmp
 
 				
         
