@@ -411,11 +411,14 @@ class processor:
 
                 btb=args[0]
 
-                if btb.find(state.PC):
+                if not btb.find(state.PC):
                     state.MucINC_select=self.MuxINC_select
                     #pc_offset
+                    state.PC_offset=self.PC_offset
                     #pc_select
+                    state.MuxPC_select=self.MuxPC_select
                     #state_returnaddress
+                    state.return_address=self.return_address
                     self.PC_next=state.PC
                     self.IAG(state)
                     #state.pc_update no need
@@ -529,12 +532,12 @@ class processor:
     # Function to update PC
     def IAG(self,state):
         if(state.MuxPC_select==False):
-            self.PC_next = state.RA
+            self.PC_next = state.return_address
         else:
             if(state.MuxINC_select==False):
                 self.PC_next += 4
             else:
-                self.PC_next += state.Imm
+                self.PC_next += state.PC_offset
 
     # Memory Access
     def MemoryAccess(self,state):

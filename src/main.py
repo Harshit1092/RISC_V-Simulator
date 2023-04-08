@@ -179,7 +179,7 @@ if __name__ == '__main__':
                     if not x.stall:
                         prog_end = False
                         break
-
+                clock_cycles+=1
             else:
                 dataHazard, ifStall, stallPos, pipelineInstructions, toFrom = hdu.dataHazardForwarding(pipelineInstructions)
 
@@ -235,35 +235,35 @@ if __name__ == '__main__':
                 
                 clock_cycles += 1
                 # Print the register values after each clock cycle
-                if print_registers_each_cycle:
-                    print("CLOCK CYCLE:", clock_cycles)
-                    print("Register Data:-")
-                    for i in range(32):
-                        print("R" + str(i) + ":", processor.registers[i], end=" ")
-                    print("\n")
+            if print_registers_each_cycle:
+                print("CLOCK CYCLE:", clock_cycles)
+                print("Register Data:-")
+                for i in range(32):
+                    print("R" + str(i) + ":", processor.registers[i], end=" ")
+                print("\n")
 
                 # Print specific pipeline registers
-                if print_specific_pipeline_registers[0]:
-                    for inst in pipelineInstructions:
-                        if inst.PC/4 == print_specific_pipeline_registers[1]:
-                            if not print_registers_each_cycle:
-                                print("CLOCK CYCLE:", clock_cycles)
-                            print("Pipeline Registers:-")
-                            print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].IR)
-                            print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].RA, ", Operand2: ", pipelineInstructions[2].RB, sep="")
-                            print("Execute # Memory => ", "Data: ", pipelineInstructions[1].RY, sep="")
-                            print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].RY, sep="")
-                            print("\n")
-
-                # Print pipeline registers
-                elif print_pipeline_registers:
-                    if not print_registers_each_cycle:
-                        print("CLOCK CYCLE:", clock_cycles)
+            if print_specific_pipeline_registers[0]:
+                for inst in pipelineInstructions:
+                    if inst.PC/4 == print_specific_pipeline_registers[1]:
+                        if not print_registers_each_cycle:
+                            print("CLOCK CYCLE:", clock_cycles)
                         print("Pipeline Registers:-")
                         print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].IR)
                         print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].RA, ", Operand2: ", pipelineInstructions[2].RB, sep="")
                         print("Execute # Memory => ", "Data: ", pipelineInstructions[1].RY, sep="")
                         print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].RY, sep="")
                         print("\n")
+
+                # Print pipeline registers
+            elif print_pipeline_registers:
+                if not print_registers_each_cycle:
+                    print("CLOCK CYCLE:", clock_cycles)
+                    print("Pipeline Registers:-")
+                    print("Fetch # Decode =>", "Instruction:", pipelineInstructions[3].IR)
+                    print("Decode # Execute => ", "Operand1: ", pipelineInstructions[2].RA, ", Operand2: ", pipelineInstructions[2].RB, sep="")
+                    print("Execute # Memory => ", "Data: ", pipelineInstructions[1].RY, sep="")
+                    print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].RY, sep="")
+                    print("\n")
 
     processor.writeDataMemory()
