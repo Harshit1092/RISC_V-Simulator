@@ -31,21 +31,21 @@
     },
     {
         "register": "x5",
-        "hex": "0x0000000a",
-        "binary": "0b1010",
-        "decimal": "10"
+        "hex": "0xfffffff9",
+        "binary": "0b11111111111111111111111111111001",
+        "decimal": "-7"
     },
     {
         "register": "x6",
-        "hex": "0x0000000a",
-        "binary": "0b1010",
-        "decimal": "10"
+        "hex": "0xfffffff9",
+        "binary": "0b11111111111111111111111111111001",
+        "decimal": "-7"
     },
     {
         "register": "x7",
-        "hex": "0x00000014",
-        "binary": "0b10100",
-        "decimal": "20"
+        "hex": "0xfffffff2",
+        "binary": "0b11111111111111111111111111110010",
+        "decimal": "-14"
     },
     {
         "register": "x8",

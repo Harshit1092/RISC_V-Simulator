@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import MemoryData from "./MemoryData.js";
+import MemoryData from "./data.json";
 
 function MemoryTable(){
 // get table column
