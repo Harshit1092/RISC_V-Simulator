@@ -77,7 +77,7 @@ class processor:
             fp = open('reg.txt', 'w')
             output = []
             for i in range(32):
-                output.append('x' + str(i) + ' ' + self.registers[i] + '\n')
+                output.append('x' + str(i) + ' ' + self.registers[i] + ' ' + bin(int(self.registers[i], 16)) + ' ' + str(int(self.registers[i], 16)) + '\n')
             fp.writelines(output)
             fp.close()
         except:
@@ -510,7 +510,9 @@ class processor:
     # Write Back 
     def writeBack(self, state):
         if state.registerWrite and state.RD != 0:
-            self.registers[state.RD] = hex(state.RY)
+            tmp = hex(state.RY)
+            tmp = '0x' + '0' * (10-len(tmp)) + tmp[2:]
+            self.registers[state.RD] = tmp
 
 				
         
