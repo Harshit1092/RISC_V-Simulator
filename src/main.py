@@ -7,18 +7,12 @@ pc_tmp = []
 dataHazardPairs = []
 controlHazardSignals = []
 
-
-
 def evaluate(processor, pipelineInstructions):
     processor.writeBack(pipelineInstructions[0])
     processor.MemoryAccess(pipelineInstructions[1])
     processor.execute(pipelineInstructions[2])
     controlHazard, controlPC, enter, color = processor.decode(pipelineInstructions[3], btb)
-    # if(processor.terminate==True):
-    #     print(f"gaand m danda de")
-    #     for i in range(5):
-    #         print(pipelineInstructions[i].stall)
-            # pipelineInstructions[i].stall=True
+
     if enter:
         controlHazardSignals.append(2)
     elif pipelineInstructions[2].stall and color !=0 and len(controlHazardSignals) > 0 and controlHazardSignals[-1] == 2:
@@ -73,7 +67,7 @@ if __name__ == '__main__':
 
     if not pipelining_knob:
 
-        processor.pipelingEnabled=False
+        processor.pipeliningEnabled=False
         while True:
 
             curr_instruction=State(PC)
@@ -269,4 +263,29 @@ if __name__ == '__main__':
                     print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].RY, sep="")
                     print("\n")
 
+    totalStalls = stalls_due_to_control_hazard + stalls_due_to_data_hazard
     processor.writeDataMemory()
+
+    # Printing the stats at the end of the simulation
+    statsFile = open("stats.txt", "w")
+    # Stats
+    stats = [''] * 12
+    stats[0] = "Number of clock cycles: " + str(clock_cycles) + "\n"
+    stats[1] = "Number of instructions executed: " + str(processor.Total_instructions) + "\n"
+    stats[2] = "CPI: " + str(clock_cycles / processor.Total_instructions) + "\n"
+    stats[3] = "Number of data transfer (load & store) instructions executed: " + str(processor.memory_instructions) + "\n"
+    stats[4] = "Number of ALU instructions executed: " + str(processor.ALU_instructions) + "\n"
+    stats[5] = "Number of control instructions executed: " + str(processor.control_instructions) + "\n"
+    stats[6] = "Number of stalls: " + str(totalStalls) + "\n"
+    stats[7] = "Number of data hazards: " + str(number_of_data_hazards) + "\n"
+    stats[8] = "Number of control hazards: "
+    if processor.pipeliningEnabled:
+        stats[8] += str(processor.control_instructions) + "\n"
+    else:
+        stats[8] += "0\n"
+    stats[9] = "Number of branch mispredictions: " + str(processor.branch_misprediction) + "\n"
+    stats[10] = "Number of stalls due to data hazards: " + str(stalls_due_to_data_hazard) + "\n"
+    stats[11] = "Number of stalls due to control hazards: " + str(stalls_due_to_control_hazard) + "\n"
+
+    statsFile.writelines(stats)
+
