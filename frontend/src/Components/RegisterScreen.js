@@ -21,7 +21,7 @@ const RegisterScreen = () => {
                     <button type="button" class="btn btn-outline-danger" style={{ marginRight: '10px' }}>Control Hazards</button>
                 </Link>
             </div>
-            <div>
+            <div className='register'>
                 <RegisterTable />
             </div>
         </>
