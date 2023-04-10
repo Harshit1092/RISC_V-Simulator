@@ -1,0 +1,50 @@
+body {
+    background-color: #3d285c;
+}
+.topbar {
+    width: 100%;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    font-weight: 500;
+    font-size: xx-large;
+    color: white;
+}
+
+.runButtons {
+    margin-top: 20px;
+}
+
+.outer {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    margin-top: 50px;
+  /*   flex-direction: row; */
+  /*   justify-content: center; */
+  /*   align-items: center; */
+  }
+
+  .inner {
+    /*   margin: 100px 100px; */
+      margin-right: 20px;
+      margin-left: 20px;
+        height: 200px;
+        width: 200px;
+        background: #DCCAE9;
+    /*   background: red; */
+        border-radius: 10px;
+        display: flex;
+      align-items: center;
+      justify-content: center;
+    /*     border: 10px; */
+    /*     border: 1px solid black; */
+      box-shadow: -10px 0px 10px 1px #181717;
+    /*      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+    /*   -webkit-animation: glowing 1500ms infinite;
+      -moz-animation: glowing 1500ms infinite;
+      -o-animation: glowing 1500ms infinite;
+      animation: glowing 1500ms infinite; */
+    }
