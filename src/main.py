@@ -79,7 +79,7 @@ if __name__ == '__main__':
                 for i in range(32):
                     print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
-                pc_tmp.append([-1, -1, -1, -1, curr_instruction.PC])
+            pc_tmp.append([-1, -1, -1, -1, curr_instruction.PC])
 
             processor.decode(curr_instruction)
             clock_cycles +=1
@@ -142,6 +142,14 @@ if __name__ == '__main__':
                 oldStates = pipelineInstructions
                 pipelineInstructions, controlHazard, controlPC = evaluate(processor, pipelineInstructions)
                 
+                tmp = []
+                for i in range(5):
+                    if oldStates[i].stall:
+                        tmp.append(-1)
+                    else:
+                        tmp.append(oldStates[i].PC)
+                pc_tmp.append(tmp)
+
                 dataHazardPairs.append(dataHazard[2])
                 branch_taken = pipelineInstructions[3].branch_taken
                 branch_pc = pipelineInstructions[3].PC_next
@@ -182,6 +190,14 @@ if __name__ == '__main__':
 
                 oldStates = pipelineInstructions
                 pipelineInstructions, controlHazard, controlPC = evaluate(processor, pipelineInstructions)
+
+                tmp = []
+                for i in range(5):
+                    if oldStates[i].stall:
+                        tmp.append(-1)
+                    else:
+                        tmp.append(oldStates[i].PC)
+                pc_tmp.append(tmp)
 
                 dataHazardPairs.append(toFrom)
 
@@ -262,10 +278,21 @@ if __name__ == '__main__':
                     print("Execute # Memory => ", "Data: ", pipelineInstructions[1].RY, sep="")
                     print("Memory # WriteBack => ", "Data: ", pipelineInstructions[0].RY, sep="")
                     print("\n")
+     
+    pc_tmp.pop(-1)
+    cycleFile = open("cycle.txt", "w")
+    for i in range(len(pc_tmp)):
+        cycleFile.write(str(i + 1) + "  ")
+        for j in range(len(pc_tmp[i])):
+            code = str(processor.riscvCode[pc_tmp[i][j]])
+            cycleFile.write(code + "  ")
+        if pipelining_knob:
+            cycleFile.write(str(dataHazardPairs[i]))
+        cycleFile.write("\n")
+    cycleFile.close()
 
     totalStalls = stalls_due_to_control_hazard + stalls_due_to_data_hazard
     processor.writeDataMemory()
-
     # Printing the stats at the end of the simulation
     statsFile = open("stats.txt", "w")
     # Stats
@@ -288,4 +315,5 @@ if __name__ == '__main__':
     stats[11] = "Number of stalls due to control hazards: " + str(stalls_due_to_control_hazard) + "\n"
 
     statsFile.writelines(stats)
+    statsFile.close()
 

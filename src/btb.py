@@ -1,5 +1,5 @@
-# if the instruction is jal/jalr , we are always making the prediction as True.
-#otherwise, we are making the prediction true if we are going back and false if we are going forward.
+# If the instruction is jal/jalr , we are always making the prediction as True.
+# Otherwise, we are making the prediction true if we are going back and false if we are going forward.
 class BTB:
     def __init__(self):
         self.table={}

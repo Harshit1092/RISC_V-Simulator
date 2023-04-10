@@ -32,6 +32,7 @@ class processor:
         self.branch_misprediction=0 # Total number of branch mispredictions
         
         self.allStall=False
+        self.riscvCode = defaultdict(lambda: -1)
 
     def reset(self, *args):
         if len(args) > 0:
@@ -126,6 +127,7 @@ class processor:
     def decode(self, state, *args):
         print("Printing Instructions")
         print(f"{state.IR}   {state.PC}")
+        code = ''
         if state.stall == True:
             return False, 0, False, 0
         # print(f"stkmb {state.IR}")
@@ -161,12 +163,15 @@ class processor:
                 # ADD Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[0] = True
+                    code = 'ADD x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 # SUB Instruction
                 elif(func7 == 0x20):
                     state.ALU_OP[1] = True
+                    code = 'SUB x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 # MUL Instruction
                 elif(func7 == 0x01):
                     state.ALU_OP[3] = True
+                    code = 'MUL x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
@@ -175,6 +180,7 @@ class processor:
                 # AND Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[10] = True
+                    code = 'AND x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
@@ -183,9 +189,11 @@ class processor:
                 # OR Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[9] = True
+                    code = 'OR x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 # REM Instruction
                 elif(func7 == 0x01):
                     state.ALU_OP[4] = True
+                    code = 'REM x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 else:
                     print("Unknown Instruction")
                     exit(1)
@@ -194,6 +202,7 @@ class processor:
                 # SLL Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[6] = True
+                    code = 'SLL x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
@@ -202,6 +211,7 @@ class processor:
                 # SLT Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[11] = True;
+                    code = 'SLT x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
@@ -210,9 +220,11 @@ class processor:
                 # SRL Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[8] = True
+                    code = 'SRL x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 # SRA Instruction
                 elif(func7 == 0x20):
                     state.ALU_OP[7] = True
+                    code = 'SRA x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 else:
                     print("Error: Unknown instruction")
                     exit(1)
@@ -221,9 +233,11 @@ class processor:
                 # XOR Instruction
                 if(func7 == 0x00):
                     state.ALU_OP[5] = True
+                    code = 'XOR x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 # DIV Instruction
                 elif(func7 == 0x01):
                     state.ALU_OP[2] = True
+                    code = 'DIV x' + str(state.RD) + ', x' + str(state.RS1) + ', x' + str(state.RS2)
                 else:
                     print("Unknown instruction")
                     exit(1)
@@ -232,7 +246,6 @@ class processor:
 
             state.RA = nint(self.registers[state.RS1][2:], 16)
             state.RB = nint(self.registers[state.RS2][2:], 16)
-            state.RM = state.RB
             self.ALU_instructions += 1
             
         # I Format
@@ -250,12 +263,15 @@ class processor:
                 # LB Instruction
                 if(func3 == 0x0):
                     state.generateControlSignals(True,True,1,True,False,False,True,False,1)
+                    code = 'LB x' + str(state.RD) + ', ' + str(state.Imm) + '(x' + str(state.RS1) + ')'
                 # LH Instruction
                 elif(func3 == 0x1):
                     state.generateControlSignals(True,True,1,True,False,False,True,False,2)
+                    code = 'LH x' + str(state.RD) + ', ' + str(state.Imm) + '(x' + str(state.RS1) + ')'
                 # LW Instruction
                 elif(func3 == 0x2):
                     state.generateControlSignals(True,True,1,True,False,False,True,False,4)
+                    code = 'LW x' + str(state.RD) + ', ' + str(state.Imm) + '(x' + str(state.RS1) + ')'
                 else:
                     print("Unknown instruction")
                     exit(1)
@@ -269,21 +285,27 @@ class processor:
                 # ADDI Instruction
                 if(func3 == 0x0):
                     state.ALU_OP[0] = True
+                    code = 'ADDI x' + str(state.RD) + ', x' + str(state.RS1) + ', ' + str(state.Imm)
                 # ANDI Instruction
                 elif(func3 == 0x7):
                     state.ALU_OP[10] = True
+                    code = 'ANDI x' + str(state.RD) + ', x' + str(state.RS1) + ', ' + str(state.Imm)
                 # ORI Instruction
                 elif(func3 == 0x6):
                     state.ALU_OP[9] = True
+                    code = 'ORI x' + str(state.RD) + ', x' + str(state.RS1) + ', ' + str(state.Imm)
                 # XORI Instruction
                 elif(func3 == 0x4):
                     state.ALU_OP[5] = True
+                    code = 'XORI x' + str(state.RD) + ', x' + str(state.RS1) + ', ' + str(state.Imm)
                 # SLLI Instruction
                 elif(func3 == 0x1):
                     state.ALU_OP[6] = True
+                    code = 'SLLI x' + str(state.RD) + ', x' + str(state.RS1) + ', ' + str(state.Imm)
                 # SRLI Instruction
                 elif(func3 == 0x5):
                     state.ALU_OP[8] = True
+                    code = 'SRLI x' + str(state.RD) + ', x' + str(state.RS1) + ', ' + str(state.Imm)
                 else:
                     print("Unknown instruction")
                 state.RA = nint(self.registers[state.RS1][2:], 16)
@@ -295,6 +317,7 @@ class processor:
                 # JALR Instruction
                 if(func3 == 0x0):
                     state.ALU_OP[0] = True
+                    code = 'JALR x' + str(state.RD) + ', x' + str(state.RS1) + ', ' + str(state.Imm)
                 else:
                     print("Unknown Error")
                     exit(1)
@@ -317,12 +340,15 @@ class processor:
             # SB Instruction
             if(func3 == 0x0):
                 state.generateControlSignals(False,True,1,False,True,False,True,False,1)
+                code = 'SB x' + str(state.RS2) + ', ' + str(state.Imm) + '(x' + str(state.RS1) + ')'
             # SH Instruction
             elif(func3 == 0x1):
                 state.generateControlSignals(False,True,1,False,True,False,True,False,2)
+                code = 'SH x' + str(state.RS2) + ', ' + str(state.Imm) + '(x' + str(state.RS1) + ')'
             # SW Instruction
             elif(func3 == 0x2):                            
                 state.generateControlSignals(False,True,1,False,True,False,True,False,4)
+                code = 'SW x' + str(state.RS2) + ', ' + str(state.Imm) + '(x' + str(state.RS1) + ')'
             else:
                 print("Unknown Error")
                 exit(1)
@@ -346,15 +372,19 @@ class processor:
             # BEQ Instruction
             if(func3 == 0x0):
                 state.ALU_OP[12] = True
+                code = 'BEQ x' + str(state.RS1) + ', x' + str(state.RS2) + ', ' + str(state.Imm)
             # BNE Instruction
             elif(func3 == 0x1):
                 state.ALU_OP[13] = True
+                code = 'BNE x' + str(state.RS1) + ', x' + str(state.RS2) + ', ' + str(state.Imm)
             # BLT Instruction
             elif(func3 == 0x4):
                 state.ALU_OP[11] = True
+                code = 'BLT x' + str(state.RS1) + ', x' + str(state.RS2) + ', ' + str(state.Imm)
             # BGE Instruction
             elif(func3 == 0x5):
                 state.ALU_OP[14] = True
+                code = 'BGE x' + str(state.RS1) + ', x' + str(state.RS2) + ', ' + str(state.Imm)
             else:
                 print("Unknown Error")
                 exit(1)
@@ -369,11 +399,13 @@ class processor:
             state.Imm = ImmediateSign(state.Imm,20)
             # AUIPC Instruction
             if(opcode == '0010111'):
+                code = 'AUIPC x' + str(state.RD) + ', ' + str(state.Imm)
                 state.ALU_OP[0] = True
                 state.RA = state.PC
                 state.Imm = state.Imm << 12
             # LUI Instruction
             else:
+                code = 'LUI x' + str(state.RD) + ', ' + str(state.Imm)
                 state.ALU_OP[6] = True
                 state.RA = state.Imm
                 state.Imm = 12
@@ -389,6 +421,7 @@ class processor:
             state.Imm =  ImmediateSign(state.Imm,20)
             state.Imm *= 2
             state.ALU_OP[12] = True
+            code = 'JAL x' + str(state.RD) + ', ' + str(state.Imm)
             state.RA = 0
             state.RB = 0
             state.isbranch=1
@@ -399,6 +432,8 @@ class processor:
         else:
             print("Unknown Instruction")
             exit(1)
+        
+        self.riscvCode[state.PC] = code
 
         if self.pipeliningEnabled:
             enter=False
