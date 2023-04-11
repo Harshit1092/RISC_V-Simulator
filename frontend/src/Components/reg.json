@@ -7,9 +7,9 @@
     },
     {
         "register": "x1",
-        "hex": "0X00000010",
-        "binary": "10000",
-        "decimal": "16"
+        "hex": "0X00000014",
+        "binary": "10100",
+        "decimal": "20"
     },
     {
         "register": "x2",
@@ -61,9 +61,9 @@
     },
     {
         "register": "x10",
-        "hex": "0X000002D0",
-        "binary": "1011010000",
-        "decimal": "720"
+        "hex": "0X00000000",
+        "binary": "0",
+        "decimal": "0"
     },
     {
         "register": "x11",
@@ -115,21 +115,21 @@
     },
     {
         "register": "x19",
-        "hex": "0X00000001",
-        "binary": "1",
-        "decimal": "1"
+        "hex": "0X00000007",
+        "binary": "111",
+        "decimal": "7"
     },
     {
         "register": "x20",
-        "hex": "0X00000006",
-        "binary": "110",
-        "decimal": "6"
+        "hex": "0X0000000D",
+        "binary": "1101",
+        "decimal": "13"
     },
     {
         "register": "x21",
-        "hex": "0X00000000",
-        "binary": "0",
-        "decimal": "0"
+        "hex": "0X00000008",
+        "binary": "1000",
+        "decimal": "8"
     },
     {
         "register": "x22",
@@ -175,9 +175,9 @@
     },
     {
         "register": "x29",
-        "hex": "0X00000000",
-        "binary": "0",
-        "decimal": "0"
+        "hex": "0X00000001",
+        "binary": "1",
+        "decimal": "1"
     },
     {
         "register": "x30",

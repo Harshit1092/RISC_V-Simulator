@@ -16,7 +16,8 @@ def upload_file():
     print_registers_each_cycle = request.form.get('print_registers_each_cycle') == 'true'
     print_pipeline_registers = request.form.get('print_pipeline_registers') == 'true'
     print_specific_pipeline_registers = request.form.get('print_specific_pipeline_registers') == 'true'
-
+    number = request.form.get('number')
+    
     # Do something with the file and the boolean values
     demo = open('demofile.txt','w')
     demo.write(content)
@@ -28,7 +29,9 @@ def upload_file():
     f.write(str(forwarding_enabled)+'\n')
     f.write(str(print_registers_each_cycle)+'\n')
     f.write(str(print_pipeline_registers)+'\n')
-    f.write(str(print_specific_pipeline_registers)+'\n')
+    # f.write(str(print_specific_pipeline_registers[0]) + ' ' + str(print_specific_pipeline_registers[1]) + '\n')
+    f.write(str(print_specific_pipeline_registers) + ' ' + str(number) + '\n')
+
     f.close()
     return jsonify({'message': 'File uploaded successfully'})
 

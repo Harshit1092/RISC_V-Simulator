@@ -1,12 +1,12 @@
-Number of clock cycles: 332
-Number of instructions executed: 66
-CPI: 5.03030303030303
-Number of data transfer (load & store) instructions executed: 23
-Number of ALU instructions executed: 24
-Number of control instructions executed: 19
-Number of stalls: 0
-Number of data hazards: 0
-Number of control hazards: 0
+Number of clock cycles: 884
+Number of instructions executed: 757
+CPI: 1.16776750330251
+Number of data transfer (load & store) instructions executed: 367
+Number of ALU instructions executed: 266
+Number of control instructions executed: 124
+Number of stalls: 288
+Number of data hazards: 164
+Number of control hazards: 124
 Number of branch mispredictions: 0
-Number of stalls due to data hazards: 0
-Number of stalls due to control hazards: 0
+Number of stalls due to data hazards: 164
+Number of stalls due to control hazards: 124

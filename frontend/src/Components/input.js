@@ -48,7 +48,10 @@ function Input() {
         formData.append('forwarding_enabled', forwardingEnabled);
         formData.append('print_registers_each_cycle', printRegistersEachCycle);
         formData.append('print_pipeline_registers', printPipelineRegisters);
-        formData.append('print_specific_pipeline_registers', [printSpecificPipelineRegisters, instructionNumber]);
+        // formData.append('print_specific_pipeline_registers', [printSpecificPipelineRegisters, instructionNumber]);  
+        formData.append('print_specific_pipeline_registers',printSpecificPipelineRegisters);
+        if(instructionNumber != null) formData.append('number',instructionNumber);
+        else formData.append('number',0);
         fetch('http://127.0.0.1:5000/upload', {
             method: 'POST',
             body: formData,
