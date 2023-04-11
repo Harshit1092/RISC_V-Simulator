@@ -8,6 +8,9 @@ const DataHazardScreen = () => {
     return (
         <>
             <div className='navBar'>
+                <Link to='/'>
+                    <button type='button' className="btn btn-outline-danger" style={{marginRight: '10px'}}>Home</button>
+                </Link>
                 <Link to='/memory'>
                     <button type="button" class="btn btn-outline-primary" style={{ marginRight: '10px' }}>Memory</button>
                 </Link>

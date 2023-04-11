@@ -54,7 +54,17 @@ function Input() {
             body: formData,
         })
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(
+            fetch('http://127.0.0.1:5000/runScripts',{
+                method: 'POST',
+                body: JSON.stringify('Hello')
+            })
+            .then(() => {
+                console.log('Successfully returned after running both files')
+                window.location = 'http://localhost:3000/memory'
+            })
+            .catch(error => console.log(error))
+        )
         .catch(error => console.error(error));
     };
     return (

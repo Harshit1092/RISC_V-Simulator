@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import subprocess
 
 app = Flask(__name__)
 CORS(app)
@@ -31,6 +32,24 @@ def upload_file():
     f.close()
     return jsonify({'message': 'File uploaded successfully'})
 
+
+@app.route('/runScripts', methods=['POST'])
+def run_Scripts():
+    print("HELLO0")
+    # data = request.get_json()
+    # arg = data.get('arg')
+    # print(arg)
+    print("HELLO1")
+    first = subprocess.run(['python','./main.py'])
+    if first.returncode != 0:
+        return jsonify({'error': 'Failed to execute first script'})
+    
+    print("HELLO2")
+    second = subprocess.run(['python','./jsonify.py'])
+    if second.returncode != 0:
+        return jsonify({'error' : 'Failed to execute second script'})
+    print("HELLO3")
+    return jsonify({'request' : 'Both scripts executed successfully'})
 
 if __name__=='__main__':
    app.run()
