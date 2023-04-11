@@ -1,10 +1,10 @@
 import React from 'react'
-import './RegisterScreen.css'
+import './DataHazardScreen.css'
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import RegisterTable from './RegisterTable.js'
+import DataHazardTable from './DataHazardTable.js'
 import { Link } from 'react-router-dom'
 
-const RegisterScreen = () => {
+const DataHazardScreen = () => {
     return (
         <>
             <div className='navBar'>
@@ -25,10 +25,10 @@ const RegisterScreen = () => {
                 </Link>
             </div>
             <div className='register'>
-                <RegisterTable />
+                <DataHazardTable />
             </div>
         </>
     )
 }
 
-export default RegisterScreen
+export default DataHazardScreen

@@ -17,8 +17,11 @@ const MemoryScreen = () => {
         <Link to='/dataHazard'>
           <button type="button" class="btn btn-outline-success" style={{ marginRight: '10px' }}>Data Hazards</button>
         </Link>
-        <Link to='/controlHazards'>
+        {/* <Link to='/controlHazards'>
           <button type="button" class="btn btn-outline-danger" style={{ marginRight: '10px' }}>Control Hazards</button>
+        </Link> */}
+        <Link to='/simulator'>
+          <button type='button' className="btn btn-outline-danger" style={{marginRight: '10px'}}> Simulation</button>
         </Link>
       </div>
       <div>

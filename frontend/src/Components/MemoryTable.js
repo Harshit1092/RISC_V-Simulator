@@ -51,7 +51,7 @@ const handleMouseLeave = (value) => {
  const ThData =()=>{
     
      return column.map((data)=>{
-         return <th key={data} style={{width:'20%', textAlign:'center'}}>{data}</th>
+         return <th key={data} style={{width:'20%', textAlign:'center', backgroundColor:'white'}}>{data}</th>
      })
  }
 // get table row data

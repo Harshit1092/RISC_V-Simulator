@@ -1,13 +1,18 @@
-body {
+.complete {
     background-color: #3d285c;
 }
+.box {
+  display: flex;
+  /* align-items: center; */
+  padding-top: 20px;
+  box-sizing: border-box;
+}
 .topbar {
-    width: 100%;
-    /* border: 2px solid red; */
+  /* border: 2px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
+    margin-left: 40%;
     font-weight: 500;
     font-size: xx-large;
     color: white;
@@ -37,6 +42,7 @@ body {
     /*   background: red; */
         border-radius: 10px;
         display: flex;
+        flex-direction: column;
       align-items: center;
       justify-content: center;
     /*     border: 10px; */
@@ -50,6 +56,29 @@ body {
       -moz-animation: glowing 1500ms infinite;
       -o-animation: glowing 1500ms infinite;
       animation: glowing 1500ms infinite;
+    }
+
+    .statistics {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .divInner {
+      background-color: #DCCAE9;
+      margin-right: 20px;
+      margin-right: 20px;
+      width: 250px;
+      height: 100px;
+      margin-top: 20px;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 6px;
+      box-shadow: -10px 0px 10px 1px #181717;
     }
 
     @-webkit-keyframes glowing {
