@@ -468,6 +468,7 @@ class processor:
                     enter=True
                 
                 if actual_pc!=state.PC_next:
+                    self.branch_misprediction+=1
                     return True,actual_pc,enter,1
                 else:
                     return False,0,enter,3
