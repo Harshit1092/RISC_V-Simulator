@@ -61,21 +61,21 @@
     },
     {
         "memory": "0X10000028",
-        "hex": "0x0000000C",
-        "binary": "1100",
-        "decimal": "12"
-    },
-    {
-        "memory": "0X1000002C",
         "hex": "0x000000FE",
         "binary": "11111110",
         "decimal": "254"
     },
     {
-        "memory": "0X10000030",
+        "memory": "0X1000002C",
         "hex": "0x000000FF",
         "binary": "11111111",
         "decimal": "255"
+    },
+    {
+        "memory": "0X10000030",
+        "hex": "0x0000000C",
+        "binary": "1100",
+        "decimal": "12"
     },
     {
         "memory": "0X10000034",

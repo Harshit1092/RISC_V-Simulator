@@ -66,7 +66,7 @@ const handleMouseLeave = (value) => {
  // get table heading data
  const ThData =()=>{
     
-     return column.map((data)=>{
+     return column.reverse().map((data)=>{
         //  return <th key={data} style={{width:'20%', textAlign:'center'}}>{data}</th>
         if(data != 'id' && data != 'forwarding' && data != 'value'){
             return <th style={{width:'20%', textAlign:'center'}}>{data}</th>
