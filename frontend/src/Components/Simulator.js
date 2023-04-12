@@ -45,12 +45,67 @@ const Simulator = () => {
 
 
         if (data[index]["forwarding"] != -1) {
-            if (data[index]['forwarding'] == 0) setValue(4);
-            else if (data[index]['forwarding'] == 1) setValue(3);
-            else if (data[index]['forwarding'] == 2) setValue(2);
-            else if (data[index]['forwarding'] == 3) setValue(1);
-            else if (data[index]['forwarding'] == 4) setValue(0)
-            else setValue(-1)
+            if (data[index]['forwarding'] == 0) {
+                console.log(1)
+                setValue(4);
+                let divElement = document.createElement('div');
+                divElement.textContent = data[index]["value"];
+                divElement.className = 'newDiv'
+                let elt = document.querySelector('.newDiv')
+                if(elt !== null) elt.remove()
+                document.querySelector('.div5').appendChild(divElement)
+            }
+            else if (data[index]['forwarding'] == 1) {
+                setValue(3);
+                console.log(1)
+                let divElement = document.createElement('div');
+                divElement.textContent = data[index]["value"];
+                divElement.className = 'newDiv'
+                let elt = document.querySelector('.newDiv')
+                if(elt !== null) elt.remove()
+                document.querySelector('.div4').appendChild(divElement)
+            }
+            else if (data[index]['forwarding'] == 2) {
+                setValue(2);
+                console.log(3)
+                let divElement = document.createElement('div');
+                divElement.textContent = data[index]["value"];
+                divElement.className = 'newDiv'
+                let elt = document.querySelector('.newDiv')
+                if(elt !== null) elt.remove()
+                document.querySelector('.div3').appendChild(divElement)
+            }
+            else if (data[index]['forwarding'] == 3) {
+                setValue(1);
+                console.log(4)
+                let divElement = document.createElement('div');
+                divElement.textContent = data[index]["value"];
+                divElement.className = 'newDiv'
+                let elt = document.querySelector('.newDiv')
+                if(elt !== null) elt.remove()
+                document.querySelector('.div2').appendChild(divElement)
+            }
+            else if (data[index]['forwarding'] == 4) {
+                setValue(0)
+                console.log(5)
+                let divElement = document.createElement('div');
+                divElement.textContent = data[index]["value"];
+                divElement.className = 'newDiv'
+                let elt = document.querySelector('.newDiv')
+                if(elt !== null) elt.remove()
+                document.querySelector('.div1').appendChild(divElement)
+            }
+            else {
+                console.log("HELLO")
+                setValue(-1)
+                let elt = document.querySelector('.newDiv')
+                if(elt !== null) elt.remove()
+            }
+        }
+        else{
+            console.log("PRINT")
+            let elt = document.querySelector('.newDiv')
+            if(elt !== null) elt.remove()
         }
 
     }, [index])
@@ -81,24 +136,24 @@ const Simulator = () => {
                 </div>
                 <div className='outer'>
                     <div className='inner div1'>
-                        <div style={{ width: '100%' }}><b>{data[index]['fetch']}</b></div>
+                        <div className='data1'  style={{ width: '100%' }}><b>{data[index]['fetch']}</b></div>
                         {/* {value == 0 ? <div style={{width:'100%'}}><b>{data[index]['value']}</b></div> : <div></div>} */}
                     </div>
                     <div className='inner div2'>
-                        <div style={{ width: '100%' }}><b>{data[index]['decode']}</b></div>
-                        {value == 1 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>}
+                        <div className='data2' style={{ width: '100%' }}><b>{data[index]['decode']}</b></div>
+                        {/* {value == 1 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>} */}
                     </div>
                     <div className='inner div3'>
-                        <div style={{ width: '100%' }}><b>{data[index]['execute']}</b></div>
-                        {value == 2 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>}
+                        <div className='data3' style={{ width: '100%' }}><b>{data[index]['execute']}</b></div>
+                        {/* {value == 2 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>} */}
                     </div>
                     <div className='inner div4'>
-                        <div style={{ width: '100%' }}><b>{data[index]['memory']}</b></div>
-                        {value == 3 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>}
+                        <div className='data4' style={{ width: '100%' }}><b>{data[index]['memory']}</b></div>
+                        {/* {value == 3 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>} */}
                     </div>
                     <div className='inner div5'>
-                        <div style={{ width: '100%' }}><b>{data[index]['writeback']}</b></div>
-                        {value == 4 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>}
+                        <div className='data5' style={{ width: '100%' }}><b>{data[index]['writeback']}</b></div>
+                        {/* {value == 4 ? <div style={{ width: '100%' }}><b>{data[index]['value']}</b></div> : <div></div>} */}
                     </div>
                 </div>
 

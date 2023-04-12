@@ -102,9 +102,9 @@ class HDU:
         print(f"memory opcode : {memory_opcode}")
         print(f"writeback opcode : {writeback_opcode}")
         
-        print(f"execute RD : , {execute_state.RD}")
-        print(f"decode RS1 : , {decode_state.RS1}")
-        print(f"decode RS2 : , {decode_state.RS2}")
+        print(f"memory RD : , {memory_state.RD}")
+        print(f"execute RS1 : , {execute_state.RS1}")
+        print(f"execute RS2 : , {execute_state.RS2}")
         print(f"********: {memory_state.MDR}\n")
         # M -> M forwarding
         if writeback_opcode == 3 and memory_opcode == 35 and not writeback_state.stall and not memory_state.stall:
