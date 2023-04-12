@@ -186,7 +186,7 @@ if __name__ == '__main__':
                 clock_cycles+=1
             else:
                 dataHazard, ifStall, stallPos, pipelineInstructions, toFrom = hdu.dataHazardForwarding(pipelineInstructions)
-                print(f"data : {dataHazard}  {ifStall} {stallPos} {toFrom}")
+                # print(f"data : {dataHazard}  {ifStall} {stallPos} {toFrom}")
 
                 oldStates = pipelineInstructions
                 pipelineInstructions, controlHazard, controlPC = evaluate(processor, pipelineInstructions)
@@ -227,8 +227,8 @@ if __name__ == '__main__':
                         pipelineInstructions = pipelineInstructions[:2] + [State(0)] + oldStates[3:]
                         pipelineInstructions[2].stall = True
                         PC -= 4
-                
-                number_of_data_hazards += dataHazard
+                if(ifStall):
+                    number_of_data_hazards += dataHazard
 
                 if not controlHazard and not ifStall:
                     pipelineInstructions.append(State(PC))
@@ -317,3 +317,4 @@ if __name__ == '__main__':
     statsFile.writelines(stats)
     statsFile.close()
 
+print(f"bbbb {processor.branch_misprediction}")

@@ -11,7 +11,7 @@ class HDU:
         decode_state = pipeline_instructions[-2]
         instruction = bin(int(decode_state.IR[2:],16))[2:]
         instruction = (32-len(instruction)) * '0' + instruction
-        print(f"inst : {instruction}")
+        # print(f"inst : {instruction}")
         decode_opcode = int(instruction[25:32],2)
         if(decode_opcode in [19, 103, 3]):
             decode_state.RS1 = int(instruction[12:17],2)
@@ -28,10 +28,10 @@ class HDU:
         decode_state = states[-1]
         memory_state = states[-3]
         
-        print(f"execute RD : {execute_state.RD}")
-        print(f"decode RS1 : {decode_state.RS1}")
-        print(f"decode RS2 : {decode_state.RS2}")
-        print(f"Memory RD : {memory_state.RD}")
+        # print(f"execute RD : {execute_state.RD}")
+        # print(f"decode RS1 : {decode_state.RS1}")
+        # print(f"decode RS2 : {decode_state.RS2}")
+        # print(f"Memory RD : {memory_state.RD}")
         # print(f"Memory : {memory_state.IR}")
         # print(f"RS2 : {decode_state.RS2}")
         # Checking dependency between execute state and decode state
@@ -47,18 +47,18 @@ class HDU:
                 isDataHazard = True
                 countHazards = countHazards + 1
                 to_from = {'to': 3, 'from': 1}
-                print("HELLO")
+                # print("HELLO")
         # print(f"to_from : {to_from}")
         return [isDataHazard, countHazards, to_from]
     
     #If forwarding is enabled
     def dataHazardForwarding(self,pipeline_instructions):
         
-        print(f"pipeline0 : {pipeline_instructions[0].IR}")
-        print(f"pipeline1 : {pipeline_instructions[1].IR}")
-        print(f"pipeline2 : {pipeline_instructions[2].IR}")
-        print(f"pipeline3 : {pipeline_instructions[3].IR}")
-        print(f"pipeline4 : {pipeline_instructions[4].IR}")
+        # print(f"pipeline0 : {pipeline_instructions[0].IR}")
+        # print(f"pipeline1 : {pipeline_instructions[1].IR}")
+        # print(f"pipeline2 : {pipeline_instructions[2].IR}")
+        # print(f"pipeline3 : {pipeline_instructions[3].IR}")
+        # print(f"pipeline4 : {pipeline_instructions[4].IR}")
         decode_state = pipeline_instructions[-2]
         execute_state = pipeline_instructions[-3]
         memory_state = pipeline_instructions[-4]
@@ -71,7 +71,7 @@ class HDU:
         if(decode_opcode in [19, 103, 3]):
             decode_state.RS1 = int(instruction[12:17],2)
             decode_state.RS2 = -1
-            print("HELLOOOOOO")
+            # print("HELLOOOOOO")
         else:
             decode_state.RS1 = int(instruction[12:17],2)
             decode_state.RS2 = int(instruction[7:12],2)
@@ -97,15 +97,15 @@ class HDU:
         instruction = (32 - len(instruction)) * '0' + instruction
         writeback_opcode = int(instruction[25:32], 2)
         
-        print(f"decode opcode : {decode_opcode}")
-        print(f"execute opcode : {execute_opcode}")
-        print(f"memory opcode : {memory_opcode}")
-        print(f"writeback opcode : {writeback_opcode}")
+        # print(f"decode opcode : {decode_opcode}")
+        # print(f"execute opcode : {execute_opcode}")
+        # print(f"memory opcode : {memory_opcode}")
+        # print(f"writeback opcode : {writeback_opcode}")
         
-        print(f"memory RD : , {memory_state.RD}")
-        print(f"execute RS1 : , {execute_state.RS1}")
-        print(f"execute RS2 : , {execute_state.RS2}")
-        print(f"********: {memory_state.MDR}\n")
+        # print(f"memory RD : , {memory_state.RD}")
+        # print(f"execute RS1 : , {execute_state.RS1}")
+        # print(f"execute RS2 : , {execute_state.RS2}")
+        # print(f"********: {memory_state.MDR}\n")
         # M -> M forwarding
         if writeback_opcode == 3 and memory_opcode == 35 and not writeback_state.stall and not memory_state.stall:
             if writeback_state.RD != -1 and writeback_state.RD != 0 and writeback_state.RD == memory_state.RS2:
@@ -215,7 +215,7 @@ class HDU:
                 if stallPos > 1:
                     stallPos = 1
                     to_from = {'to': 3, 'from': 2}
-        print(f"harshit : {execute_state.registerData}")
+        # print(f"harshit : {execute_state.registerData}")
         to_from['from'] = to_for
         new_states = [writeback_state, memory_state, execute_state, decode_state, pipeline_instructions[-1]]
         return [countHazards, isStall, stallPos, new_states, to_from]

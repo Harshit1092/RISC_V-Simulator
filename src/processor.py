@@ -123,10 +123,21 @@ class processor:
                 state.PC_next= state.PC + 4
 
 
+    # Function to update PC
+    def IAG(self,state):
+        if(state.MuxPC_select==False):
+            self.PC_next = state.return_address
+        else:
+            if(state.MuxINC_select==False):
+                self.PC_next += 4
+            else:
+                self.PC_next += state.PC_offset
+
+
     # Decode
     def decode(self, state, *args):
-        print("Printing Instructions")
-        print(f"{state.IR}   {state.PC}")
+        # print("Printing Instructions")
+        # print(f"{state.IR}   {state.PC}")
         code = ''
         if state.stall == True:
             return False, 0, False, 0
@@ -138,7 +149,7 @@ class processor:
             return False, 0, False, 0
         
         self.Total_instructions += 1
-        print(state.IR)
+        # print(state.IR)
 
         for i in range(15):
             state.ALU_OP[i] = False
@@ -446,6 +457,10 @@ class processor:
                 actual_pc=self.PC_next
 
                 btb=args[0]
+                
+                if btb.find(state.PC) and actual_pc!=state.PC_next:
+                    print("this cassssssssss")
+                    self.branch_misprediction+=1
 
                 if not btb.find(state.PC):
                     state.MucINC_select=self.MuxINC_select
@@ -458,19 +473,28 @@ class processor:
                     self.PC_next=state.PC
                     self.IAG(state)
                     #state.pc_update no need
+                    temp1=self.PC_next
+                    print(f"temp {temp1} {self.PC_next}")
                     if(state.isbranch==1):
-                        btb.enter(True,state.PC,self.PC_next)
+                        print("jump entering")
+                        btb.enter(is_jump=True,pc=state.PC,next_address=temp1)
                     else:
+                        print("branch entering")
                         btb.enter(False,state.PC,self.PC_next)
                     
                     self.reset()
                     self.reset(state)
                     enter=True
-                
+
+                else:
+                    if(state.isbranch==1):
+                        btb.enter(is_jump=True,pc=state.PC,next_address=self.PC_next)
+                    else:
+                        btb.enter(False,state.PC,self.PC_next)
                 if actual_pc!=state.PC_next:
-                    self.branch_misprediction+=1
                     return True,actual_pc,enter,1
                 else:
+                    
                     return False,0,enter,3
 
 
@@ -557,15 +581,6 @@ class processor:
                 else:
                     break
 
-    # Function to update PC
-    def IAG(self,state):
-        if(state.MuxPC_select==False):
-            self.PC_next = state.return_address
-        else:
-            if(state.MuxINC_select==False):
-                self.PC_next += 4
-            else:
-                self.PC_next += state.PC_offset
 
     # Memory Access
     def MemoryAccess(self,state):
@@ -582,7 +597,7 @@ class processor:
             # Whether to access dataMemory?
             if state.MuxMA_select == False:
                 state.MAR = state.registerData
-                print(f"please : {state.registerData}")
+                # print(f"please : {state.registerData}")
                 # print(f"before hew {state.MDR} {state.RM}")
                 # state.MDR = nhex(state.registerData)
                 # state.MDR = '0x' + ('0' * (10-len(state.MDR))) + state.MDR[2:]
