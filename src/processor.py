@@ -459,11 +459,11 @@ class processor:
 
                 if not btb.find(state.PC):
                     state.MucINC_select = self.MuxINC_select
-                    #pc_offset
+                    # pc_offset
                     state.PC_offset = self.PC_offset
-                    #pc_select
+                    # pc_select
                     state.MuxPC_select = self.MuxPC_select
-                    #state_returnaddress
+                    # state_returnaddress
                     state.return_address = self.return_address
                     self.PC_next = state.PC
                     self.IAG(state)
@@ -587,10 +587,7 @@ class processor:
             # Whether to access dataMemory?
             if state.MuxMA_select == False:
                 state.MAR = state.registerData
-                # print(f"please : {state.registerData}")
-                # print(f"before hew {state.MDR} {state.RM}")
-                # state.MDR = nhex(state.registerData)
-                # state.MDR = '0x' + ('0' * (10-len(state.MDR))) + state.MDR[2:]
+
                 # Memory Read (Load Instructions)
                 if state.mem_read:
                     if state.numBytes == 1:
@@ -616,7 +613,6 @@ class processor:
                         self.dataMemory[state.MAR + 1] = state.MDR[6:8]
                         self.dataMemory[state.MAR + 2] = state.MDR[4:6]
                         self.dataMemory[state.MAR + 3] = state.MDR[2:4]
-                    
         elif state.MuxY_select == 2:
             state.RY = state.PC + 4
         
@@ -625,9 +621,7 @@ class processor:
         if not state.stall:
             if state.registerWrite and state.RD != 0:
                 tmp = nhex(state.RY)
-                # print(f"bug 1 {tmp}")
-                tmp = '0x' + ('0' * (10-len(tmp))) + tmp[2:]
-                # print(f"bug 2 {tmp}  {hex(state.RD)} ")
+                tmp = '0x' + ('0' * (10 - len(tmp))) + tmp[2:]
                 self.registers[state.RD] = tmp
 
 				
