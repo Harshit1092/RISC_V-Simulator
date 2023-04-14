@@ -2,7 +2,7 @@ from collections import defaultdict
 from btb import *
 from utility import *
 class processor:
-    def __init__(self,file1):
+    def __init__(self, file1):
         self.dataMemory = defaultdict(lambda: '00') # initialising data memory
         self.instructionMemory = defaultdict(lambda: '00') # initialising instruction memory
         self.registers = ['0x00000000' for i in range(32)] # initialising registers
@@ -48,7 +48,7 @@ class processor:
             self.return_address = 0
     
     # Function to populate the instruction & data memory using the program.mc file    
-    def loadProgramMemory(self,file1):
+    def loadProgramMemory(self, file1):
         try:
             fp = open(file1, 'r')
             flag = True
@@ -113,8 +113,8 @@ class processor:
 
         if not self.pipeliningEnabled:
             return
+        
         btb=args[0]
-
         if btb.find(state.PC):
             state.branch_taken=btb.predict(state.PC)
             if state.branch_taken:
@@ -123,8 +123,8 @@ class processor:
                 state.PC_next= state.PC + 4
 
 
-    # Function to update PC
-    def IAG(self,state):
+    # Function to update PC (instruction address generator)
+    def IAG(self, state):
         if(state.MuxPC_select==False):
             self.PC_next = state.return_address
         else:
@@ -136,37 +136,34 @@ class processor:
 
     # Decode
     def decode(self, state, *args):
-        # print("Printing Instructions")
-        # print(f"{state.IR}   {state.PC}")
         code = ''
         if state.stall == True:
             return False, 0, False, 0
-        # print(f"stkmb {state.IR}")
+        
         if state.IR == '0x00000000':
             self.terminate = True
             state.stall = True
-            self.allStall=True
+            self.allStall = True
             return False, 0, False, 0
         
         self.Total_instructions += 1
-        # print(state.IR)
 
         for i in range(15):
             state.ALU_OP[i] = False
 
         instruction = bin(int(state.IR[2:], 16))[2:]
-        instruction = (32-len(instruction))*'0' + instruction
+        instruction = (32-len(instruction)) * '0' + instruction
 
         # Opcode and func3
         opcode = instruction[25:32]
-        func3 = int(instruction[17:20],2)
+        func3 = int(instruction[17:20], 2)
 
         # R Format
         if(opcode == '0110011'):
-            state.generateControlSignals(True, False, 0, False, False,False,True,False,4)
-            state.RD = int(instruction[20:25],2)
-            state.RS1 = int(instruction[12:17],2)
-            state.RS2 = int(instruction[7:12],2)
+            state.generateControlSignals(True, False, 0, False, False, False, True, False, 4)
+            state.RD = int(instruction[20:25], 2)
+            state.RS1 = int(instruction[12:17], 2)
+            state.RS2 = int(instruction[7:12], 2)
             func7 = int(instruction[0:7], 2)
 
             # ADD/SUB/MUL
@@ -447,55 +444,48 @@ class processor:
         self.riscvCode[state.PC] = code
 
         if self.pipeliningEnabled:
-            enter=False
-            if state.isbranch==0:
-                return False,0,False,0
+            enter = False
+            if state.isbranch == 0:
+                return False, 0, False, 0
             else:
                 self.execute(state)
-                self.PC_next=state.PC
+                self.PC_next = state.PC
                 self.IAG(state)
-                actual_pc=self.PC_next
+                actual_pc = self.PC_next
 
-                btb=args[0]
-                
-                if btb.find(state.PC) and actual_pc!=state.PC_next:
-                    print("this cassssssssss")
-                    self.branch_misprediction+=1
+                btb = args[0]
+                if btb.find(state.PC) and actual_pc != state.PC_next:
+                    self.branch_misprediction += 1
 
                 if not btb.find(state.PC):
-                    state.MucINC_select=self.MuxINC_select
+                    state.MucINC_select = self.MuxINC_select
                     #pc_offset
-                    state.PC_offset=self.PC_offset
+                    state.PC_offset = self.PC_offset
                     #pc_select
-                    state.MuxPC_select=self.MuxPC_select
+                    state.MuxPC_select = self.MuxPC_select
                     #state_returnaddress
-                    state.return_address=self.return_address
-                    self.PC_next=state.PC
+                    state.return_address = self.return_address
+                    self.PC_next = state.PC
                     self.IAG(state)
-                    #state.pc_update no need
-                    temp1=self.PC_next
-                    print(f"temp {temp1} {self.PC_next}")
-                    if(state.isbranch==1):
-                        print("jump entering")
-                        btb.enter(is_jump=True,pc=state.PC,next_address=temp1)
+                    
+                    if(state.isbranch == 1):
+                        btb.enter(True, state.PC, self.PC_next)
                     else:
-                        print("branch entering")
-                        btb.enter(False,state.PC,self.PC_next)
+                        btb.enter(False, state.PC, self.PC_next)
                     
                     self.reset()
                     self.reset(state)
-                    enter=True
+                    enter = True
 
                 else:
-                    if(state.isbranch==1):
-                        btb.enter(is_jump=True,pc=state.PC,next_address=self.PC_next)
+                    if(state.isbranch == 1):
+                        btb.enter(True, state.PC, self.PC_next)
                     else:
-                        btb.enter(False,state.PC,self.PC_next)
-                if actual_pc!=state.PC_next:
-                    return True,actual_pc,enter,1
+                        btb.enter(False, state.PC, self.PC_next)
+                if actual_pc != state.PC_next:
+                    return True, actual_pc, enter, 1
                 else:
-                    
-                    return False,0,enter,3
+                    return False, 0, enter, 3
 
 
     # Execute
@@ -583,7 +573,7 @@ class processor:
 
 
     # Memory Access
-    def MemoryAccess(self,state):
+    def memoryAccess(self,state):
         if not self.pipeliningEnabled:
             self.IAG(state)
 
