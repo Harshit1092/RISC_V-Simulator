@@ -1,33 +1,33 @@
 [
     {
         "memory": "0X10000000",
-        "hex": "0xFFFFFFF8",
-        "binary": "11111111111111111111111111111000",
-        "decimal": "-8"
+        "hex": "0x0000000A",
+        "binary": "1010",
+        "decimal": "10"
     },
     {
         "memory": "0X10000004",
-        "hex": "0xFFFFFFFE",
-        "binary": "11111111111111111111111111111110",
-        "decimal": "-2"
+        "hex": "0x00000009",
+        "binary": "1001",
+        "decimal": "9"
     },
     {
         "memory": "0X10000008",
-        "hex": "0x00000001",
-        "binary": "1",
-        "decimal": "1"
+        "hex": "0x00000008",
+        "binary": "1000",
+        "decimal": "8"
     },
     {
         "memory": "0X1000000C",
-        "hex": "0x00000003",
-        "binary": "11",
-        "decimal": "3"
+        "hex": "0x00000007",
+        "binary": "111",
+        "decimal": "7"
     },
     {
         "memory": "0X10000010",
-        "hex": "0x00000004",
-        "binary": "100",
-        "decimal": "4"
+        "hex": "0x00000006",
+        "binary": "110",
+        "decimal": "6"
     },
     {
         "memory": "0X10000014",
@@ -37,93 +37,93 @@
     },
     {
         "memory": "0X10000018",
+        "hex": "0x00000004",
+        "binary": "100",
+        "decimal": "4"
+    },
+    {
+        "memory": "0X1000001C",
+        "hex": "0x00000003",
+        "binary": "11",
+        "decimal": "3"
+    },
+    {
+        "memory": "0X10000020",
+        "hex": "0x00000002",
+        "binary": "10",
+        "decimal": "2"
+    },
+    {
+        "memory": "0X10000024",
+        "hex": "0x00000001",
+        "binary": "1",
+        "decimal": "1"
+    },
+    {
+        "memory": "0X10000028",
+        "hex": "0x00000000",
+        "binary": "0",
+        "decimal": "0"
+    },
+    {
+        "memory": "0X1000002C",
+        "hex": "0x00000001",
+        "binary": "1",
+        "decimal": "1"
+    },
+    {
+        "memory": "0X10000030",
+        "hex": "0x00000002",
+        "binary": "10",
+        "decimal": "2"
+    },
+    {
+        "memory": "0X10000034",
+        "hex": "0x00000003",
+        "binary": "11",
+        "decimal": "3"
+    },
+    {
+        "memory": "0X10000038",
+        "hex": "0x00000004",
+        "binary": "100",
+        "decimal": "4"
+    },
+    {
+        "memory": "0X1000003C",
+        "hex": "0x00000005",
+        "binary": "101",
+        "decimal": "5"
+    },
+    {
+        "memory": "0X10000040",
         "hex": "0x00000006",
         "binary": "110",
         "decimal": "6"
     },
     {
-        "memory": "0X1000001C",
+        "memory": "0X10000044",
         "hex": "0x00000007",
         "binary": "111",
         "decimal": "7"
     },
     {
-        "memory": "0X10000020",
+        "memory": "0X10000048",
+        "hex": "0x00000008",
+        "binary": "1000",
+        "decimal": "8"
+    },
+    {
+        "memory": "0X1000004C",
         "hex": "0x00000009",
         "binary": "1001",
         "decimal": "9"
     },
     {
-        "memory": "0X10000024",
+        "memory": "0X10000050",
         "hex": "0x0000000A",
         "binary": "1010",
         "decimal": "10"
-    },
-    {
-        "memory": "0X10000028",
-        "hex": "0x0000000C",
-        "binary": "1100",
-        "decimal": "12"
-    },
-    {
-        "memory": "0X1000002C",
-        "hex": "0x000000FE",
-        "binary": "11111110",
-        "decimal": "254"
-    },
-    {
-        "memory": "0X10000030",
-        "hex": "0x000000FF",
-        "binary": "11111111",
-        "decimal": "255"
-    },
-    {
-        "memory": "0X10000034",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
-    },
-    {
-        "memory": "0X10000038",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
-    },
-    {
-        "memory": "0X1000003C",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
-    },
-    {
-        "memory": "0X10000040",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
-    },
-    {
-        "memory": "0X10000044",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
-    },
-    {
-        "memory": "0X10000048",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
-    },
-    {
-        "memory": "0X1000004C",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
-    },
-    {
-        "memory": "0X10000050",
-        "hex": "0x00000000",
-        "binary": "0",
-        "decimal": "0"
     },
     {
         "memory": "0X10000054",

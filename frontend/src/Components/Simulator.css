@@ -1,5 +1,6 @@
 .complete {
     background-color: #3d285c;
+    /* position: fixed; */
 }
 .box {
   display: flex;
@@ -70,7 +71,7 @@
       background-color: #DCCAE9;
       margin-right: 20px;
       margin-right: 20px;
-      width: 250px;
+      width: 200px;
       height: 100px;
       margin-top: 20px;
       color: black;
