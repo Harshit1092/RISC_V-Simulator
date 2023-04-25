@@ -33,3 +33,28 @@ class Cache:
             self.numberOfIndexBits = int(math.ceil(math.log(self.sets, 2)))
         
         self.cache = [dict() for i in range(self.sets)]
+        
+        
+        
+    def read(self, address, mem):
+        index = self.getIndex(address)
+        tag = self.getTag(address)
+        offset = self.getOffset(address)
+        
+        self.readCount = self.readCount + 1
+        
+        if tag not in self.cache[index].keys():
+            self.missCount = self.missCount + 1
+            if len(self.cache[index]) != self.ways:
+                self.addBlock(address,mem)
+            else:
+                for cacheTag in self.cache[index].keys():
+                    if self.cache[index][cacheTag][1] == 0:
+                        self.replaceBlock(index,cacheTag,address,mem)
+                        break
+        else:
+            self.hitCount = self.hitCount + 1
+        
+        block = self.cache[index][tag][0]
+        self.updateRecency(index,tag)
+        return block[2 * offset:2 * offset + 8]
