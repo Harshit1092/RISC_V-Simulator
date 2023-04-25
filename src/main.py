@@ -8,9 +8,11 @@ pc_tmp = []
 dataHazardPairs = []
 controlHazardSignals = []
 
+memoryTable = []
+
 def evaluate(processor, pipelineInstructions):
     processor.writeBack(pipelineInstructions[0])
-    processor.memoryAccess(pipelineInstructions[1])
+    guiMemory = processor.memoryAccess(pipelineInstructions[1])
     processor.execute(pipelineInstructions[2])
     controlHazard, controlPC, enter, color = processor.decode(pipelineInstructions[3], btb)
 
@@ -20,14 +22,12 @@ def evaluate(processor, pipelineInstructions):
         controlHazardSignals.append(controlHazardSignals[-1])
     else:
         controlHazardSignals.append(color)
-    processor.fetch(pipelineInstructions[4],btb)
+    guiFetch = processor.fetch(pipelineInstructions[4],btb)
+    memoryTable.append([guiFetch, guiMemory])
     return [pipelineInstructions[1],pipelineInstructions[2],pipelineInstructions[3],pipelineInstructions[4]], controlHazard, controlPC
         
-
-if __name__ == '__main__':
-    
-    file1="demofile.txt"
-    knob_input=open("input.txt", "r")
+def takeInput():
+    knob_input=open("knobsInput.txt", "r")
     knobs=[]
     for line in knob_input:
         x=line.split()
@@ -42,22 +42,52 @@ if __name__ == '__main__':
                 knobs.append(False)
             else:
                 knobs.append([False,x[1]])
-
     knob_input.close()
+
+    cache_input = open("cacheInput.txt", "r")
+    cache = []
+    for line in cache_input:
+        x = line.split()
+        for i in range(len(x)):
+            cache.append(int(x[i]))
+    cache_input.close()
+    
+    return knobs, cache
+
+if __name__ == '__main__':
+    
+    file1="demofile.txt"
+    knobs, cache = takeInput()
+
     # Knobs
     pipelining_knob=knobs[0]  # knob1
     forwarding_knob=knobs[1]   # knob2
     print_registers_each_cycle=knobs[2]    # knob3
     print_pipeline_registers=knobs[3]   # knob4
     print_specific_pipeline_registers =knobs[4]  # knob5
+
+    # Data cache inputs
+    dataCacheSize = int(cache[0])
+    dataCacheBlockSize = int(cache[1]) # Word is 4B
+    dataCacheAssociativity = int(cache[2]) # 0/1/2[FA/DM/SA]
+    dataCacheWays = int(cache[3])
+
+	# Instruction cache inputs
+    instructionCacheSize = int(cache[4])
+    instructionCacheBlock_size = int(cache[5]) # Word is 4B
+    instructionCacheAssociativity = int(cache[6]) # 0/1/2[FA/DM/SA]
+    instructionCacheWays = int(cache[7])
+
     # Various Counts
     stalls_due_to_data_hazard = 0
     number_of_data_hazards = 0
     stalls_due_to_control_hazard = 0
     totalStalls = 0
 
-    #initial calling of classes.
-    processor = processor(file1)
+    # Initial calling of classes
+    dataCache = Cache(dataCacheSize, dataCacheBlockSize, dataCacheAssociativity, dataCacheWays)
+    instructionCache = Cache(instructionCacheSize, instructionCacheBlock_size, instructionCacheAssociativity, instructionCacheWays)
+    processor = Processor(file1, dataCache, instructionCache)
     hdu=HDU()
     btb=BTB()
 
@@ -72,7 +102,7 @@ if __name__ == '__main__':
         while True:
 
             curr_instruction=State(PC)
-            processor.fetch(curr_instruction)
+            guiRead = processor.fetch(curr_instruction)
             clock_cycles +=1
             if print_registers_each_cycle:
                 print("CLOCK CYCLE:", clock_cycles)
@@ -81,6 +111,7 @@ if __name__ == '__main__':
                     print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([-1, -1, -1, -1, curr_instruction.PC])
+            memoryTable.append([guiRead, False])
 
             processor.decode(curr_instruction)
             clock_cycles +=1
@@ -91,6 +122,7 @@ if __name__ == '__main__':
                     print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([-1, -1, -1, curr_instruction.PC,-1])
+            memoryTable.append([False, False])
 
             if processor.terminate:
                 prog_end = True
@@ -105,8 +137,9 @@ if __name__ == '__main__':
                     print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([-1, -1,curr_instruction.PC,-1,-1])
+            memoryTable.append([False, False])
 
-            processor.memoryAccess(curr_instruction)
+            guiData = processor.memoryAccess(curr_instruction)
             clock_cycles +=1
             if print_registers_each_cycle:
                 print("CLOCK CYCLE:", clock_cycles)
@@ -115,6 +148,7 @@ if __name__ == '__main__':
                     print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([-1,curr_instruction.PC,-1,-1,-1])
+            memoryTable.append([False, guiData])
 
             processor.writeBack(curr_instruction)
             clock_cycles +=1
@@ -125,7 +159,7 @@ if __name__ == '__main__':
                     print("R" + str(i) + ":", processor.registers[i], end=" ")
                     print("\n")
             pc_tmp.append([curr_instruction.PC,-1,-1,-1,-1])
-
+            memoryTable.append([False, False])
             PC=processor.PC_next
 
     else:
@@ -279,6 +313,7 @@ if __name__ == '__main__':
                     print("\n")
      
     pc_tmp.pop(-1)
+
     cycleFile = open("cycle.txt", "w")
     for i in range(len(pc_tmp)):
         cycleFile.write(str(i + 1) + "  ")
@@ -294,7 +329,9 @@ if __name__ == '__main__':
     processor.writeDataMemory()
     # Printing the stats at the end of the simulation
     statsFile = open("stats.txt", "w")
-    # Stats
+
+    statsFile.write("Pipeline Stats\n")
+    # Pipeline Stats
     stats = [''] * 12
     stats[0] = "Number of clock cycles: " + str(clock_cycles) + "\n"
     stats[1] = "Number of instructions executed: " + str(processor.Total_instructions) + "\n"
@@ -314,4 +351,60 @@ if __name__ == '__main__':
     stats[11] = "Number of stalls due to control hazards: " + str(stalls_due_to_control_hazard) + "\n"
 
     statsFile.writelines(stats)
+
+    statsFile.write("Cache Stats\n")
+    # Cache Stats
+    ic = [''] * 3
+    dc = [''] * 4
+
+    statsFile.write("Instruction Cache :-\n")
+    ic[0] = "Number of accesses: Read -> " + str(processor.instCache.readCount) + ", Write -> " + str(processor.instCache.writeCount) + "\n"
+    ic[1] = "Number of hits: " + str(processor.instCache.hitCount) + "\n"
+    ic[2] = "Number of misses: " + str(processor.instCache.missCount) + "\n"
+    
+    statsFile.writelines(ic)
+
+    statsFile.write("Data Cache :-\n")
+    dc[0] = "Number of accesses: Read -> " + str(processor.dataCache.readCount) + ", Write -> " + str(processor.dataCache.writeCount) + "\n"
+    dc[1] = "Number of hits: " + str(processor.dataCache.hitCount) + "\n"
+    dc[2] = "Number of misses: " + str(processor.dataCache.missCount) + "\n"
+    
+    statsFile.writelines(dc)
     statsFile.close()
+
+    hitMissFile = open("hit_miss.txt", "w")
+    for i in range(memoryTable):
+        if memoryTable[i][0]:
+            d = memoryTable[i][0]
+            if d['action'] == 'read':
+                hitMissFile.write("Reading from set: " + str(d['index']) + " Victim: " + str(d.get('victim', '-1')) + " ")
+                if d['status'] == 'found':
+                    hitMissFile.write("(Read Hit)")
+                elif d['status'] == 'added':
+                    hitMissFile.write("(Read Miss: Added from main memory)")
+                else:
+                    hitMissFile.write("(Read Miss: Replaced from main memory)")
+            elif d['action'] == 'write':
+                hitMissFile.write("Writing in set: " + str(d['index']) + " Victim: " + str(d.get('victim', '-1')) + " ")
+                if d['status'] == 'found':
+                    hitMissFile.write("(Write Hit)")
+                else:
+                    hitMissFile.write("(Write Miss: Writing through in main memory)")
+        hitMissFile.write("  ")
+        if memoryTable[i][1]:
+            d = memoryTable[i][1]
+            if d['action'] == 'read':
+                hitMissFile.write("Reading from set: " + str(d['index']) + " Victim: " + str(d.get('victim', '-1')) + " ")
+                if d['status'] == 'found':
+                    hitMissFile.write("(Read Hit)")
+                elif d['status'] == 'added':
+                    hitMissFile.write("(Read Miss: Added from main memory)")
+                else:
+                    hitMissFile.write("(Read Miss: Replaced from main memory)")
+            elif d['action'] == 'write':
+                hitMissFile.write("Writing in set: " + str(d['index']) + " Victim: " + str(d.get('victim', '-1')) + " ")
+                if d['status'] == 'found':
+                    hitMissFile.write("(Write Hit)")
+                else:
+                    hitMissFile.write("(Write Miss: Writing through in main memory)")
+        hitMissFile.write("\n")

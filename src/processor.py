@@ -1,7 +1,7 @@
 from collections import defaultdict
 from btb import *
 from utility import *
-class processor:
+class Processor:
     def __init__(self, file1, dataCache, instCache):
         self.dataMemory = defaultdict(lambda: '00') # initialising data memory
         self.instructionMemory = defaultdict(lambda: '00') # initialising instruction memory
@@ -109,7 +109,7 @@ class processor:
         if state.stall == True:
             return
         
-        data = self.instCache.read(state.PC, self.instructionMemory)
+        data, guiRead = self.instCache.read(state.PC, self.instructionMemory)
         state.IR = '0x' + data[6:8] + data[4:6] + data[2:4] + data[0:2]
         # state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
         
@@ -118,7 +118,7 @@ class processor:
             return
 
         if not self.pipeliningEnabled:
-            return
+            return guiRead
         
         btb=args[0]
         if btb.find(state.PC):
@@ -127,6 +127,8 @@ class processor:
                 state.PC_next=btb.next_add(state.PC)
             else:
                 state.PC_next= state.PC + 4
+
+        return guiRead
 
 
     # Function to update PC (instruction address generator)
@@ -593,7 +595,7 @@ class processor:
             # Whether to access dataMemory?
             if state.MuxMA_select == False:
                 state.MAR = state.registerData
-                data = self.dataCache.read(state.MAR, self.dataMemory)
+                data, guiRead = self.dataCache.read(state.MAR, self.dataMemory)
 
                 # Memory Read (Load Instructions)
                 if state.mem_read:
@@ -607,6 +609,7 @@ class processor:
                         tmp = data[6:8] + data[4:6] + data[2:4] + data[0:2]
                         state.RY = nint(tmp,16,32)
                     state.registerData = state.RY
+                    return guiRead
                     
                 # Memory Write (Store Instructions)
                 elif state.mem_write:
@@ -620,7 +623,8 @@ class processor:
                         self.dataMemory[state.MAR + 1] = state.MDR[6:8]
                         self.dataMemory[state.MAR + 2] = state.MDR[4:6]
                         self.dataMemory[state.MAR + 3] = state.MDR[2:4]
-                    self.dataCache.write(state.MAR, state.MDR, self.dataMemory, state.numBytes)
+                    guiWrite = self.dataCache.write(state.MAR, state.MDR, self.dataMemory, state.numBytes)
+                    return guiWrite
         elif state.MuxY_select == 2:
             state.RY = state.PC + 4
         

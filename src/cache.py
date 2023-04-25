@@ -5,6 +5,7 @@ class Cache:
         self.cacheSize = cacheSize
         self.blockSize = blockSize
         self.associativity = associativity
+        self.ways = ways
         self.sets = cacheSize / (blockSize * associativity)
         self.numberOfIndexBits = 0
         self.numberOfBlockOffsetBits = int(math.ceil(math.log(blockSize, 2)))
@@ -84,6 +85,12 @@ class Cache:
         index = self.getIndex(address)
         tag = self.getTag(address)
         offset = self.getOffset(address)
+
+        guiData = {}
+        guiData['action'] = 'read'
+        guiData['index'] = index
+        guiData['offset'] = offset
+        guiData['status'] = 'found'
         
         self.readCount = self.readCount + 1
         
@@ -91,17 +98,20 @@ class Cache:
             self.missCount = self.missCount + 1
             if len(self.cache[index]) != self.ways:
                 self.addBlock(address,mem)
+                guiData['status'] = 'added'
             else:
                 for cacheTag in self.cache[index].keys():
                     if self.cache[index][cacheTag][1] == 0:
                         self.replaceBlock(index,cacheTag,address,mem)
+                        guiData['status'] = 'replaced'
+                        guiData['victim'] = cacheTag
                         break
         else:
             self.hitCount = self.hitCount + 1
         
         block = self.cache[index][tag][0]
         self.updateRecency(index,tag)
-        return block[2 * offset: 2 * offset + 8]
+        return block[2 * offset: 2 * offset + 8], guiData
     
     # Write through and No Write Allocate
     def write(self, address, data, mem, type):
@@ -109,9 +119,16 @@ class Cache:
         tag = self.getTag(address)
         offset = self.getOffset(address)
 
+        guiData = {}
+        guiData['action'] = 'write'
+        guiData['index'] = index
+        guiData['offset'] = offset
+        guiData['status'] = 'not found'
+
         self.writeCount += 1
 
         if tag in self.cache[index].keys():
+            guiData['status'] = 'found'
             if type == 4:
                 self.cache[index][tag][0] = self.cache[index][tag][0][:2 * offset] + data[8:10] + data[6:8] + data[4:6] + data[2:4] + self.cache[index][tag][0][2 * offset + 8:]
             elif type == 2:
@@ -129,6 +146,8 @@ class Cache:
             mem[address] = data[8:10]
         if type == 1:
             mem[address] = data[8:10]
+        
+        return guiData
     
     def makeTable(self):
         table = []
@@ -148,6 +167,5 @@ class Cache:
             table.append(row_data)
         
         return table
-        self.cache = [dict() for i in range(self.sets)]
 
     
