@@ -105,9 +105,9 @@ class Cache:
     
     # Write through and No Write Allocate
     def write(self, address, data, mem, type):
-        index = getIndex(address)
-        tag = getTag(address)
-        offset = getOffset(address)
+        index = self.getIndex(address)
+        tag = self.getTag(address)
+        offset = self.getOffset(address)
 
         self.writeCount += 1
 
