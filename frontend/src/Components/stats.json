@@ -1,0 +1,50 @@
+[
+    {
+        "stats": "Number of clock cycles",
+        "value": "5212"
+    },
+    {
+        "stats": "Number of instructions executed",
+        "value": "1042"
+    },
+    {
+        "stats": "CPI",
+        "value": "5.001919385796545"
+    },
+    {
+        "stats": "Number of data transfer (load & store) instructions executed",
+        "value": "299"
+    },
+    {
+        "stats": "Number of ALU instructions executed",
+        "value": "357"
+    },
+    {
+        "stats": "Number of control instructions executed",
+        "value": "386"
+    },
+    {
+        "stats": "Number of stalls",
+        "value": "0"
+    },
+    {
+        "stats": "Number of data hazards",
+        "value": "0"
+    },
+    {
+        "stats": "Number of control hazards",
+        "value": "0"
+    },
+    {
+        "stats": "Number of branch mispredictions",
+        "value": "0"
+    },
+    {
+        "stats": "Number of stalls due to data hazards",
+        "value": "0"
+    },
+    {
+        "stats": "Number of stalls due to control hazards",
+        "value": "0"
+    }
+]

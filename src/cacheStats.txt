@@ -1,9 +1,9 @@
-Number of read accesses:1225
-Number of hits: 1212
-Number of misses: 13
+Number of read accesses:1043
+Number of hits: 995
+Number of misses: 48
 Number of write accesses: 0
 
-Number of accesses: 218
-Number of hits: 209
-Number of misses: 9
-Number of write accesses: 109
+Number of accesses: 299
+Number of hits: 292
+Number of misses: 7
+Number of write accesses: 44

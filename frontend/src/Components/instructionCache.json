@@ -1,18 +1,18 @@
 [
     {
-        "Way1": "0x60 0x0325C30083250301 0",
-        "Way2": " 0x80 0x0329C30200000000 1"
+        "Way1": "Tag: 0x3 Index: 0x0 Offset: 0x0",
+        "Way2": " Tag: 0x4 Index: 0x0 Offset: 0x0"
     },
     {
-        "Way1": "0x68 0x0326430183268301 0",
-        "Way2": " 0x88 0x0000000000000000 1"
+        "Way1": "Tag: 0x1 Index: 0x1 Offset: 0x0",
+        "Way2": " Tag: 0x3 Index: 0x1 Offset: 0x0"
     },
     {
-        "Way1": "0x70 0x0327C30183270302 0",
-        "Way2": " 0x90 0x0000000000000000 1"
+        "Way1": "Tag: 0x2 Index: 0x2 Offset: 0x0",
+        "Way2": " Tag: 0x3 Index: 0x2 Offset: 0x0"
     },
     {
-        "Way1": "0x58 0x0324430083248300 0",
-        "Way2": " 0x78 0x0328430283288302 1"
+        "Way1": "Tag: 0x2 Index: 0x3 Offset: 0x0",
+        "Way2": " Tag: 0x3 Index: 0x3 Offset: 0x0"
     }
 ]
