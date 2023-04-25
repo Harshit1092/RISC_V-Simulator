@@ -207,6 +207,7 @@ function Input() {
                                 type="number"
                                 id="number-input"
                                 value={dataCache}
+                                className="text-gray-900"
                                 onChange={handleDataCache}
                             />
                             </div>
@@ -216,18 +217,19 @@ function Input() {
                                 type="number"
                                 id="number-input"
                                 value={dataCacheBlock}
+                                className="text-gray-900"
                                 onChange={handleDataCacheBlock}
                             />
                             </div>
                             <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache Size (in Bytes)</label>
                             <select
-                                className="text-lg font-medium"
+                                className="text-lg font-medium text-gray-900"
                                 value={associativityData}
                                 onChange={handleassociativityData}
                             >
                                 {Object.keys(options).map((option) => (
-                                    <option key={option} value={option}>
+                                    <option className="text-gray-900" key={option} value={option}>
                                     {options[option]}
                                     </option>
                                 ))}
@@ -238,6 +240,7 @@ function Input() {
                             <input
                                 type="number"
                                 id="number-input"
+                                className="text-gray-900"
                                 value={waysData}
                                 onChange={handleWaysData}
                             />
@@ -250,6 +253,7 @@ function Input() {
                             <input
                                 type="number"
                                 id="number-input"
+                                className="text-gray-900"
                                 value={instCache}
                                 onChange={handleDataCache1}
                             />
@@ -259,6 +263,7 @@ function Input() {
                             <input
                                 type="number"
                                 id="number-input"
+                                className="text-gray-900"
                                 value={instCacheBlock}
                                 onChange={handleDataCacheBlock1}
                             />
@@ -266,12 +271,12 @@ function Input() {
                             <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache Size (in Bytes)</label>
                             <select
-                                className="text-lg font-medium"
+                                className="text-lg font-medium text-gray-900"
                                 value={associativityInst}
                                 onChange={handleassociativityData1}
                             >
                                 {Object.keys(options).map((option) => (
-                                    <option key={option} value={option}>
+                                    <option className="text-gray-900" key={option} value={option}>
                                     {options[option]}
                                     </option>
                                 ))}
@@ -282,6 +287,7 @@ function Input() {
                             <input
                                 type="number"
                                 id="number-input"
+                                className="text-gray-900"
                                 value={waysInst}
                                 onChange={handleWaysData1}
                             />
@@ -291,12 +297,12 @@ function Input() {
                     <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Replacement Policy</label>
                             <select
-                                className="text-lg font-medium"
+                                className="text-lg font-medium text-gray-900"
                                 value={policy}
                                 onChange={handlePolicy}
                             >
                                 {Object.keys(options1).map((option) => (
-                                    <option key={option} value={option}>
+                                    <option className="text-gray-900" key={option} value={option}>
                                     {options1[option]}
                                     </option>
                                 ))}
