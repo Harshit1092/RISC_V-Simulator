@@ -119,17 +119,16 @@ class Cache:
             elif type == 1:
                 self.cache[index][tag][0] = self.cache[index][tag][0][:2 * offset] + data[8:10] + self.cache[index][tag][0][2 * offset + 8:]
         
-        if type == 3:
+        if type == 4:
             mem[address + 3] = data[2:4]
             mem[address + 2] = data[4:6]
             mem[address + 1] = data[6:8]
             mem[address] = data[8:10]
-        if type == 1:
+        if type == 2:
             mem[address + 1] = data[6:8]
             mem[address] = data[8:10]
-        if type == 0:
+        if type == 1:
             mem[address] = data[8:10]
-        return block[2 * offset:2 * offset + 8]
     
     def makeTable(self):
         table = []

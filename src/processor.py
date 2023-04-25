@@ -2,9 +2,12 @@ from collections import defaultdict
 from btb import *
 from utility import *
 class processor:
-    def __init__(self, file1):
+    def __init__(self, file1, dataCache, instCache):
         self.dataMemory = defaultdict(lambda: '00') # initialising data memory
         self.instructionMemory = defaultdict(lambda: '00') # initialising instruction memory
+        self.dataCache = dataCache # data cache
+        self.instCache = instCache # instruction cache
+
         self.registers = ['0x00000000' for i in range(32)] # initialising registers
         self.registers[2]='0x7FFFFFF0' # sp
         self.registers[3]='0x10000000' # gp
@@ -105,7 +108,10 @@ class processor:
     def fetch(self, state, *args):
         if state.stall == True:
             return
-        state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
+        
+        data = self.instCache.read(state.PC, self.instructionMemory)
+        state.IR = '0x' + data[6:8] + data[4:6] + data[2:4] + data[0:2]
+        # state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
         
         if self.allStall:
             state.stall=True
@@ -587,17 +593,18 @@ class processor:
             # Whether to access dataMemory?
             if state.MuxMA_select == False:
                 state.MAR = state.registerData
+                data = self.dataCache.read(state.MAR, self.dataMemory)
 
                 # Memory Read (Load Instructions)
                 if state.mem_read:
                     if state.numBytes == 1:
-                        tmp = self.dataMemory[state.MAR]
+                        tmp = data[0:2]
                         state.RY = nint(tmp,16,8)
                     elif state.numBytes == 2:
-                        tmp = self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR]
+                        tmp = data[2:4] + data[0:2]
                         state.RY = nint(tmp,16,16)
                     elif state.numBytes == 4:
-                        tmp = self.dataMemory[state.MAR + 3] + self.dataMemory[state.MAR + 2] + self.dataMemory[state.MAR + 1] + self.dataMemory[state.MAR]
+                        tmp = data[6:8] + data[4:6] + data[2:4] + data[0:2]
                         state.RY = nint(tmp,16,32)
                     state.registerData = state.RY
                     
@@ -613,6 +620,7 @@ class processor:
                         self.dataMemory[state.MAR + 1] = state.MDR[6:8]
                         self.dataMemory[state.MAR + 2] = state.MDR[4:6]
                         self.dataMemory[state.MAR + 3] = state.MDR[2:4]
+                    self.dataCache.write(state.MAR, state.MDR, self.dataMemory, state.numBytes)
         elif state.MuxY_select == 2:
             state.RY = state.PC + 4
         
