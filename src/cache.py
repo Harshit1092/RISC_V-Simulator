@@ -161,9 +161,9 @@ class Cache:
                 tag1 = "0"*(32 - self.numberOfBlockOffsetBits - self.numberOfIndexBits) + tag1
                 offset = "0"*self.numberOfBlockOffsetBits
                 address = int(tag1 + index + offset,2)
-                row_data.append([str(hex(address)), "0x" + str(self.cache[row][tag][0]),1,self.cache[row][tag][1],bin(int(self.cache[row][tag][0],16))])
-            for i in range(self.ways - len(row_data)):
-                row_data.append([0,0,0,0,0])
+                row_data.append([str(hex(address)), "0x" + str(self.cache[row][tag][0]),self.cache[row][tag][1]])
+            while len(row_data) < self.ways:
+                row_data.append([0,0,0])
             table.append(row_data)
         
         return table

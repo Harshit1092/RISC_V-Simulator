@@ -415,3 +415,21 @@ if __name__ == '__main__':
         else:
             hitMissFile.write("Empty")
         hitMissFile.write("\n")
+
+    dataCacheList = dataCache.makeTable()
+    dataCacheFile = open("dataCache.txt", "w")
+    for i in range(len(dataCacheList)):
+        for j in range(len(dataCacheList[i])):
+            for k in range(len(dataCacheList[i][j])):
+                dataCacheFile.write(str(dataCacheList[i][j][k]) + " ")
+            dataCacheFile.write("  ")
+        dataCacheFile.write("\n")
+
+    instCacheList = instructionCache.makeTable()
+    instructionCacheFile = open("instructionCache.txt", "w")
+    for i in range(len(instCacheList)):
+        for j in range(len(instCacheList[i])):
+            for k in range(len(instCacheList[i][j])):
+                instructionCacheFile.write(str(instCacheList[i][j][k]) + " ")
+            instructionCacheFile.write("  ")
+        instructionCacheFile.write("\n")
