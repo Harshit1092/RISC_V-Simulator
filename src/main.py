@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
 	# Instruction cache inputs
     instructionCacheSize = int(cache[4])
-    instructionCacheBlock_size = int(cache[5]) # Word is 4B
+    instructionCacheBlockSize = int(cache[5]) # Word is 4B
     instructionCacheAssociativity = int(cache[6]) # 0/1/2[FA/DM/SA]
     instructionCacheWays = int(cache[7])
 
@@ -86,7 +86,7 @@ if __name__ == '__main__':
 
     # Initial calling of classes
     dataCache = Cache(dataCacheSize, dataCacheBlockSize, dataCacheAssociativity, dataCacheWays)
-    instructionCache = Cache(instructionCacheSize, instructionCacheBlock_size, instructionCacheAssociativity, instructionCacheWays)
+    instructionCache = Cache(instructionCacheSize, instructionCacheBlockSize, instructionCacheAssociativity, instructionCacheWays)
     processor = Processor(file1, dataCache, instructionCache)
     hdu=HDU()
     btb=BTB()
@@ -351,8 +351,10 @@ if __name__ == '__main__':
     stats[11] = "Number of stalls due to control hazards: " + str(stalls_due_to_control_hazard) + "\n"
 
     statsFile.writelines(stats)
+    statsFile.close()
 
-    statsFile.write("Cache Stats\n")
+    statsFile = open("cacheStats.txt", "w")
+    statsFile.write("***Cache Stats***\n\n")
     # Cache Stats
     ic = [''] * 3
     dc = [''] * 4
@@ -363,6 +365,7 @@ if __name__ == '__main__':
     ic[2] = "Number of misses: " + str(processor.instCache.missCount) + "\n"
     
     statsFile.writelines(ic)
+    statsFile.write("\n")
 
     statsFile.write("Data Cache :-\n")
     dc[0] = "Number of accesses: Read -> " + str(processor.dataCache.readCount) + ", Write -> " + str(processor.dataCache.writeCount) + "\n"
