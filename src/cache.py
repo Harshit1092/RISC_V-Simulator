@@ -25,6 +25,7 @@ class Cache:
         elif self.associativity == 1:
             self.sets = self.cacheSize // self.blockSize
             self.numberOfIndexBits = int(math.ceil(math.log(self.sets, 2)))
+            self.ways = 1
         # Set Associative
         else:
             self.sets = self.cacheSize // self.blockSize
