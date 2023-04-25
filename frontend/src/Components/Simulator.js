@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './Simulator.css'
 import data from './cycle.json'
 import stats from './stats.json'
+import stats1 from './stats1.json'
 import { Link } from 'react-router-dom'
 const Simulator = () => {
 
@@ -177,6 +178,21 @@ const Simulator = () => {
                     <div className='divInner'><b>{stats[9]['stats']}</b>: {stats[9]['value']}</div>
                     <div className='divInner'><b>{stats[10]['stats']}</b>: {stats[10]['value']}</div>
                     <div className='divInner'><b>{stats[11]['stats']}</b>: {stats[11]['value']}</div>
+                </div>
+                <div className='statistics text-gray-300 text-xl font-bold'>Cache statistics</div>
+                <div className="statistics">
+                    <div className='statistics text-gray-300 text-lg font-bold'>Data Cache</div>
+                    <div className='divInner'><b>{stats1[0]['stats']}</b>: {stats1[0]['value']}</div>
+                    <div className='divInner'><b>{stats1[1]['stats']}</b>: {stats1[1]['value']}</div>
+                    <div className='divInner'><b>{stats1[2]['stats']}</b>: {stats1[2]['value']}</div>
+                    <div className='divInner'><b>{stats1[3]['stats']}</b>: {stats1[3]['value']}</div>
+                </div>
+                <div className="statistics">
+                    <div className='statistics text-gray-300 text-lg font-bold'>Inst Cache</div>
+                    <div className='divInner'><b>{stats1[4]['stats']}</b>: {stats1[4]['value']}</div>
+                    <div className='divInner'><b>{stats1[5]['stats']}</b>: {stats1[5]['value']}</div>
+                    <div className='divInner'><b>{stats1[6]['stats']}</b>: {stats1[6]['value']}</div>
+                    <div className='divInner'><b>{stats1[7]['stats']}</b>: {stats1[7]['value']}</div>
                 </div>
             </div>
         </>

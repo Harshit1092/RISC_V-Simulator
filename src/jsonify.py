@@ -120,6 +120,27 @@ with open(filename) as fh:
     json.dump(array,jsonFile,indent=4)
     jsonFile.close()
     
+fields = ['stats', 'value']
+with open('cacheStats.txt') as fh:
+    array = []
+    for line in fh:
+        description = line.strip('\n').split(':')
+        # print(description)
+        dict2 = {}
+        i = 0
+        while i < len(fields):
+            if len(description) > 1:
+                dict2[fields[i]] = description[i]
+            i = i + 1
+        if bool(dict2):
+            array.append(dict2)
+    
+    # print(array)
+    filepath = '../frontend/src/components/stats1.json'
+    jsonFile = open(filepath,'w')
+    json.dump(array,jsonFile,indent=4)
+    jsonFile.close()
+    
 filename = 'hit_miss.txt'
 fields = ['Fetch', 'Memory']
 with open(filename) as fh:
