@@ -16,6 +16,14 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Miss: Added from main memory)",
         "Memory": "Reading from set: 2 Victim: -1 (Read Miss: Added from main memory)"
     },
@@ -24,7 +32,27 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Miss: Added from main memory)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -45,6 +73,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Miss: Added from main memory)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -88,6 +128,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: 0 (Read Miss: Replaced from main memory)",
         "Memory": "Empty"
     },
@@ -96,8 +140,12 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: 0 (Read Miss: Replaced from main memory)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: 0 (Read Miss: Replaced from main memory)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
@@ -105,6 +153,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -152,16 +204,24 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: 1 (Read Miss: Replaced from main memory)",
@@ -169,6 +229,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: 2 (Read Miss: Replaced from main memory)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -213,6 +277,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -260,7 +328,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -268,12 +336,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -320,20 +400,32 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -392,6 +484,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -424,20 +520,32 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -496,6 +604,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -528,20 +640,32 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -588,7 +712,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -596,12 +720,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -648,7 +784,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -656,72 +792,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -752,6 +840,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -761,6 +853,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -820,6 +924,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -864,6 +972,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -896,7 +1008,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -904,12 +1016,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -968,6 +1092,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -997,6 +1125,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1044,16 +1176,24 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
@@ -1072,6 +1212,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1101,6 +1245,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1160,6 +1308,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1192,7 +1344,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1200,12 +1352,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -1252,16 +1416,24 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
@@ -1280,62 +1452,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1353,7 +1469,7 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
+        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
@@ -1369,6 +1485,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1400,6 +1520,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1409,6 +1533,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1468,6 +1604,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1500,16 +1640,24 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
@@ -1528,6 +1676,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1557,6 +1709,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1616,6 +1772,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1648,7 +1808,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1656,12 +1816,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -1720,6 +1892,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1749,6 +1925,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1796,7 +1976,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -1804,12 +1984,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -1856,20 +2048,32 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 0 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -1928,6 +2132,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -1961,46 +2169,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2032,6 +2200,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2041,6 +2213,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2100,6 +2284,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2144,6 +2332,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2173,6 +2365,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2232,6 +2428,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2261,6 +2461,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2320,6 +2524,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2352,7 +2560,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2360,12 +2568,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -2412,16 +2632,24 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
@@ -2440,46 +2668,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2497,6 +2685,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
     },
     {
@@ -2528,6 +2764,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2561,46 +2801,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2632,6 +2832,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2641,6 +2845,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2700,6 +2916,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2744,6 +2964,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2773,6 +2997,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2832,6 +3060,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -2861,6 +3093,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2908,7 +3144,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -2916,12 +3152,24 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -2968,20 +3216,32 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
     },
     {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 3 Victim: -1 (Write Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
@@ -3040,46 +3300,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3097,6 +3317,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
     },
     {
@@ -3128,6 +3396,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3161,46 +3433,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -3232,6 +3464,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3241,6 +3477,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -3300,6 +3548,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3344,6 +3596,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3373,6 +3629,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -3432,6 +3692,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3464,7 +3728,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -3472,10 +3736,18 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
@@ -3492,6 +3764,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3536,46 +3812,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3593,6 +3829,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
     },
     {
@@ -3624,6 +3908,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3653,6 +3941,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -3712,6 +4004,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3745,46 +4041,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -3816,6 +4072,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3825,6 +4085,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -3884,6 +4156,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3928,6 +4204,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -3957,6 +4237,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4004,7 +4288,7 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4012,10 +4296,18 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 1 Victim: -1 (Write Hit)"
     },
     {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Writing in set: 2 Victim: -1 (Write Hit)"
     },
@@ -4032,6 +4324,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4061,6 +4357,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4120,46 +4420,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4177,6 +4437,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
     },
     {
@@ -4208,6 +4516,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4237,6 +4549,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4296,6 +4612,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4329,46 +4649,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4400,6 +4680,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4409,6 +4693,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4468,6 +4764,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4512,6 +4812,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4541,6 +4845,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4600,6 +4908,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4629,6 +4941,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4688,46 +5004,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4745,6 +5021,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
     },
     {
@@ -4776,6 +5100,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4805,6 +5133,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4864,6 +5196,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4897,46 +5233,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -4968,6 +5264,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -4977,6 +5277,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5036,6 +5348,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5080,6 +5396,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5109,6 +5429,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5168,6 +5492,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5197,6 +5525,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5256,46 +5588,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5313,6 +5605,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
     },
     {
@@ -5344,6 +5684,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5373,6 +5717,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5432,6 +5780,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5465,46 +5817,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5536,6 +5848,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5545,6 +5861,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5604,6 +5932,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5648,6 +5980,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5677,6 +6013,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5736,6 +6076,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5765,6 +6109,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -5824,46 +6172,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5881,6 +6189,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
     },
     {
@@ -5912,6 +6268,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -5941,6 +6301,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -6000,6 +6364,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6033,46 +6401,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -6104,6 +6432,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6113,6 +6445,18 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -6172,6 +6516,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6216,6 +6564,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6245,6 +6597,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -6304,6 +6660,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6333,6 +6693,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -6392,46 +6756,6 @@
         "Memory": "Empty"
     },
     {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6449,6 +6773,54 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
+        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
+    },
+    {
+        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
         "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
     },
     {
@@ -6480,6 +6852,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6509,6 +6885,10 @@
     },
     {
         "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -6568,6 +6948,10 @@
         "Memory": "Empty"
     },
     {
+        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
+        "Memory": "Empty"
+    },
+    {
         "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
@@ -6601,46 +6985,6 @@
     },
     {
         "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
         "Memory": "Empty"
     },
     {
@@ -6661,570 +7005,6 @@
     },
     {
         "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: 2 (Read Miss: Replaced from main memory)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: 0 (Read Miss: Replaced from main memory)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 3 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 0 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 1 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Reading from set: 2 Victim: -1 (Read Hit)"
-    },
-    {
-        "Fetch": "Reading from set: 3 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 0 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 1 Victim: -1 (Read Hit)",
-        "Memory": "Empty"
-    },
-    {
-        "Fetch": "Reading from set: 2 Victim: 1 (Read Miss: Replaced from main memory)",
         "Memory": "Empty"
     },
     {
