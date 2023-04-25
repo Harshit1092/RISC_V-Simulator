@@ -86,3 +86,23 @@ class Cache:
             mem[address] = data[8:10]
         if type == 0:
             mem[address] = data[8:10]
+        return block[2 * offset:2 * offset + 8]
+    
+    def makeTable(self):
+        table = []
+        for row in range(self.sets):
+            row_data = []
+            for tag in self.cache[row].keys():
+                index = bin(row)[2:]
+                index = "0"*(self.numberOfIndexBits - len(index)) + index
+                index = index[:self.numberOfIndexBits]
+                tag1 = bin(tag)[2:]
+                tag1 = "0"*(32 - self.numberOfBlockOffsetBits - self.numberOfIndexBits) + tag1
+                offset = "0"*self.numberOfBlockOffsetBits
+                address = int(tag1 + index + offset,2)
+                row_data.append([str(hex(address)), "0x" + str(self.cache[row][tag][0]),1,self.cache[row][tag][1],bin(int(self.cache[row][tag][0],16))])
+            for i in range(self.ways - len(row_data)):
+                row_data.append([0,0,0,0,0])
+            table.append(row_data)
+        
+        return table
