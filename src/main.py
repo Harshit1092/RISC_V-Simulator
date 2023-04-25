@@ -332,7 +332,6 @@ if __name__ == '__main__':
     # Printing the stats at the end of the simulation
     statsFile = open("stats.txt", "w")
 
-    statsFile.write("Pipeline Stats\n")
     # Pipeline Stats
     stats = [''] * 12
     stats[0] = "Number of clock cycles: " + str(clock_cycles) + "\n"
@@ -361,7 +360,7 @@ if __name__ == '__main__':
     ic = [''] * 3
     dc = [''] * 4
 
-    statsFile.write("Instruction Cache :-\n")
+    # Instruction Cache Stats
     ic[0] = "Number of accesses: Read -> " + str(processor.instCache.readCount) + ", Write -> " + str(processor.instCache.writeCount) + "\n"
     ic[1] = "Number of hits: " + str(processor.instCache.hitCount) + "\n"
     ic[2] = "Number of misses: " + str(processor.instCache.missCount) + "\n"
@@ -369,7 +368,7 @@ if __name__ == '__main__':
     statsFile.writelines(ic)
     statsFile.write("\n")
 
-    statsFile.write("Data Cache :-\n")
+    # Data Cache Stats
     dc[0] = "Number of accesses: Read -> " + str(processor.dataCache.readCount) + ", Write -> " + str(processor.dataCache.writeCount) + "\n"
     dc[1] = "Number of hits: " + str(processor.dataCache.hitCount) + "\n"
     dc[2] = "Number of misses: " + str(processor.dataCache.missCount) + "\n"
