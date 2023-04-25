@@ -2,6 +2,7 @@ from processor import *
 from state import *
 from btb import *
 from hdu import *
+from cache import *
 
 pc_tmp = []
 dataHazardPairs = []

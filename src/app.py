@@ -17,6 +17,15 @@ def upload_file():
     print_pipeline_registers = request.form.get('print_pipeline_registers') == 'true'
     print_specific_pipeline_registers = request.form.get('print_specific_pipeline_registers') == 'true'
     number = request.form.get('number')
+    data_cache = request.form.get('data_cache')
+    data_cache_block = request.form.get('data_cache_block')
+    data_associativity = request.form.get('data_associativity')
+    data_ways = request.form.get('data_ways')
+    inst_cache = request.form.get('inst_cache')
+    inst_cache_block = request.form.get('inst_cache_block')
+    inst_associativity = request.form.get('inst_associativity')
+    inst_ways = request.form.get('inst_ways')
+    
     
     # Do something with the file and the boolean values
     demo = open('demofile.txt','w')
@@ -32,6 +41,20 @@ def upload_file():
     # f.write(str(print_specific_pipeline_registers[0]) + ' ' + str(print_specific_pipeline_registers[1]) + '\n')
     f.write(str(print_specific_pipeline_registers) + ' ' + str(number) + '\n')
 
+    f.close()
+    
+    f = open('cacheInput.txt','w')
+    f.close()
+    f = open('cacheInput.txt','a')
+    f.write(str(data_cache)+' ')
+    f.write(str(data_cache_block)+' ')
+    f.write(str(data_associativity)+' ')
+    f.write(str(data_ways)+'\n')
+    f.write(str(inst_cache)+' ')
+    f.write(str(inst_cache_block)+' ')
+    f.write(str(inst_associativity)+' ')
+    f.write(str(inst_ways)+'\n')
+    
     f.close()
     return jsonify({'message': 'File uploaded successfully'})
 

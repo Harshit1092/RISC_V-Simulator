@@ -9,7 +9,7 @@ const RegisterScreen = () => {
         <>
             <div className='navBar'>
                 <Link to='/'>
-                    <button type='button' className="btn btn-outline-danger" style={{marginRight: '10px'}}>Home</button>
+                    <button type='button' className="btn btn-outline-danger" style={{ marginRight: '10px' }}>Home</button>
                 </Link>
                 <Link to='/memory'>
                     <button type="button" class="btn btn-outline-primary" style={{ marginRight: '10px' }}>Memory</button>
@@ -23,8 +23,17 @@ const RegisterScreen = () => {
                 {/* <Link to='/controlHazards'>
                     <button type="button" class="btn btn-outline-danger" style={{ marginRight: '10px' }}>Control Hazards</button>
                 </Link> */}
+                <Link to='/Hits'>
+                    <button type="button" class="btn btn-outline-success" style={{ marginRight: '10px' }}>Hits/Misses</button>
+                </Link>
+                <Link to='/dataCache'>
+                    <button type="button" class="btn btn-outline-secondary" style={{ marginRight: '10px' }}>Data Cache</button>
+                </Link>
+                <Link to='/instCache'>
+                    <button type="button" class="btn btn-outline-primary" style={{ marginRight: '10px' }}>Instruction Cache</button>
+                </Link>
                 <Link to='/simulator'>
-                    <button type='button' className="btn btn-outline-danger" style={{marginRight: '10px'}}> Simulation</button>
+                    <button type='button' className="btn btn-outline-danger" style={{ marginRight: '10px' }}> Simulation</button>
                 </Link>
             </div>
             <div className='register'>

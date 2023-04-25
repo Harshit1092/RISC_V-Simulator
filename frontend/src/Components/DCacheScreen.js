@@ -1,10 +1,10 @@
 import React from 'react'
-import './MemoryScreen.css'
+import './DCacheScreen.css'
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { Link } from 'react-router-dom'
-import MemoryTable from './MemoryTable.js'
+import DCacheTable from './DCacheTable.js'
 
-const MemoryScreen = () => {
+const DCacheScreen = () => {
   return (
     <>
       <div className='navBar'>
@@ -37,10 +37,10 @@ const MemoryScreen = () => {
         </Link>
       </div>
       <div>
-        <MemoryTable />
+        <DCacheTable />
       </div>
     </>
   )
 }
 
-export default MemoryScreen
+export default DCacheScreen
