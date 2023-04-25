@@ -4,6 +4,9 @@ function Input() {
     const options = {
         0:"Fully Associative", 1:"Direct Mapped", 2:"Set Associative"
     }
+    const options1 = {
+        0:"LRU", 1:"FIFO", 2:"Random", 3:"LFU", 4:"LIFO"
+    }
     const [pipeliningEnabled, setPipeliningEnabled] = useState(false);
     const [forwardingEnabled, setForwardingEnabled] = useState(false);
     const [printRegistersEachCycle, setPrintRegistersEachCycle] = useState(false);
@@ -19,6 +22,7 @@ function Input() {
     const [instCacheBlock, setInstCacheBlock] = useState(-1);
     const [associativityInst, setassociativityInst] = useState(0);
     const [waysInst, setWaysInst] = useState(-1);
+    const [policy, setPolicy] = useState(0);
     
         function handleFileInput(e) {
           setSelectedFile(e.target.files[0]);
@@ -71,6 +75,9 @@ function Input() {
     const handleWaysData1 = (e) => {
         setWaysInst(e.target.value);
     }
+    const handlePolicy = (e) => {
+        setPolicy(e.target.value);
+    }
 
     const handleSubmit = () => {
         if (!selectedFile) {
@@ -93,6 +100,7 @@ function Input() {
         formData.append('inst_cache_block', instCacheBlock);
         formData.append('inst_associativity', associativityInst);
         formData.append('inst_ways', waysInst);
+        formData.append('policy', policy);
         if(instructionNumber != null) formData.append('number',instructionNumber);
         else formData.append('number',0);
         fetch('http://127.0.0.1:5000/upload', {
@@ -126,11 +134,11 @@ function Input() {
         />
       </label>
       {selectedFile && <p>{selectedFile.name}</p>}
-                <div className="pt-12 flex flex-col w-full space-y-2 mb-8 place-items-center justify-items-center">
+                <div className="pt-12 flex flex-col w-full space-y-2 mb-4 place-items-center justify-items-center">
                     
                     <label className="text-2xl font-bold">Options:</label>
                     
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 pb-2">
                     <input
                         type="checkbox"
                         className="h-6 w-6"
@@ -139,7 +147,7 @@ function Input() {
                     />
                     <label className="text-lg font-medium">Enable pipelining</label>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 pb-2">
                     <input
                         type="checkbox"
                         className="h-6 w-6"
@@ -148,7 +156,7 @@ function Input() {
                     />
                     <label className="text-lg font-medium">Enable forwarding</label>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 pb-2">
                     <input
                         type="checkbox"
                         className="h-6 w-6"
@@ -157,7 +165,7 @@ function Input() {
                     />
                     <label className="text-lg font-medium">Enable printing registers in each cycle</label>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 pb-2">
                     <input
                         type="checkbox"
                         className="h-6 w-6"
@@ -166,7 +174,7 @@ function Input() {
                     />
                     <label className="text-lg font-medium">Enable printing pipeline registers</label>
                     </div>
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 pb-2">
                     <input
                         type="checkbox"
                         className="h-6 w-6"
@@ -190,10 +198,10 @@ function Input() {
                     }
                     
                     </div>
-                    <div className="grid md:grid-cols-2 py-5 flex-wrap place-items-center">
+                    <div className="grid md:grid-cols-2 pt-5 flex-wrap place-items-center">
                         <div className="pr-10">
                             <label className="text-xl font-bold">Data Cache</label>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache Size (in Bytes)</label>
                             <input
                                 type="number"
@@ -202,7 +210,7 @@ function Input() {
                                 onChange={handleDataCache}
                             />
                             </div>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache block Size (in Bytes)</label>
                             <input
                                 type="number"
@@ -211,7 +219,7 @@ function Input() {
                                 onChange={handleDataCacheBlock}
                             />
                             </div>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache Size (in Bytes)</label>
                             <select
                                 className="text-lg font-medium"
@@ -225,7 +233,7 @@ function Input() {
                                 ))}
                             </select>
                             </div>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Number of Ways:</label>
                             <input
                                 type="number"
@@ -237,7 +245,7 @@ function Input() {
                         </div>
                         <div className="pl-10">
                             <label className="text-xl font-bold">Information Cache</label>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache Size (in Bytes)</label>
                             <input
                                 type="number"
@@ -246,7 +254,7 @@ function Input() {
                                 onChange={handleDataCache1}
                             />
                             </div>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache block Size (in Bytes)</label>
                             <input
                                 type="number"
@@ -255,7 +263,7 @@ function Input() {
                                 onChange={handleDataCacheBlock1}
                             />
                             </div>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Cache Size (in Bytes)</label>
                             <select
                                 className="text-lg font-medium"
@@ -269,7 +277,7 @@ function Input() {
                                 ))}
                             </select>
                             </div>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 pb-2">
                             <label className="text-lg font-medium">Number of Ways:</label>
                             <input
                                 type="number"
@@ -280,7 +288,20 @@ function Input() {
                             </div>
                         </div>
                     </div>
-
+                    <div className="flex items-center space-x-4 pb-2">
+                            <label className="text-lg font-medium">Replacement Policy</label>
+                            <select
+                                className="text-lg font-medium"
+                                value={policy}
+                                onChange={handlePolicy}
+                            >
+                                {Object.keys(options1).map((option) => (
+                                    <option key={option} value={option}>
+                                    {options1[option]}
+                                    </option>
+                                ))}
+                            </select>
+                            </div>
                     <center><button className="w-36 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bg-purple-900" onClick={handleSubmit}>
                         Submit
                     </button></center>
