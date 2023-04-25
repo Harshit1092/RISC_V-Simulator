@@ -103,9 +103,16 @@ class Cache:
         guiData['status'] = 'found'
         
         self.readCount = self.readCount + 1
+        index = self.getIndex(address)
+        tag = self.getTag(address)
+        offset = self.getOffset(address)
         
         if tag not in self.cache[index].keys():
             self.missCount = self.missCount + 1
+        else:
+            self.hitCount = self.hitCount + 1
+        
+        if tag not in self.cache[index].keys():
             if len(self.cache[index]) != self.ways:
                 self.addBlock(address,mem)
                 guiData['status'] = 'added'
@@ -145,8 +152,6 @@ class Cache:
                                 guiData['status'] = 'replaced'
                                 guiData['victim'] = cacheTag
                                 break
-        else:
-            self.hitCount = self.hitCount + 1
         
         block = self.cache[index][tag][0]
         self.updateRecency(index,tag)
