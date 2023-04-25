@@ -1,9 +1,9 @@
-Number of clock cycles: 5212
-Number of instructions executed: 1042
-CPI: 5.001919385796545
-Number of data transfer (load & store) instructions executed: 299
-Number of ALU instructions executed: 357
-Number of control instructions executed: 386
+Number of clock cycles: 332
+Number of instructions executed: 66
+CPI: 5.03030303030303
+Number of data transfer (load & store) instructions executed: 23
+Number of ALU instructions executed: 24
+Number of control instructions executed: 19
 Number of stalls: 0
 Number of data hazards: 0
 Number of control hazards: 0

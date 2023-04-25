@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 
 function Input() {
+    const options = {
+        0:"Fully Associative", 1:"Direct Mapped", 2:"Set Associative"
+    }
     const [pipeliningEnabled, setPipeliningEnabled] = useState(false);
     const [forwardingEnabled, setForwardingEnabled] = useState(false);
     const [printRegistersEachCycle, setPrintRegistersEachCycle] = useState(false);
@@ -8,6 +11,14 @@ function Input() {
     const [printSpecificPipelineRegisters, setPrintSpecificPipelineRegisters] = useState(false);
     const [instructionNumber, setInstructionNumber] = useState(-1);
     const [selectedFile, setSelectedFile] = useState(null);
+    const [dataCache, setDataCache] = useState(-1);
+    const [dataCacheBlock, setDataCacheBlock] = useState(-1);
+    const [associativityData, setassociativityData] = useState(0);
+    const [waysData, setWaysData] = useState(-1);
+    const [instCache, setInstCache] = useState(-1);
+    const [instCacheBlock, setInstCacheBlock] = useState(-1);
+    const [associativityInst, setassociativityInst] = useState(0);
+    const [waysInst, setWaysInst] = useState(-1);
     
         function handleFileInput(e) {
           setSelectedFile(e.target.files[0]);
@@ -36,6 +47,30 @@ function Input() {
     const handleInstructionNumber = (event) => {
         setInstructionNumber(event.target.value);
     };
+    const handleDataCache = (e) => {
+        setDataCache(e.target.value);
+    }
+    const handleDataCacheBlock = (e) => {
+        setDataCacheBlock(e.target.value);
+    }
+    const handleassociativityData = (e) => {
+        setassociativityData(e.target.value);
+    };
+    const handleWaysData = (e) => {
+        setWaysData(e.target.value);
+    }
+    const handleDataCache1 = (e) => {
+        setInstCache(e.target.value);
+    }
+    const handleDataCacheBlock1 = (e) => {
+        setInstCacheBlock(e.target.value);
+    }
+    const handleassociativityData1 = (e) => {
+        setassociativityInst(e.target.value);
+    };
+    const handleWaysData1 = (e) => {
+        setWaysInst(e.target.value);
+    }
 
     const handleSubmit = () => {
         if (!selectedFile) {
@@ -50,6 +85,14 @@ function Input() {
         formData.append('print_pipeline_registers', printPipelineRegisters);
         // formData.append('print_specific_pipeline_registers', [printSpecificPipelineRegisters, instructionNumber]);  
         formData.append('print_specific_pipeline_registers',printSpecificPipelineRegisters);
+        formData.append('data_cache', dataCache);
+        formData.append('data_cache_block', dataCacheBlock);
+        formData.append('data_associativity', associativityData);
+        formData.append('data_ways', waysData);
+        formData.append('inst_cache', instCache);
+        formData.append('inst_cache_block', instCacheBlock);
+        formData.append('inst_associativity', associativityInst);
+        formData.append('inst_ways', waysInst);
         if(instructionNumber != null) formData.append('number',instructionNumber);
         else formData.append('number',0);
         fetch('http://127.0.0.1:5000/upload', {
@@ -72,8 +115,8 @@ function Input() {
     };
     return (
         <>
-            <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-            <label className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <div className="pt-14 flex flex-col items-center justify-center h-screen text-gray-300">
+            <label className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bg-purple-900">
         Upload File
         <input
           type="file"
@@ -83,7 +126,7 @@ function Input() {
         />
       </label>
       {selectedFile && <p>{selectedFile.name}</p>}
-                <div className="flex flex-col w-full space-y-2 mb-8">
+                <div className="pt-12 flex flex-col w-full space-y-2 mb-8 place-items-center justify-items-center">
                     
                     <label className="text-2xl font-bold">Options:</label>
                     
@@ -145,10 +188,102 @@ function Input() {
                             </>
                         )
                     }
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleSubmit}>
-                        Submit
-                    </button>
+                    
                     </div>
+                    <div className="grid md:grid-cols-2 py-5 flex-wrap place-items-center">
+                        <div className="pr-10">
+                            <label className="text-xl font-bold">Data Cache</label>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Cache Size (in Bytes)</label>
+                            <input
+                                type="number"
+                                id="number-input"
+                                value={dataCache}
+                                onChange={handleDataCache}
+                            />
+                            </div>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Cache block Size (in Bytes)</label>
+                            <input
+                                type="number"
+                                id="number-input"
+                                value={dataCacheBlock}
+                                onChange={handleDataCacheBlock}
+                            />
+                            </div>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Cache Size (in Bytes)</label>
+                            <select
+                                className="text-lg font-medium"
+                                value={associativityData}
+                                onChange={handleassociativityData}
+                            >
+                                {Object.keys(options).map((option) => (
+                                    <option key={option} value={option}>
+                                    {options[option]}
+                                    </option>
+                                ))}
+                            </select>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Number of Ways:</label>
+                            <input
+                                type="number"
+                                id="number-input"
+                                value={waysData}
+                                onChange={handleWaysData}
+                            />
+                            </div>
+                        </div>
+                        <div className="pl-10">
+                            <label className="text-xl font-bold">Information Cache</label>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Cache Size (in Bytes)</label>
+                            <input
+                                type="number"
+                                id="number-input"
+                                value={instCache}
+                                onChange={handleDataCache1}
+                            />
+                            </div>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Cache block Size (in Bytes)</label>
+                            <input
+                                type="number"
+                                id="number-input"
+                                value={instCacheBlock}
+                                onChange={handleDataCacheBlock1}
+                            />
+                            </div>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Cache Size (in Bytes)</label>
+                            <select
+                                className="text-lg font-medium"
+                                value={associativityInst}
+                                onChange={handleassociativityData1}
+                            >
+                                {Object.keys(options).map((option) => (
+                                    <option key={option} value={option}>
+                                    {options[option]}
+                                    </option>
+                                ))}
+                            </select>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                            <label className="text-lg font-medium">Number of Ways:</label>
+                            <input
+                                type="number"
+                                id="number-input"
+                                value={waysInst}
+                                onChange={handleWaysData1}
+                            />
+                            </div>
+                        </div>
+                    </div>
+
+                    <center><button className="w-36 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bg-purple-900" onClick={handleSubmit}>
+                        Submit
+                    </button></center>
                 </div>
             </div>
         </>

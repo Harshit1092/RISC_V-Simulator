@@ -1,27 +1,27 @@
 [
     {
         "stats": "Number of clock cycles",
-        "value": "5212"
+        "value": "332"
     },
     {
         "stats": "Number of instructions executed",
-        "value": "1042"
+        "value": "66"
     },
     {
         "stats": "CPI",
-        "value": "5.001919385796545"
+        "value": "5.03030303030303"
     },
     {
         "stats": "Number of data transfer (load & store) instructions executed",
-        "value": "299"
+        "value": "23"
     },
     {
         "stats": "Number of ALU instructions executed",
-        "value": "357"
+        "value": "24"
     },
     {
         "stats": "Number of control instructions executed",
-        "value": "386"
+        "value": "19"
     },
     {
         "stats": "Number of stalls",
