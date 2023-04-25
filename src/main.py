@@ -78,6 +78,8 @@ if __name__ == '__main__':
     instructionCacheAssociativity = int(cache[6]) # 0/1/2[FA/DM/SA]
     instructionCacheWays = int(cache[7])
 
+    replacementPolicy = int(cache[8])
+
     # Various Counts
     stalls_due_to_data_hazard = 0
     number_of_data_hazards = 0
@@ -85,8 +87,8 @@ if __name__ == '__main__':
     totalStalls = 0
 
     # Initial calling of classes
-    dataCache = Cache(dataCacheSize, dataCacheBlockSize, dataCacheAssociativity, dataCacheWays)
-    instructionCache = Cache(instructionCacheSize, instructionCacheBlockSize, instructionCacheAssociativity, instructionCacheWays)
+    dataCache = Cache(dataCacheSize, dataCacheBlockSize, dataCacheAssociativity, dataCacheWays, replacementPolicy)
+    instructionCache = Cache(instructionCacheSize, instructionCacheBlockSize, instructionCacheAssociativity, instructionCacheWays, replacementPolicy)
     processor = Processor(file1, dataCache, instructionCache)
     hdu=HDU()
     btb=BTB()

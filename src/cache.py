@@ -10,7 +10,7 @@ class Cache:
         self.sets = 0
         self.numberOfIndexBits = 0
         self.numberOfBlockOffsetBits = int(math.ceil(math.log(blockSize, 2)))
-        self.replacementPolicy=replacementPolicy# 0 for LRU,1 for FIFO,2 for random,3 for LFU ,4 for LIFO
+        self.replacementPolicy=replacementPolicy # 0 for LRU,1 for FIFO,2 for random,3 for LFU ,4 for LIFO
         self.readCount = 0
         self.writeCount = 0
         self.hitCount = 0
@@ -58,7 +58,7 @@ class Cache:
         addr=(32-len(addr))*'0'+addr
         return int(addr[-(self.numberOfBlockOffsetBits):],2)
     
-    def updateFirstin(self,ind,tag):
+    def updateFirstin(self,ind):
         for cacheTag in self.cache[ind].keys():
             self.cache[ind][cacheTag][3]-=1
 
