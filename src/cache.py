@@ -6,7 +6,7 @@ class Cache:
         self.blockSize = blockSize
         self.associativity = associativity
         self.ways = ways
-        self.sets = cacheSize / (blockSize * associativity)
+        self.sets = 0
         self.numberOfIndexBits = 0
         self.numberOfBlockOffsetBits = int(math.ceil(math.log(blockSize, 2)))
 

@@ -27,7 +27,7 @@ def evaluate(processor, pipelineInstructions):
     return [pipelineInstructions[1],pipelineInstructions[2],pipelineInstructions[3],pipelineInstructions[4]], controlHazard, controlPC
         
 def takeInput():
-    knob_input=open("knobsInput.txt", "r")
+    knob_input=open("input.txt", "r")
     knobs=[]
     for line in knob_input:
         x=line.split()
@@ -373,7 +373,7 @@ if __name__ == '__main__':
     statsFile.close()
 
     hitMissFile = open("hit_miss.txt", "w")
-    for i in range(memoryTable):
+    for i in range(len(memoryTable)):
         if memoryTable[i][0]:
             d = memoryTable[i][0]
             if d['action'] == 'read':
@@ -390,7 +390,9 @@ if __name__ == '__main__':
                     hitMissFile.write("(Write Hit)")
                 else:
                     hitMissFile.write("(Write Miss: Writing through in main memory)")
-        hitMissFile.write("  ")
+        else:
+            hitMissFile.write("Empty")
+        hitMissFile.write("*")
         if memoryTable[i][1]:
             d = memoryTable[i][1]
             if d['action'] == 'read':
@@ -407,4 +409,6 @@ if __name__ == '__main__':
                     hitMissFile.write("(Write Hit)")
                 else:
                     hitMissFile.write("(Write Miss: Writing through in main memory)")
+        else:
+            hitMissFile.write("Empty")
         hitMissFile.write("\n")
