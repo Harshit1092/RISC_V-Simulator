@@ -35,8 +35,51 @@ class Cache:
         # Initialize Cache (cache[index][tag][block, recency])
         self.cache = [dict() for i in range(self.sets)]
         
-        
-        
+    def getIndex(self,addr):
+        addr=hex(addr)
+        addr=bin(int(addr[2:],16))[2:]
+        addr=(32-len(addr))*'0'+addr
+        if self.numberOfIndexBits==0:
+            return 0
+        else:
+            return int(addr[-(self.numberOfBlockOffsetBits+self.numberOfIndexBits):-self.numberOfBlockOffsetBits],2)
+
+    def getTag(self,addr):
+        addr=hex(addr)
+        addr=bin(int(addr[2:],16))[2:]
+        addr=(32-len(addr))*'0'+addr
+        return int(addr[:-(self.numberOfBlockOffsetBits+self.numberOfIndexBits)],2)
+    
+    def getOffset(self,addr):
+        addr=hex(addr)
+        addr=bin(int(addr[2:],16))[2:]
+        addr=(32-len(addr))*'0'+addr
+        return int(addr[-(self.numberOfBlockOffsetBits):],2)
+    
+    def replaceBlock(self,ind,cache_tag,addr,mem):
+        self.cache[ind].pop(cache_tag)
+        tag=self.getTag(addr)
+        self.cache[ind][tag]=['',self.ways-1]
+        addr=(addr//self.blockSize)*self.blockSize
+        for i in range(self.blockSize):
+            self.cache[ind][tag][0] += mem[addr+i]
+
+    def updateRecency(self,ind,tag):
+        self.cache[ind][tag][1]=self.ways
+        for cache_tag in self.cache[ind].keys():
+            if self.cache[ind][cache_tag][1]!=0:
+                self.cache[ind][cache_tag][1]-=1
+
+    def addBlock(self,addr,mem):
+        ind=self.getIndex(addr)
+        tag=self.getTag(addr)
+        self.cache[ind][tag]=['',self.ways-1]
+        addr=(addr//self.blockSize)*self.blockSize
+        for i in range(self.blockSize):
+            self.cache[ind][tag][0] += mem[addr+i]
+    
+    
+
     def read(self, address, mem):
         index = self.getIndex(address)
         tag = self.getTag(address)
@@ -106,3 +149,6 @@ class Cache:
             table.append(row_data)
         
         return table
+        self.cache = [dict() for i in range(self.sets)]
+
+    
