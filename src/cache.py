@@ -39,6 +39,7 @@ class Cache:
         
     def getIndex(self,addr):
         addr=hex(addr)
+        # print(addr)
         addr=bin(int(addr[2:],16))[2:]
         addr=(32-len(addr))*'0'+addr
         if self.numberOfIndexBits==0:

@@ -15,7 +15,7 @@ class Processor:
         self.pipeliningEnabled = False # knob for pipelining
         self.PC_next = 0 # Next PC address
         self.PC_offset = 0 # PC offset
-        self.return_address = -1 # return address
+        self.return_address = 0 # return address
         self.terminate = False # flag to terminate the program
         # Control Signals
         self.registerWrite=False
@@ -108,10 +108,10 @@ class Processor:
     def fetch(self, state, *args):
         if state.stall == True:
             return
-        
+        print(state.PC)
+        # state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
         data, guiRead = self.instCache.read(state.PC, self.instructionMemory)
         state.IR = '0x' + data[6:8] + data[4:6] + data[2:4] + data[0:2]
-        # state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
         
         if self.allStall:
             state.stall=True
