@@ -105,7 +105,7 @@ with open(filename) as fh:
     array = []
     for line in fh:
         description = line.strip('\n').split(': ')
-        
+        print(description)
         dict2 = {}
         i = 0
         while i < len(fields):
@@ -116,6 +116,26 @@ with open(filename) as fh:
     
     # print(array)
     filepath = '../frontend/src/components/stats.json'
+    jsonFile = open(filepath,'w')
+    json.dump(array,jsonFile,indent=4)
+    jsonFile.close()
+    
+filename = 'hit_miss.txt'
+fields = ['Fetch', 'Memory']
+with open(filename) as fh:
+    array = []
+    for line in fh:
+        description = line.strip('\n').split("*")
+        
+        dict2 = {}
+        i = 0
+        while i < len(fields):
+            dict2[fields[i]] = description[i]
+            i = i + 1
+        
+        array.append(dict2)
+        
+    filepath = '../frontend/src/components/hit_miss.json'
     jsonFile = open(filepath,'w')
     json.dump(array,jsonFile,indent=4)
     jsonFile.close()

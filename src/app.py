@@ -25,7 +25,7 @@ def upload_file():
     inst_cache_block = request.form.get('inst_cache_block')
     inst_associativity = request.form.get('inst_associativity')
     inst_ways = request.form.get('inst_ways')
-    
+    policy = request.form.get('policy')
     
     # Do something with the file and the boolean values
     demo = open('demofile.txt','w')
@@ -54,7 +54,7 @@ def upload_file():
     f.write(str(inst_cache_block)+' ')
     f.write(str(inst_associativity)+' ')
     f.write(str(inst_ways)+'\n')
-    
+    f.write(str(policy) + '\n')
     f.close()
     return jsonify({'message': 'File uploaded successfully'})
 
