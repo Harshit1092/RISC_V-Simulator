@@ -1,11 +1,11 @@
 ***Cache Stats***
 
 Instruction Cache :-
-Number of accesses: Read -> 67, Write -> 0
-Number of hits: 57
-Number of misses: 10
+Number of accesses: Read -> 1043, Write -> 0
+Number of hits: 995
+Number of misses: 48
 
 Data Cache :-
-Number of accesses: Read -> 23, Write -> 12
-Number of hits: 16
+Number of accesses: Read -> 299, Write -> 44
+Number of hits: 292
 Number of misses: 7
