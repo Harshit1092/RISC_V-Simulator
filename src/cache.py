@@ -1,3 +1,4 @@
+
 import math
 import random
 
@@ -34,12 +35,11 @@ class Cache:
             self.sets = self.sets // self.ways
             self.numberOfIndexBits = int(math.ceil(math.log(self.sets, 2)))
         
-        # Initialize Cache (cache[index][tag][block, recency,islastin,First])
+        # Initialize Cache (cache[index][tag][block, recency,islastin,First,frequency,leastfrequency])
         self.cache = [dict() for i in range(self.sets)]
         
     def getIndex(self,addr):
         addr=hex(addr)
-        # print(addr)
         addr=bin(int(addr[2:],16))[2:]
         addr=(32-len(addr))*'0'+addr
         if self.numberOfIndexBits==0:
@@ -63,12 +63,22 @@ class Cache:
         for cacheTag in self.cache[ind].keys():
             self.cache[ind][cacheTag][3]-=1
 
+    def updateleastfrequency(self,ind,tag):
+        least=self.cache[ind][tag][4]
+        for cache_tag in self.cache[ind].keys():
+            least=min(least,self.cache[ind][cache_tag][4])
+        for cache_tag in self.cache[ind].keys():
+            self.cache[ind][cache_tag][5]=least
+
+
 
     def replaceBlock(self,ind,cache_tag,addr,mem):
         self.cache[ind].pop(cache_tag)
         tag=self.getTag(addr)
-        self.cache[ind][tag]=['',self.ways-1,1,len(self.cache[ind])]
+        self.cache[ind][tag]=['',self.ways-1,1,len(self.cache[ind]),0,0]
         self.updateFirstin(ind)
+        for cache_tag in self.cache[ind].keys():
+            self.cache[ind][cache_tag][5]=0
         addr=(addr//self.blockSize)*self.blockSize
         for i in range(self.blockSize):
             self.cache[ind][tag][0] += mem[addr+i]
@@ -78,13 +88,18 @@ class Cache:
         for cache_tag in self.cache[ind].keys():
             if self.cache[ind][cache_tag][1]!=0:
                 self.cache[ind][cache_tag][1]-=1
+    
+
+
 
     def addBlock(self,addr,mem):
         ind=self.getIndex(addr)
         tag=self.getTag(addr)
         for cacheTag in self.cache[ind].keys():
             self.cache[ind][cacheTag][2]==0
-        self.cache[ind][tag]=['',self.ways-1,1,len(self.cache[ind])]
+        self.cache[ind][tag]=['',self.ways-1,1,len(self.cache[ind]),0,0]
+        for cache_tag in self.cache[ind].keys():
+            self.cache[ind][cache_tag][5]=0
         addr=(addr//self.blockSize)*self.blockSize
         for i in range(self.blockSize):
             self.cache[ind][tag][0] += mem[addr+i]
@@ -103,16 +118,9 @@ class Cache:
         guiData['status'] = 'found'
         
         self.readCount = self.readCount + 1
-        index = self.getIndex(address)
-        tag = self.getTag(address)
-        offset = self.getOffset(address)
         
         if tag not in self.cache[index].keys():
             self.missCount = self.missCount + 1
-        else:
-            self.hitCount = self.hitCount + 1
-        
-        if tag not in self.cache[index].keys():
             if len(self.cache[index]) != self.ways:
                 self.addBlock(address,mem)
                 guiData['status'] = 'added'
@@ -152,7 +160,19 @@ class Cache:
                                 guiData['status'] = 'replaced'
                                 guiData['victim'] = cacheTag
                                 break
-        
+                    else: #LFU
+                        for cacheTag in self.cache[index].keys():
+                            if self.cache[index][cacheTag][4] == self.cache[index][cacheTag][5]:
+                                self.replaceBlock(index,cacheTag,address,mem)
+                                guiData['status'] = 'replaced'
+                                guiData['victim'] = cacheTag
+                                break
+        else:
+            self.hitCount = self.hitCount + 1
+            self.cache[index][tag][4]+=1
+            self.updateleastfrequency(index,tag)
+
+
         block = self.cache[index][tag][0]
         self.updateRecency(index,tag)
         return block[2 * offset: 2 * offset + 8], guiData
