@@ -64,7 +64,7 @@ with open(filename) as fh:
         dataFields = line.split("  ")
         
         dict2 = {}
-        i = 0
+        i = 1
         while i < len(fields)-2:
             dict2[fields[i]] = dataFields[i]
             i = i + 1
@@ -90,7 +90,7 @@ with open(filename) as fh:
                 j = -1
             dict2[fields[i]] = str(j)
             dict2[fields[i+1]] = val
-            
+        dict2[fields[0]] = dataFields[0]            
         array.append(dict2)
         
     filepath = '../frontend/src/components/cycle.json'
