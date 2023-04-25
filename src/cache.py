@@ -1,7 +1,8 @@
 import math
+import random
 
 class Cache:
-    def __init__(self, cacheSize, blockSize, associativity, ways):
+    def __init__(self, cacheSize, blockSize, associativity, ways,replacementPolicy):
         self.cacheSize = cacheSize
         self.blockSize = blockSize
         self.associativity = associativity
@@ -9,7 +10,7 @@ class Cache:
         self.sets = 0
         self.numberOfIndexBits = 0
         self.numberOfBlockOffsetBits = int(math.ceil(math.log(blockSize, 2)))
-
+        self.replacementPolicy=replacementPolicy# 0 for LRU,1 for FIFO,2 for random,3 for LFU ,4 for LIFO
         self.readCount = 0
         self.writeCount = 0
         self.hitCount = 0
@@ -33,7 +34,7 @@ class Cache:
             self.sets = self.sets // self.ways
             self.numberOfIndexBits = int(math.ceil(math.log(self.sets, 2)))
         
-        # Initialize Cache (cache[index][tag][block, recency])
+        # Initialize Cache (cache[index][tag][block, recency,islastin,First])
         self.cache = [dict() for i in range(self.sets)]
         
     def getIndex(self,addr):
@@ -57,10 +58,16 @@ class Cache:
         addr=(32-len(addr))*'0'+addr
         return int(addr[-(self.numberOfBlockOffsetBits):],2)
     
+    def updateFirstin(self,ind,tag):
+        for cacheTag in self.cache[ind].keys():
+            self.cache[ind][cacheTag][3]-=1
+
+
     def replaceBlock(self,ind,cache_tag,addr,mem):
         self.cache[ind].pop(cache_tag)
         tag=self.getTag(addr)
-        self.cache[ind][tag]=['',self.ways-1]
+        self.cache[ind][tag]=['',self.ways-1,1,len(self.cache[ind])]
+        self.updateFirstin(ind)
         addr=(addr//self.blockSize)*self.blockSize
         for i in range(self.blockSize):
             self.cache[ind][tag][0] += mem[addr+i]
@@ -74,7 +81,9 @@ class Cache:
     def addBlock(self,addr,mem):
         ind=self.getIndex(addr)
         tag=self.getTag(addr)
-        self.cache[ind][tag]=['',self.ways-1]
+        for cacheTag in self.cache[ind].keys():
+            self.cache[ind][cacheTag][2]==0
+        self.cache[ind][tag]=['',self.ways-1,1,len(self.cache[ind])]
         addr=(addr//self.blockSize)*self.blockSize
         for i in range(self.blockSize):
             self.cache[ind][tag][0] += mem[addr+i]
@@ -100,12 +109,41 @@ class Cache:
                 self.addBlock(address,mem)
                 guiData['status'] = 'added'
             else:
-                for cacheTag in self.cache[index].keys():
-                    if self.cache[index][cacheTag][1] == 0:
-                        self.replaceBlock(index,cacheTag,address,mem)
+                if self.associativity==1:
+                    for cacheTag in self.cache[index].keys():
+                        if self.cache[index][cacheTag][1] == 0:
+                            self.replaceBlock(index,cacheTag,address,mem)
+                            guiData['status'] = 'replaced'
+                            guiData['victim'] = cacheTag
+                            break
+                else:
+                    if self.replacementPolicy==0:#LRU
+                        for cacheTag in self.cache[index].keys():
+                            if self.cache[index][cacheTag][1] == 0:
+                                self.replaceBlock(index,cacheTag,address,mem)
+                                guiData['status'] = 'replaced'
+                                guiData['victim'] = cacheTag
+                                break
+                    elif self.replacementPolicy==4:#LIFO
+                        for cacheTag in self.cache[index].keys():
+                            if self.cache[index][cacheTag][2] == 1:
+                                self.replaceBlock(index,cacheTag,address,mem)
+                                guiData['status'] = 'replaced'
+                                guiData['victim'] = cacheTag
+                                break
+                    elif self.replacementPolicy==2:#random
+                        x=len(self.cache[index])
+                        cacheTag=random.choice(list(self.cache[index]))
                         guiData['status'] = 'replaced'
                         guiData['victim'] = cacheTag
-                        break
+                        self.replaceBlock(index,cacheTag,address,mem)
+                    elif self.replacementPolicy==1:#FIFO
+                        for cacheTag in self.cache[index].keys():
+                            if self.cache[index][cacheTag][3] == 0:
+                                self.replaceBlock(index,cacheTag,address,mem)
+                                guiData['status'] = 'replaced'
+                                guiData['victim'] = cacheTag
+                                break
         else:
             self.hitCount = self.hitCount + 1
         
