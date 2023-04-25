@@ -1,96 +1,1225 @@
 Reading from set: 0 Victim: -1 (Read Miss: Added from main memory)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Reading from set: 1 Victim: -1 (Read Miss: Added from main memory)*Empty
 Reading from set: 1 Victim: -1 (Read Hit)*Empty
 Reading from set: 1 Victim: -1 (Read Hit)*Empty
 Reading from set: 1 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Miss: Added from main memory)*Reading from set: 0 Victim: -1 (Read Miss: Added from main memory)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Miss: Added from main memory)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Miss: Added from main memory)*Empty
-Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
-Reading from set: 1 Victim: -1 (Read Miss: Added from main memory)*Writing in set: 1 Victim: -1 (Write Hit)
-Reading from set: 2 Victim: -1 (Read Miss: Added from main memory)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Miss: Added from main memory)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Miss: Added from main memory)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Miss: Added from main memory)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Miss: Added from main memory)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Miss: Added from main memory)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
 Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Miss: Added from main memory)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Empty
-Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 3 Victim: -1 (Write Hit)
-Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 3 Victim: -1 (Write Hit)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Empty
-Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 2 Victim: -1 (Write Hit)
-Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 2 Victim: -1 (Write Hit)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Miss: Added from main memory)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: 0 (Read Miss: Replaced from main memory)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: 0 (Read Miss: Replaced from main memory)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 0 Victim: 1 (Read Miss: Replaced from main memory)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
 Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
 Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
 Reading from set: 1 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Miss: Added from main memory)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 0 Victim: 0 (Read Miss: Replaced from main memory)*Reading from set: 1 Victim: -1 (Read Hit)
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
-Reading from set: 1 Victim: 0 (Read Miss: Replaced from main memory)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 2 Victim: -1 (Read Hit)
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 2 Victim: -1 (Read Hit)
-Reading from set: 0 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 3 Victim: -1 (Read Hit)
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 3 Victim: -1 (Read Hit)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 3 Victim: -1 (Read Hit)*Empty
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
-Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
-Reading from set: 2 Victim: -1 (Read Hit)*Empty
 Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Writing in set: 1 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Writing in set: 0 Victim: -1 (Write Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: 3 (Read Miss: Replaced from main memory)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: 1 (Read Miss: Replaced from main memory)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 1 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 1 Victim: -1 (Read Hit)*Reading from set: 0 Victim: -1 (Read Hit)
+Reading from set: 1 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
+Reading from set: 0 Victim: -1 (Read Hit)*Empty
 Empty*Empty
 Empty*Empty

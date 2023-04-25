@@ -70,8 +70,6 @@ class Cache:
         for cache_tag in self.cache[ind].keys():
             self.cache[ind][cache_tag][5]=least
 
-
-
     def replaceBlock(self,ind,cache_tag,addr,mem):
         self.cache[ind].pop(cache_tag)
         tag=self.getTag(addr)
@@ -88,9 +86,6 @@ class Cache:
         for cache_tag in self.cache[ind].keys():
             if self.cache[ind][cache_tag][1]!=0:
                 self.cache[ind][cache_tag][1]-=1
-    
-
-
 
     def addBlock(self,addr,mem):
         ind=self.getIndex(addr)
@@ -104,8 +99,6 @@ class Cache:
         for i in range(self.blockSize):
             self.cache[ind][tag][0] += mem[addr+i]
     
-    
-
     def read(self, address, mem):
         index = self.getIndex(address)
         tag = self.getTag(address)
@@ -116,7 +109,7 @@ class Cache:
         guiData['index'] = index
         guiData['offset'] = offset
         guiData['status'] = 'found'
-        
+
         self.readCount = self.readCount + 1
         
         if tag not in self.cache[index].keys():
@@ -225,7 +218,7 @@ class Cache:
                 tag1 = "0"*(32 - self.numberOfBlockOffsetBits - self.numberOfIndexBits) + tag1
                 offset = "0"*self.numberOfBlockOffsetBits
                 address = int(tag1 + index + offset,2)
-                row_data.append([str(hex(address)), "0x" + str(self.cache[row][tag][0]),self.cache[row][tag][1]])
+                row_data.append(["Tag: " + str(hex(self.getTag(address))), "Index: " + str(hex(self.getIndex(address))), "Offset: " + str(hex(self.getOffset(address)))])
             while len(row_data) < self.ways:
                 row_data.append([0,0,0])
             table.append(row_data)

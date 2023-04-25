@@ -355,23 +355,24 @@ if __name__ == '__main__':
     statsFile.close()
 
     statsFile = open("cacheStats.txt", "w")
-    statsFile.write("***Cache Stats***\n\n")
     # Cache Stats
-    ic = [''] * 3
+    ic = [''] * 4
     dc = [''] * 4
 
     # Instruction Cache Stats
-    ic[0] = "Number of accesses: Read -> " + str(processor.instCache.readCount) + ", Write -> " + str(processor.instCache.writeCount) + "\n"
+    ic[0] = "Number of read accesses:" + str(processor.instCache.readCount) + "\n"
     ic[1] = "Number of hits: " + str(processor.instCache.hitCount) + "\n"
     ic[2] = "Number of misses: " + str(processor.instCache.missCount) + "\n"
+    ic[3] = "Number of write accesses: " + str(processor.instCache.writeCount) + "\n"
     
     statsFile.writelines(ic)
     statsFile.write("\n")
 
     # Data Cache Stats
-    dc[0] = "Number of accesses: Read -> " + str(processor.dataCache.readCount) + ", Write -> " + str(processor.dataCache.writeCount) + "\n"
+    dc[0] = "Number of accesses: " + str(processor.dataCache.readCount) + "\n"
     dc[1] = "Number of hits: " + str(processor.dataCache.hitCount) + "\n"
     dc[2] = "Number of misses: " + str(processor.dataCache.missCount) + "\n"
+    dc[3] = "Number of write accesses: " + str(processor.dataCache.writeCount) + "\n"
     
     statsFile.writelines(dc)
     statsFile.close()

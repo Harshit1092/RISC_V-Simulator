@@ -108,7 +108,7 @@ class Processor:
     def fetch(self, state, *args):
         if state.stall == True:
             return
-        print(state.PC)
+        
         # state.IR = '0x' + self.instructionMemory[state.PC + 3] + self.instructionMemory[state.PC + 2] + self.instructionMemory[state.PC + 1] + self.instructionMemory[state.PC]
         data, guiRead = self.instCache.read(state.PC, self.instructionMemory)
         state.IR = '0x' + data[6:8] + data[4:6] + data[2:4] + data[0:2]

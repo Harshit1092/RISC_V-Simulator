@@ -1,9 +1,9 @@
-***Cache Stats***
+Number of read accesses:1225
+Number of hits: 1212
+Number of misses: 13
+Number of write accesses: 0
 
-Number of accesses: Read -> 96, Write -> 0
-Number of hits: 85
-Number of misses: 11
-
-Number of accesses: Read -> 23, Write -> 12
-Number of hits: 16
-Number of misses: 7
+Number of accesses: 218
+Number of hits: 209
+Number of misses: 9
+Number of write accesses: 109
