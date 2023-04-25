@@ -60,6 +60,7 @@ class Cache:
         self.updateRecency(index,tag)
         return block[2 * offset: 2 * offset + 8]
     
+    # Write through and No Write Allocate
     def write(self, address, data, mem, type):
         index = getIndex(address)
         tag = getTag(address)
