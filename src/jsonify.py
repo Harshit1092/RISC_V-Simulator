@@ -56,7 +56,7 @@ with open(filename2) as fh:
     for line in fh:
         arr.append(line.strip('\n'))
         
-print(f"arr[0]: {arr[0]}")
+# print(f"arr[0]: {arr[0]}")
 fields = ['id','writeback','memory','execute','decode','fetch',"forwarding","value"]
 with open(filename) as fh:
     array = []

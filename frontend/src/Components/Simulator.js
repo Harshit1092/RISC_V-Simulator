@@ -168,13 +168,15 @@ const Simulator = () => {
                     <div className='divInner'><b>{stats[2]['stats']}</b>: {stats[2]['value']}</div>
                     <div className='divInner'><b>{stats[3]['stats']}</b>: {stats[3]['value']}</div>
                     <div className='divInner'><b>{stats[4]['stats']}</b>: {stats[4]['value']}</div>
+                    <div className='divInner'><b>{stats[5]['stats']}</b>: {stats[5]['value']}</div>
                 </div>
                 <div className="statistics">
-                    <div className='divInner'><b>{stats[5]['stats']}</b>: {stats[5]['value']}</div>
                     <div className='divInner'><b>{stats[6]['stats']}</b>: {stats[6]['value']}</div>
                     <div className='divInner'><b>{stats[7]['stats']}</b>: {stats[7]['value']}</div>
                     <div className='divInner'><b>{stats[8]['stats']}</b>: {stats[8]['value']}</div>
                     <div className='divInner'><b>{stats[9]['stats']}</b>: {stats[9]['value']}</div>
+                    <div className='divInner'><b>{stats[10]['stats']}</b>: {stats[10]['value']}</div>
+                    <div className='divInner'><b>{stats[11]['stats']}</b>: {stats[11]['value']}</div>
                 </div>
             </div>
         </>
