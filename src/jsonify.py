@@ -105,7 +105,7 @@ with open(filename) as fh:
     array = []
     for line in fh:
         description = line.strip('\n').split(': ')
-        print(description)
+        # print(description)
         dict2 = {}
         i = 0
         while i < len(fields):
@@ -141,4 +141,59 @@ with open(filename) as fh:
     jsonFile.close()
     
         
+filename = 'dataCache.txt'
+fields = []
+
+with open(filename) as fh:
+    arr = fh.readline().strip('\n').strip(" ").split("  ")
+    for i in range(len(arr)):
+        fields.append(f"Way{i+1}")
+    
+    fh.close()
+
+with open(filename) as fh:
+    array = []
+    for line in fh:
+        description = line.strip('\n').strip(" ").split("  ")
+        # print(description)
+        dict2 = {}
+        i = 0
+        while i < len(fields):
+            dict2[fields[i]] = description[i]
+            i = i + 1
         
+        array.append(dict2)
+        
+    filepath = '../frontend/src/components/dataCache.json'
+    jsonFile = open(filepath,'w')
+    json.dump(array,jsonFile,indent=4)
+    jsonFile.close()
+    
+
+filename = "instructionCache.txt"
+fields = []
+
+with open(filename) as fh:
+    arr = fh.readline().strip('\n').strip(" ").split("  ")
+    for i in range(len(arr)):
+        fields.append(f"Way{i+1}")
+    
+    fh.close()
+
+with open(filename) as fh:
+    array = []
+    for line in fh:
+        description = line.strip('\n').strip(" ").split("  ")
+        # print(description)
+        dict2 = {}
+        i = 0
+        while i < len(fields):
+            dict2[fields[i]] = description[i]
+            i = i + 1
+        
+        array.append(dict2)
+        
+    filepath = '../frontend/src/components/instructionCache.json'
+    jsonFile = open(filepath,'w')
+    json.dump(array,jsonFile,indent=4)
+    jsonFile.close()

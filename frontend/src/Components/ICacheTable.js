@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import MemoryData from "./data.json";
+import MemoryData from "./instructionCache.json";
 
 function ICacheTable(){
 
@@ -61,15 +61,15 @@ const tdData =() =>{
       if(index > 300) return
        return(
            <tr>
-                {/* {
+                {
                    column.map((v)=>{
-                       return <td style={{width:'20%', textAlign:'center'}}>{data[v]}</td>
+                       return <td style={{width:'20%', textAlign:'center', backgroundColor:'white'}}>{data[v]}</td>
                    })
-                } */}
-                <td onMouseEnter={() => handleMouseEnter(index,1)} onMouseLeave={() => handleMouseLeave(1)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value1 ? "#DCCAE9" : "white" }}>{data['memory']}</td>
+                }
+                {/* <td onMouseEnter={() => handleMouseEnter(index,1)} onMouseLeave={() => handleMouseLeave(1)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value1 ? "#DCCAE9" : "white" }}>{data['memory']}</td>
                 <td onMouseEnter={() => handleMouseEnter(index,2)} onMouseLeave={() => handleMouseLeave(2)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value2 ? "#DCCAE9" : "white"}}>{data['hex']}</td>
                 <td onMouseEnter={() => handleMouseEnter(index,3)} onMouseLeave={() => handleMouseLeave(3)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value3 ? "#DCCAE9" : "white"}}>{data['binary']}</td>
-                <td onMouseEnter={() => handleMouseEnter(index,4)} onMouseLeave={() => handleMouseLeave(4)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value4 ? "#DCCAE9" : "white  "}}>{data['decimal']}</td>
+                <td onMouseEnter={() => handleMouseEnter(index,4)} onMouseLeave={() => handleMouseLeave(4)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value4 ? "#DCCAE9" : "white  "}}>{data['decimal']}</td> */}
            </tr>
        )
      })
