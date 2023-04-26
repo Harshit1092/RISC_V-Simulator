@@ -206,7 +206,7 @@ class Cache:
         
         return guiData
     
-    def makeTable(self):
+    def makeCacheTable(self):
         table = []
         for row in range(self.sets):
             row_data = []

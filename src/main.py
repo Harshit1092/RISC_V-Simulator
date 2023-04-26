@@ -24,6 +24,25 @@ def evaluate(processor, pipelineInstructions):
         controlHazardSignals.append(color)
     guiFetch = processor.fetch(pipelineInstructions[4],btb)
     memoryTable.append([guiFetch, guiMemory])
+
+    dataCacheList = dataCache.makeCacheTable()
+    for i in range(len(dataCacheList)):
+        for j in range(len(dataCacheList[i])):
+            for k in range(len(dataCacheList[i][j])):
+                dataCacheFile.write(str(dataCacheList[i][j][k]) + " ")
+            dataCacheFile.write("  ")
+        dataCacheFile.write("\n")
+    dataCacheFile.write("\n")
+    
+    instCacheList = instructionCache.makeCacheTable()
+    for i in range(len(instCacheList)):
+        for j in range(len(instCacheList[i])):
+            for k in range(len(instCacheList[i][j])):
+                instructionCacheFile.write(str(instCacheList[i][j][k]) + " ")
+            instructionCacheFile.write("  ")
+        instructionCacheFile.write("\n")
+    instructionCacheFile.write("\n")
+    
     return [pipelineInstructions[1],pipelineInstructions[2],pipelineInstructions[3],pipelineInstructions[4]], controlHazard, controlPC
         
 def takeInput():
@@ -58,6 +77,8 @@ if __name__ == '__main__':
     
     file1="demofile.txt"
     knobs, cache = takeInput()
+    dataCacheFile = open("dataCache.txt", "w")
+    instructionCacheFile = open("instructionCache.txt", "w")
 
     # Knobs
     pipelining_knob=knobs[0]  # knob1
@@ -163,6 +184,24 @@ if __name__ == '__main__':
             pc_tmp.append([curr_instruction.PC,-1,-1,-1,-1])
             memoryTable.append([False, False])
             PC=processor.PC_next
+
+            dataCacheList = dataCache.makeCacheTable()
+            for i in range(len(dataCacheList)):
+                for j in range(len(dataCacheList[i])):
+                    for k in range(len(dataCacheList[i][j])):
+                        dataCacheFile.write(str(dataCacheList[i][j][k]) + " ")
+                    dataCacheFile.write("  ")
+                dataCacheFile.write("\n")
+            dataCacheFile.write("\n")
+            
+            instCacheList = instructionCache.makeCacheTable()
+            for i in range(len(instCacheList)):
+                for j in range(len(instCacheList[i])):
+                    for k in range(len(instCacheList[i][j])):
+                        instructionCacheFile.write(str(instCacheList[i][j][k]) + " ")
+                    instructionCacheFile.write("  ")
+                instructionCacheFile.write("\n")
+            instructionCacheFile.write("\n")
 
     else:
         processor.pipeliningEnabled = True
@@ -418,20 +457,6 @@ if __name__ == '__main__':
             hitMissFile.write("Empty")
         hitMissFile.write("\n")
 
-    dataCacheList = dataCache.makeTable()
-    dataCacheFile = open("dataCache.txt", "w")
-    for i in range(len(dataCacheList)):
-        for j in range(len(dataCacheList[i])):
-            for k in range(len(dataCacheList[i][j])):
-                dataCacheFile.write(str(dataCacheList[i][j][k]) + " ")
-            dataCacheFile.write("  ")
-        dataCacheFile.write("\n")
-
-    instCacheList = instructionCache.makeTable()
-    instructionCacheFile = open("instructionCache.txt", "w")
-    for i in range(len(instCacheList)):
-        for j in range(len(instCacheList[i])):
-            for k in range(len(instCacheList[i][j])):
-                instructionCacheFile.write(str(instCacheList[i][j][k]) + " ")
-            instructionCacheFile.write("  ")
-        instructionCacheFile.write("\n")
+    hitMissFile.close()
+    dataCacheFile.close()
+    instructionCacheFile.close()
