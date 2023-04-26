@@ -4,12 +4,23 @@ import RegisterData from './cycle.json'
 
 function DataHazardTable(){
 
+  const [next, setNext] = useState(0)
 const [hoverdIndex, setHoverdIndex] = useState(null)
 const [value1, setValue1] = useState(null)
 const [value2, setValue2] = useState(null)
 const [value3, setValue3] = useState(null)
 const [value4, setValue4] = useState(null)
 const [value5, setValue5] = useState(null)
+
+const handleNext = () => {
+  setNext(next+1)
+}
+
+const handlePrev = () => {
+  if (next >= 1) {
+    setNext(next-1)
+  }
+}
 
 const handleMouseEnter = (index, value) => {
   setHoverdIndex(index);
@@ -90,7 +101,8 @@ function func(index) {
 const tdData =() =>{
    
      return RegisterData.map((data,index)=>{
-        if(index > 300) return
+      if(index < 300*next) return
+      if(index > 300*(next+1) - 1) return
        return(
            <tr >
                 {/* {
@@ -110,6 +122,7 @@ const tdData =() =>{
      })
 }
   return (
+    <>
       <table className="table">
         <thead>
          <tr>{ThData()}</tr>
@@ -118,6 +131,11 @@ const tdData =() =>{
         {tdData()}
         </tbody>
        </table>
+       <center>
+       <button onClick={handlePrev} className="w-24 mx-2 mb-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bg-purple-900">Prev</button>
+       <button onClick={handleNext} className="w-24 mx-2 mb-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded bg-purple-900">Next</button>
+      </center>
+      </>
   )
 }
 export default DataHazardTable;
