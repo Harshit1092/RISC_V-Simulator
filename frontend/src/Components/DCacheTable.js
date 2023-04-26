@@ -71,6 +71,7 @@ const tdData =() =>{
                 {/* <td onMouseEnter={() => handleMouseEnter(index,3)} onMouseLeave={() => handleMouseLeave(3)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value3 ? "#DCCAE9" : "white"}}>{data['binary']}</td> */}
                 {/* <td onMouseEnter={() => handleMouseEnter(index,4)} onMouseLeave={() => handleMouseLeave(4)} style={{width:'20%', textAlign:'center', backgroundColor : hoverdIndex == index && value4 ? "#DCCAE9" : "white  "}}>{data['decimal']}</td> */}
            </tr>
+
        )
      })
 }

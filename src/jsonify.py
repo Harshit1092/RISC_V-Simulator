@@ -180,10 +180,12 @@ with open(filename) as fh:
         dict2 = {}
         i = 0
         while i < len(fields):
-            dict2[fields[i]] = description[i]
+            if len(description) > 1:
+                dict2[fields[i]] = description[i]
             i = i + 1
         
-        array.append(dict2)
+        if bool(dict2):
+            array.append(dict2)
         
     filepath = '../frontend/src/components/dataCache.json'
     jsonFile = open(filepath,'w')
@@ -209,10 +211,12 @@ with open(filename) as fh:
         dict2 = {}
         i = 0
         while i < len(fields):
-            dict2[fields[i]] = description[i]
+            if len(description) > 1:
+                dict2[fields[i]] = description[i]
             i = i + 1
         
-        array.append(dict2)
+        if bool(dict2):
+            array.append(dict2)
         
     filepath = '../frontend/src/components/instructionCache.json'
     jsonFile = open(filepath,'w')

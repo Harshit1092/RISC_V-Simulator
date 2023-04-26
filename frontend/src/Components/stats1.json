@@ -1,15 +1,15 @@
 [
     {
         "stats": "Number of read accesses",
-        "value": "1043"
+        "value": "96"
     },
     {
         "stats": "Number of hits",
-        "value": " 995"
+        "value": " 85"
     },
     {
         "stats": "Number of misses",
-        "value": " 48"
+        "value": " 11"
     },
     {
         "stats": "Number of write accesses",
@@ -17,11 +17,11 @@
     },
     {
         "stats": "Number of accesses",
-        "value": " 299"
+        "value": " 23"
     },
     {
         "stats": "Number of hits",
-        "value": " 292"
+        "value": " 16"
     },
     {
         "stats": "Number of misses",
@@ -29,6 +29,6 @@
     },
     {
         "stats": "Number of write accesses",
-        "value": " 44"
+        "value": " 12"
     }
 ]
