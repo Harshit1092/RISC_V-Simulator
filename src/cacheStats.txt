@@ -1,6 +1,6 @@
-Number of read accesses:96
-Number of hits: 85
-Number of misses: 11
+Number of read accesses:67
+Number of hits: 57
+Number of misses: 10
 Number of write accesses: 0
 
 Number of accesses: 23

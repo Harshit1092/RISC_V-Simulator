@@ -1,19 +1,19 @@
 [
     {
         "stats": "Number of clock cycles",
-        "value": "96"
+        "value": "332"
     },
     {
         "stats": "Number of instructions executed",
-        "value": "80"
+        "value": "66"
     },
     {
         "stats": "CPI",
-        "value": "1.2"
+        "value": "5.03030303030303"
     },
     {
         "stats": "Number of data transfer (load & store) instructions executed",
-        "value": "37"
+        "value": "23"
     },
     {
         "stats": "Number of ALU instructions executed",
@@ -25,26 +25,26 @@
     },
     {
         "stats": "Number of stalls",
-        "value": "34"
+        "value": "0"
     },
     {
         "stats": "Number of data hazards",
-        "value": "14"
+        "value": "0"
     },
     {
         "stats": "Number of control hazards",
-        "value": "19"
+        "value": "0"
     },
     {
         "stats": "Number of branch mispredictions",
-        "value": "7"
+        "value": "0"
     },
     {
         "stats": "Number of stalls due to data hazards",
-        "value": "21"
+        "value": "0"
     },
     {
         "stats": "Number of stalls due to control hazards",
-        "value": "13"
+        "value": "0"
     }
 ]
