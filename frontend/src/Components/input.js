@@ -14,12 +14,12 @@ function Input() {
     const [printSpecificPipelineRegisters, setPrintSpecificPipelineRegisters] = useState(false);
     const [instructionNumber, setInstructionNumber] = useState(-1);
     const [selectedFile, setSelectedFile] = useState(null);
-    const [dataCache, setDataCache] = useState(64);
-    const [dataCacheBlock, setDataCacheBlock] = useState(8);
+    const [dataCache, setDataCache] = useState(32);
+    const [dataCacheBlock, setDataCacheBlock] = useState(4);
     const [associativityData, setassociativityData] = useState(2);
     const [waysData, setWaysData] = useState(2);
-    const [instCache, setInstCache] = useState(64);
-    const [instCacheBlock, setInstCacheBlock] = useState(8);
+    const [instCache, setInstCache] = useState(32);
+    const [instCacheBlock, setInstCacheBlock] = useState(4);
     const [associativityInst, setassociativityInst] = useState(2);
     const [waysInst, setWaysInst] = useState(2);
     const [policy, setPolicy] = useState(0);
