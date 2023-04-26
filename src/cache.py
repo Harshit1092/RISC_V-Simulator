@@ -218,7 +218,7 @@ class Cache:
                 tag1 = "0"*(32 - self.numberOfBlockOffsetBits - self.numberOfIndexBits) + tag1
                 offset = "0"*self.numberOfBlockOffsetBits
                 address = int(tag1 + index + offset,2)
-                row_data.append(["Tag: " + str(hex(self.getTag(address))), "Index: " + str(hex(self.getIndex(address))), "Offset: " + str(hex(self.getOffset(address)))])
+                row_data.append(["Tag: " + str(hex(self.getTag(address))), "Index: " + str(hex(self.getIndex(address)))])
             while len(row_data) < self.ways:
                 row_data.append([0,0,0])
             table.append(row_data)
